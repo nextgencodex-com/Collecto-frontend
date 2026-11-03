@@ -1,0 +1,332 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* COLLECTO design tokens (values taken from the COLLECTO.html prototype / Figma style guide).
+   shadcn/ui variables are mapped onto the same palette so generated components match. */
+:root {
+  --radius: 0.5rem;
+
+  /* brand */
+  --brand: #7c5cfa;
+  --brand-hover: #6a48f0;
+  --brand-soft: #f3f0ff;
+  --brand-ink: #5b3fd6;
+
+  /* text */
+  --ink: #18181b;
+  --body: #3f3f46;
+  --muted-ink: #71717a;
+  --faint: #a1a1aa;
+  --nav-ink: #52525b;
+
+  /* lines */
+  --line-card: #e7e7ea;
+  --line-input: #e4e4e7;
+  --line: #ebebed;
+  --line-row: #f0f0f2;
+
+  /* surfaces */
+  --app: #f4f4f5;
+  --subtle: #fafafa;
+  --nav-active: #ededef;
+  --hover: #f4f4f5;
+
+  /* semantic */
+  --success: #15803d;
+  --success-soft: #eaf7ee;
+  --warning: #a16207;
+  --warning-soft: #fef5dc;
+  --danger: #c81e3a;
+  --danger-soft: #ffeef0;
+
+  /* shadcn */
+  --background: #ffffff;
+  --foreground: var(--ink);
+  --card: #ffffff;
+  --card-foreground: var(--ink);
+  --popover: #ffffff;
+  --popover-foreground: var(--ink);
+  --primary: var(--brand);
+  --primary-foreground: #ffffff;
+  --secondary: var(--app);
+  --secondary-foreground: var(--ink);
+  --muted: var(--app);
+  --muted-foreground: var(--muted-ink);
+  --accent: var(--hover);
+  --accent-foreground: var(--ink);
+  --destructive: var(--danger);
+  --border: var(--line-card);
+  --input: var(--line-input);
+  --ring: var(--brand);
+}
+
+@theme inline {
+  --font-sans: var(--font-jakarta), "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-soft: var(--brand-soft);
+  --color-brand-ink: var(--brand-ink);
+  --color-ink: var(--ink);
+  --color-body: var(--body);
+  --color-muted-ink: var(--muted-ink);
+  --color-faint: var(--faint);
+  --color-nav-ink: var(--nav-ink);
+  --color-line-card: var(--line-card);
+  --color-line-input: var(--line-input);
+  --color-line: var(--line);
+  --color-line-row: var(--line-row);
+  --color-app: var(--app);
+  --color-subtle: var(--subtle);
+  --color-nav-active: var(--nav-active);
+  --color-hover: var(--hover);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --shadow-card: 0 1px 2px rgba(24, 24, 27, 0.04);
+  --shadow-pop: 0 12px 32px rgba(24, 24, 27, 0.12);
+  --shadow-chip: 0 1px 2px rgba(24, 24, 27, 0.1), 0 0 0 1px rgba(24, 24, 27, 0.04);
+
+  --text-meta: 12.5px;
+  --text-13: 13px;
+  --text-13_5: 13.5px;
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before {
+    border-color: var(--line-card);
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    margin: 0;
+    background: var(--app);
+    color: var(--body);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    word-spacing: 0.06em;
+    line-height: 1.5;
+  }
+  h1,
+  h2,
+  h3 {
+    letter-spacing: -0.02em;
+  }
+  input,
+  select,
+  textarea,
+  button {
+    font-family: inherit;
+    word-spacing: inherit;
+    letter-spacing: inherit;
+  }
+  input,
+  select,
+  textarea {
+    transition:
+      border-color 0.15s,
+      box-shadow 0.15s;
+  }
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+    border-color: var(--brand) !important;
+    box-shadow: 0 0 0 3px rgba(124, 92, 250, 0.15);
+  }
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--faint);
+  }
+  button {
+    cursor: pointer;
+    transition:
+      background-color 0.15s,
+      border-color 0.15s,
+      color 0.15s;
+  }
+  button:disabled {
+    cursor: default;
+  }
+  ::selection {
+    background: #e4dcff;
+  }
+  td {
+    font-variant-numeric: tabular-nums;
+    line-height: 1.4;
+  }
+  tbody tr {
+    transition: background-color 0.12s;
+  }
+  a {
+    color: var(--brand);
+    text-decoration: none;
+  }
+  a:hover {
+    color: var(--brand-hover);
+  }
+}
+
+@layer components {
+  .card {
+    background: #fff;
+    border: 1px solid var(--line-card);
+    border-radius: 12px;
+    box-shadow: var(--shadow-card);
+  }
+  .field {
+    height: 44px;
+    width: 100%;
+    border: 1px solid var(--line-input);
+    border-radius: 8px;
+    padding: 0 12px;
+    font-size: 14px;
+    color: var(--ink);
+    background: #fff;
+  }
+  textarea.field {
+    height: auto;
+    padding: 10px 12px;
+    resize: vertical;
+  }
+  .num {
+    font-variant-numeric: tabular-nums;
+  }
+  .kb-scroll::-webkit-scrollbar {
+    height: 8px;
+  }
+  .kb-scroll::-webkit-scrollbar-thumb {
+    background: #e4e4e7;
+    border-radius: 8px;
+  }
+  .ic {
+    display: inline-block;
+    flex: none;
+    background-color: currentColor;
+    -webkit-mask: var(--i) center / contain no-repeat;
+    mask: var(--i) center / contain no-repeat;
+  }
+  .gpin {
+    display: inline-block;
+    flex: none;
+    background: url("/icons/gpin.svg") center / contain no-repeat;
+  }
+  .pill-search {
+    width: 100%;
+    min-width: 0;
+    border: 1.5px solid #d4d4d8;
+    border-radius: 12px;
+    background: #fff;
+    color: var(--ink);
+    font-weight: 500;
+    box-shadow: 0 1px 2px rgba(24, 24, 27, 0.06);
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .pill-search::placeholder {
+    color: var(--muted-ink);
+    font-weight: 400;
+    opacity: 1;
+  }
+  .pill-search:hover {
+    border-color: var(--faint);
+  }
+  .pill-search:focus {
+    border-color: var(--brand) !important;
+    box-shadow: 0 0 0 4px rgba(124, 92, 250, 0.18);
+  }
+  .pill-search::-webkit-search-cancel-button {
+    display: none;
+  }
+  .search-ic {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--nav-ink);
+    pointer-events: none;
+  }
+  .pill-search:focus + .search-ic {
+    color: var(--brand);
+  }
+  .search-x {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0;
+    border-radius: 50%;
+    background: #e4e4e7;
+    color: var(--body);
+    display: grid;
+    place-items: center;
+    padding: 0;
+  }
+  .search-x:hover {
+    background: #d4d4d8;
+  }
+  .set-in {
+    height: 44px;
+    padding: 0 14px;
+    border: 0;
+    border-radius: 10px;
+    background: var(--app);
+    font-size: 14.5px;
+    color: var(--ink);
+    outline: none;
+  }
+  .set-in:hover {
+    background: #efeff1;
+  }
+  .set-in:focus {
+    background: #fff;
+    box-shadow:
+      0 0 0 2px var(--brand),
+      0 0 0 6px rgba(124, 92, 250, 0.15) !important;
+  }
+  .map-img {
+    background: #edeae3 url("/images/map.jpg") center / cover no-repeat;
+  }
+  .navb:not(.on):hover {
+    background: #eeeef0 !important;
+    color: var(--ink) !important;
+  }
+  .table-rows tbody tr:hover {
+    background: var(--subtle);
+  }
+  /* striped track used for rider progress bars */
+  .track-striped {
+    background: repeating-linear-gradient(90deg, #dedee3 0 2px, transparent 2px 7px);
+  }
+}

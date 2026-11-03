@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="5820cbc4-7a95-469a-b1fe-e3029704da70"></script>
+
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("d8ca8032-9761-4107-8e92-38b154d5e89f") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("b022984d-1778-42a8-82a7-507a9398fa66") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("62d49f61-7029-4c22-8ec3-46d74636f52f") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("d1a9abac-0cb9-4543-bc74-e9be8b2d92ba") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("cff1d20b-88c4-4310-bdf6-6e8d88a19dab") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("1b32ff54-eb9f-43c8-8d32-565e55494027") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("f7523a16-381a-4711-9408-a252b30cfbb2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("84f56b3d-daab-4e29-9eaa-33f8ece951bf") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("278993e9-bb33-4033-a3d2-3c7b16037844") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("f47014a3-ff66-4ef3-bd55-02d1e975cd3e") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("47a435b9-02d7-49bf-baad-d222b0f464ef") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("1b32ff54-eb9f-43c8-8d32-565e55494027") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("f7523a16-381a-4711-9408-a252b30cfbb2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("84f56b3d-daab-4e29-9eaa-33f8ece951bf") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("278993e9-bb33-4033-a3d2-3c7b16037844") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("f47014a3-ff66-4ef3-bd55-02d1e975cd3e") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("47a435b9-02d7-49bf-baad-d222b0f464ef") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("1b32ff54-eb9f-43c8-8d32-565e55494027") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("f7523a16-381a-4711-9408-a252b30cfbb2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("84f56b3d-daab-4e29-9eaa-33f8ece951bf") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("278993e9-bb33-4033-a3d2-3c7b16037844") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("f47014a3-ff66-4ef3-bd55-02d1e975cd3e") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("47a435b9-02d7-49bf-baad-d222b0f464ef") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("1b32ff54-eb9f-43c8-8d32-565e55494027") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("f7523a16-381a-4711-9408-a252b30cfbb2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("84f56b3d-daab-4e29-9eaa-33f8ece951bf") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("278993e9-bb33-4033-a3d2-3c7b16037844") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("f47014a3-ff66-4ef3-bd55-02d1e975cd3e") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("47a435b9-02d7-49bf-baad-d222b0f464ef") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("dd56c2bb-ac50-44ef-9422-e2e0b7acf220") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<script src="be1534b3-6483-4137-a3fa-eca1c3735ad9"></script>
+<script src="59775208-2fef-426d-9600-40f543f148ff"></script>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#F4F4F5;font-family:'Plus Jakarta Sans','IBM Plex Sans',system-ui,sans-serif;color:#3F3F46;-webkit-font-smoothing:antialiased;letter-spacing:0;word-spacing:.06em;line-height:1.5}
+h1,h2,h3{letter-spacing:-.02em}
+input,select,textarea{transition:border-color .15s,box-shadow .15s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:#7C5CFA !important;box-shadow:0 0 0 3px rgba(124,92,250,.15)}
+input::placeholder,textarea::placeholder{color:#A1A1AA}
+button{transition:background-color .15s,border-color .15s,color .15s}
+::selection{background:#E4DCFF}
+.gpin{display:inline-block;flex:none;background:url("DATA_URI") center/contain no-repeat}
+.ic{display:inline-block;flex:none;background-color:currentColor;-webkit-mask:var(--i) center/contain no-repeat;mask:var(--i) center/contain no-repeat}
+.ic-upload{--i:url("DATA_URI")}
+.pill-search{width:100%;min-width:0;border:1.5px solid #D4D4D8;border-radius:12px;background:#fff;color:#18181B;font-weight:500;box-shadow:0 1px 2px rgba(24,24,27,.06);outline:none;transition:border-color .15s,box-shadow .15s;-webkit-appearance:none;appearance:none}
+.pill-search::placeholder{color:#71717A;font-weight:400;opacity:1}
+.pill-search:hover{border-color:#A1A1AA}
+.set-in{height:44px;padding:0 14px;border:0;border-radius:10px;background:#F4F4F5;font-size:14.5px;color:#18181B;outline:none;transition:background .15s,box-shadow .15s}
+.set-in:hover{background:#EFEFF1}
+.set-in:focus{background:#fff;box-shadow:0 0 0 2px #7C5CFA,0 0 0 6px rgba(124,92,250,.15)}
+.pill-search:focus{border-color:#7C5CFA;box-shadow:0 0 0 4px rgba(124,92,250,.18)}
+.pill-search::-webkit-search-cancel-button{display:none}
+.search-ic{position:absolute;top:50%;transform:translateY(-50%);color:#52525B;pointer-events:none}
+.pill-search:focus+.search-ic{color:#7C5CFA}
+.search-x{position:absolute;top:50%;transform:translateY(-50%);border:0;border-radius:50%;background:#E4E4E7;color:#3F3F46;display:grid;place-items:center;cursor:pointer;padding:0}
+.search-x:hover{background:#D4D4D8}
+.ic-search{--i:url("DATA_URI")}
+.ic-x{--i:url("DATA_URI")}
+.ic-grid{--i:url("DATA_URI")}
+.ic-users{--i:url("DATA_URI")}
+.ic-calclock{--i:url("DATA_URI")}
+.ic-package{--i:url("DATA_URI")}
+.ic-archive{--i:url("DATA_URI")}
+.ic-bike{--i:url("DATA_URI")}
+.ic-wallet{--i:url("DATA_URI")}
+.ic-chart{--i:url("DATA_URI")}
+.ic-history{--i:url("DATA_URI")}
+.map-img{background:#EDEAE3 url("DATA_URI") center/cover no-repeat}
+.ic-st-paid{--i:url("DATA_URI")}
+.ic-st-due{--i:url("DATA_URI")}
+.ic-st-over{--i:url("DATA_URI")}
+.ic-st-up{--i:url("DATA_URI")}
+.ic-st-done{--i:url("DATA_URI")}
+.ic-home{--i:url("DATA_URI")}
+.ic-map{--i:url("DATA_URI")}
+.ic-user{--i:url("DATA_URI")}
+.ic-sliders{--i:url("DATA_URI")}
+.ic-bell{--i:url("DATA_URI")}
+.ic-logout{--i:url("DATA_URI")}
+.ic-plus{--i:url("DATA_URI")}
+.ic-filter{--i:url("DATA_URI")}
+.ic-more{--i:url("DATA_URI")}
+.ic-cal{--i:url("DATA_URI")}
+.ic-sub{--i:url("DATA_URI")}
+.ic-msg{--i:url("DATA_URI")}
+.ic-folder{--i:url("DATA_URI")}
+.ic-chev{--i:url("DATA_URI")}
+.ic-list{--i:url("DATA_URI")}
+.ic-kanban{--i:url("DATA_URI")}
+.ic-sparkles{--i:url("DATA_URI")}
+.ic-menu{--i:url("DATA_URI")}
+.ic-store{--i:url("DATA_URI")}
+.ic-check{--i:url("DATA_URI")}
+.navb:not(.on):hover{background:#EEEEF0 !important;color:#18181B !important}
+.kb-scroll::-webkit-scrollbar{height:8px}.kb-scroll::-webkit-scrollbar-thumb{background:#E4E4E7;border-radius:8px}
+td{font-variant-numeric:tabular-nums;line-height:1.4}
+tbody tr{transition:background-color .12s}
+tbody tr:hover{background:#FAFAFA}
+p,li{max-width:72ch}
+.kb-card{transition:box-shadow .15s,border-color .15s}
+
+a{color:#7C5CFA;text-decoration:none}
+a:hover{color:#6A48F0;text-decoration:underline}
+input,select,textarea,button{font-family:inherit;word-spacing:inherit;letter-spacing:inherit}
+</style>
+</helmet>
+<sc-if value="{{ loading }}" hint-placeholder-val="{{ false }}">
+<div style="min-height:100vh;display:grid;place-items:center;font-size:14px;color:#71717A">Loading COLLECTO…</div>
+</sc-if>
+<sc-if value="{{ isLogin }}" hint-placeholder-val="{{ true }}">
+<div style="min-height:100vh;display:grid;place-items:center;padding:24px 16px;background:#F4F4F5">
+<div style="width:100%;max-width:420px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center">
+<div style="font-size:28px;font-weight:700;letter-spacing:-.02em;color:#18181B">COLLECTO</div>
+<div style="font-size:14px;color:#71717A">Smart Installment &amp; Collection Management</div>
+</div>
+<div style="background:#fff;border:1px solid #E7E7EA;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:16px">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;background:#F0F0F2;border-radius:10px">
+<button sc-camel-on-click="{{ lgOwner }}" style="height:40px;border:0;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;background:{{ lgTab.ownerBg }};color:{{ lgTab.ownerFg }}">Owner / Admin</button>
+<button sc-camel-on-click="{{ lgRider }}" style="height:40px;border:0;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;background:{{ lgTab.riderBg }};color:{{ lgTab.riderFg }}">Rider</button>
+</div>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">{{ lgUserLabel }}<input value="{{ lg.user }}" sc-camel-on-change="{{ lgUser }}" autocomplete="username" style="height:44px;border:1px solid #E4E4E7;border-radius:8px;padding:0 12px;font-size:15px;color:#18181B;background:#fff;width:100%"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Password<input type="password" value="{{ lg.pass }}" sc-camel-on-change="{{ lgPass }}" sc-camel-on-key-down="{{ lgKey }}" autocomplete="current-password" style="height:44px;border:1px solid #E4E4E7;border-radius:8px;padding:0 12px;font-size:15px;color:#18181B;background:#fff;width:100%"></label>
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+<label style="display:flex;align-items:center;gap:8px;font-size:13px;color:#3F3F46;cursor:pointer;white-space:nowrap"><input type="checkbox" checked="{{ lg.remember }}" sc-camel-on-change="{{ lgRemember }}" style="width:16px;height:16px;accent-color:#7C5CFA">Remember me</label>
+<button sc-camel-on-click="{{ lgForgot }}" style="border:0;background:none;padding:0;font-size:13px;font-weight:500;color:#7C5CFA;cursor:pointer">Forgot password?</button>
+</div>
+<sc-if value="{{ lgHasErr }}"><div style="padding:10px 12px;border-radius:8px;background:#FFEEF0;color:#C81E3A;font-size:13px">{{ lg.err }}</div></sc-if>
+<sc-if value="{{ lgHasInfo }}"><div style="padding:10px 12px;border-radius:8px;background:#F3F0FF;color:#5B3FD6;font-size:13px">{{ lg.info }}</div></sc-if>
+<button sc-camel-on-click="{{ doLogin }}" style="height:48px;border:0;border-radius:10px;background:#7C5CFA;color:#fff;font-size:15px;font-weight:600;cursor:pointer" style-hover="background:#6A48F0">Sign in</button>
+</div>
+<div style="font-size:12.5px;color:#71717A;text-align:center;line-height:1.6">Demo accounts — Owner: owner@collecto.lk / owner123<br>Riders: kasun, nimal or tharindu / 1234</div>
+</div>
+</div>
+</sc-if>
+<sc-if value="{{ isOwner }}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;min-height:100vh;background:#fff">
+<sc-if value="{{ drawerShade }}"><div sc-camel-on-click="{{ closeDrawer }}" style="position:fixed;inset:0;background:rgba(24,24,27,.35);z-index:40"></div></sc-if>
+<aside style="width:252px;flex:none;background:#FAFAFA;border-right:1px solid #EBEBED;display:flex;flex-direction:column;position:{{ sb.pos }};top:0;left:0;height:100vh;z-index:50;transform:{{ sb.tf }};transition:transform .2s ease">
+<div style="padding:18px 16px 14px;display:flex;align-items:center;gap:10px">
+<span style="width:34px;height:34px;flex:none;border-radius:10px;background:#18181B;display:grid;place-items:center;box-shadow:0 1px 2px rgba(24,24,27,.25)"><span style="width:13px;height:13px;border:2.5px solid #fff;border-radius:4px"></span></span>
+<div style="display:flex;flex-direction:column;min-width:0;flex:1"><span style="font-size:17px;font-weight:700;letter-spacing:.01em;color:#18181B;line-height:1.2">COLLECTO</span><span style="font-size:12.5px;color:#71717A;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ shopName }}</span></div>
+</div>
+<div style="padding:2px 12px 6px;position:relative">
+<div style="position:relative">
+<span class="ic ic-search" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:#A1A1AA;pointer-events:none"></span>
+<input value="{{ gq }}" sc-camel-on-change="{{ onGq }}" placeholder="Search anything" style="height:36px;width:100%;border:1px solid #E4E4E7;border-radius:9px;padding:0 34px 0 33px;font-size:13.5px;color:#18181B;background:#fff;box-shadow:0 1px 2px rgba(24,24,27,.04)">
+<span style="position:absolute;right:8px;top:50%;transform:translateY(-50%);min-width:20px;height:20px;padding:0 5px;border:1px solid #E4E4E7;border-radius:5px;background:#FAFAFA;font-size:11px;color:#71717A;display:grid;place-items:center;pointer-events:none">/</span>
+</div>
+<sc-if value="{{ gShow }}">
+<div style="position:absolute;top:44px;left:12px;width:min(340px,calc(100vw - 24px));background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 12px 32px rgba(24,24,27,.12);padding:6px;display:flex;flex-direction:column;z-index:60">
+<sc-for list="{{ gResults }}" as="c" hint-placeholder-count="0">
+<button sc-camel-on-click="{{ c.open }}" style="display:flex;align-items:center;gap:10px;padding:8px;border:0;border-radius:8px;background:#fff;text-align:left;cursor:pointer" style-hover="background:#F4F4F5">
+<span style="width:30px;height:30px;border-radius:50%;flex:none;display:grid;place-items:center;background-color:{{ c.av }};background-image:{{ c.photoBg }};background-size:cover;background-position:center;color:#fff;font-size:11px;font-weight:600"><sc-if value="{{ c.noPhoto }}">{{ c.initials }}</sc-if></span>
+<span style="flex:1;min-width:0;display:flex;flex-direction:column"><span style="font-size:13.5px;font-weight:600;color:#18181B">{{ c.name }}</span><span style="font-size:12.5px;color:#71717A">{{ c.nic }} · {{ c.phone }}</span></span>
+<span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 9px 0 8px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(24,24,27,.05);font-size:12px;font-weight:500;white-space:nowrap;background:{{ c.chip.bg }};color:{{ c.chip.fg }}"><span style="width:8px;height:8px;border-radius:50%;flex:none;box-sizing:border-box;background:{{ c.chip.pd }};border:{{ c.chip.pb }}"></span>{{ c.chip.label }}</span>
+</button>
+</sc-for>
+<sc-if value="{{ gNone }}"><div style="padding:12px;font-size:13px;color:#71717A">No customers match this search.</div></sc-if>
+</div>
+</sc-if>
+</div>
+<nav style="flex:1;overflow:auto;padding:4px 12px 12px;display:flex;flex-direction:column;gap:1px">
+<span style="flex:none;padding:14px 10px 6px;font-size:12.5px;font-weight:500;color:#71717A">Main menu</span>
+<sc-for list="{{ navMain }}" as="n" hint-placeholder-count="4"><button class="navb {{ n.cls }}" sc-camel-on-click="{{ n.go }}" style="flex:none;display:flex;align-items:center;gap:10px;height:34px;padding:0 10px;border:0;border-radius:8px;background:{{ n.bg }};color:{{ n.fg }};box-shadow:{{ n.sh }};font-size:13.5px;font-weight:500;text-align:left;cursor:pointer"><span class="ic {{ n.ic }}" style="width:17px;height:17px;color:{{ n.icc }}"></span><span style="flex:1;min-width:0">{{ n.label }}</span><sc-if value="{{ n.hasBadge }}"><span style="min-width:20px;height:20px;padding:0 6px;border-radius:999px;background:#F43F5E;color:#fff;font-size:11px;font-weight:600;display:grid;place-items:center">{{ n.badge }}</span></sc-if></button></sc-for>
+<div style="height:1px;background:#EBEBED;margin:12px 6px 0"></div>
+<span style="flex:none;padding:14px 10px 6px;font-size:12.5px;font-weight:500;color:#71717A">Manage</span>
+<sc-for list="{{ navManage }}" as="n" hint-placeholder-count="3"><button class="navb {{ n.cls }}" sc-camel-on-click="{{ n.go }}" style="flex:none;display:flex;align-items:center;gap:10px;height:34px;padding:0 10px;border:0;border-radius:8px;background:{{ n.bg }};color:{{ n.fg }};box-shadow:{{ n.sh }};font-size:13.5px;font-weight:500;text-align:left;cursor:pointer"><span class="ic {{ n.ic }}" style="width:17px;height:17px;color:{{ n.icc }}"></span><span style="flex:1;min-width:0">{{ n.label }}</span><sc-if value="{{ n.hasBadge }}"><span style="min-width:20px;height:20px;padding:0 6px;border-radius:999px;background:#F43F5E;color:#fff;font-size:11px;font-weight:600;display:grid;place-items:center">{{ n.badge }}</span></sc-if></button></sc-for>
+<div style="height:1px;background:#EBEBED;margin:12px 6px 0"></div>
+<span style="flex:none;padding:14px 10px 6px;font-size:12.5px;font-weight:500;color:#71717A">Workspace</span>
+<sc-for list="{{ navWork }}" as="n" hint-placeholder-count="3"><button class="navb {{ n.cls }}" sc-camel-on-click="{{ n.go }}" style="flex:none;display:flex;align-items:center;gap:10px;height:34px;padding:0 10px;border:0;border-radius:8px;background:{{ n.bg }};color:{{ n.fg }};box-shadow:{{ n.sh }};font-size:13.5px;font-weight:500;text-align:left;cursor:pointer"><span class="ic {{ n.ic }}" style="width:17px;height:17px;color:{{ n.icc }}"></span><span style="flex:1;min-width:0">{{ n.label }}</span><sc-if value="{{ n.hasBadge }}"><span style="min-width:20px;height:20px;padding:0 6px;border-radius:999px;background:#F43F5E;color:#fff;font-size:11px;font-weight:600;display:grid;place-items:center">{{ n.badge }}</span></sc-if></button></sc-for>
+</nav>
+<div style="padding:10px 12px 14px;border-top:1px solid #EBEBED;display:flex;flex-direction:column;gap:1px">
+<span style="display:flex;align-items:center;gap:10px;height:34px;padding:0 10px;font-size:13px;color:#71717A"><span class="ic ic-sparkles" style="width:16px;height:16px"></span>Sell. Collect. Control.</span>
+<button sc-camel-on-click="{{ logout }}" style="display:flex;align-items:center;gap:10px;height:34px;padding:0 10px;border:0;border-radius:8px;background:none;font-size:13px;font-weight:500;color:#71717A;text-align:left;cursor:pointer" style-hover="background:#EEEEF0;color:#18181B"><span class="ic ic-logout" style="width:16px;height:16px"></span>Log out</button>
+</div>
+</aside>
+<div style="flex:1;min-width:0;display:flex;flex-direction:column">
+<header style="position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid #EBEBED;height:56px;display:flex;align-items:center;gap:10px;padding:0 clamp(12px,2.2vw,24px)">
+<sc-if value="{{ narrow }}"><button sc-camel-on-click="{{ openDrawer }}" aria-label="Open menu" style="width:36px;height:36px;flex:none;border:1px solid #E4E4E7;border-radius:8px;background:#fff;cursor:pointer;display:grid;place-items:center;color:#18181B"><span class="ic ic-menu" style="width:18px;height:18px"></span></button></sc-if>
+<div style="display:flex;align-items:center;gap:4px;min-width:0;flex:1;font-size:13px;color:#71717A;white-space:nowrap;overflow:hidden">
+<sc-if value="{{ wide }}">
+<span style="display:inline-flex;align-items:center;gap:7px;padding:4px 6px"><span style="width:20px;height:20px;border-radius:6px;background:#EAF7EE;display:grid;place-items:center"><span class="ic ic-store" style="width:12px;height:12px;color:#15803D"></span></span>{{ shopName }}</span>
+<span class="ic ic-chev" style="width:14px;height:14px;color:#D4D4D8"></span>
+<span style="display:inline-flex;align-items:center;gap:6px;padding:4px 6px"><span class="ic ic-folder" style="width:15px;height:15px"></span>{{ crumbGroup }}</span>
+<span class="ic ic-chev" style="width:14px;height:14px;color:#D4D4D8"></span>
+</sc-if>
+<span style="display:inline-flex;align-items:center;gap:6px;padding:4px 6px;color:#18181B;font-weight:500;min-width:0;overflow:hidden;text-overflow:ellipsis"><span class="ic {{ crumbIc }}" style="width:15px;height:15px"></span>{{ crumb }}</span>
+</div>
+<sc-if value="{{ wide }}">
+<div style="display:flex;align-items:center">
+<button sc-camel-on-click="{{ qa.rider }}" aria-label="Add rider" style="width:30px;height:30px;border-radius:50%;border:1px dashed #D4D4D8;background:#fff;color:#71717A;display:grid;place-items:center;cursor:pointer;margin-right:6px" style-hover="border-color:#A1A1AA;color:#18181B"><span class="ic ic-plus" style="width:14px;height:14px"></span></button>
+<button sc-camel-on-click="{{ go.riders }}" aria-label="Riders" style="display:flex;border:0;background:none;padding:0;cursor:pointer">
+<sc-for list="{{ riderStack }}" as="r" hint-placeholder-count="3"><span style="width:30px;height:30px;border-radius:50%;margin-left:-8px;border:2px solid #fff;background-color:{{ r.av }};background-image:{{ r.photoBg }};background-size:cover;background-position:center;color:#fff;display:grid;place-items:center;font-size:10.5px;font-weight:600"><sc-if value="{{ r.noPhoto }}">{{ r.init }}</sc-if></span></sc-for>
+</button>
+</div>
+<span style="width:1px;height:20px;background:#EBEBED;margin:0 4px"></span>
+</sc-if>
+<div style="position:relative">
+<button sc-camel-on-click="{{ toggleNotif }}" aria-label="Notifications" style="position:relative;width:36px;height:36px;border:0;border-radius:50%;background:none;cursor:pointer;display:grid;place-items:center;color:#3F3F46" style-hover="background:#F4F4F5"><span class="ic ic-bell" style="width:20px;height:20px"></span><sc-if value="{{ hasUnread }}"><span style="position:absolute;top:0;right:-2px;min-width:18px;height:18px;padding:0 5px;border-radius:999px;border:2px solid #fff;background:#F43F5E;color:#fff;font-size:10.5px;font-weight:700;display:grid;place-items:center">{{ unread }}</span></sc-if></button>
+<sc-if value="{{ notifOpen }}">
+<div style="position:absolute;right:0;top:46px;width:min(380px,calc(100vw - 24px));max-height:70vh;overflow:auto;background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 16px 40px rgba(24,24,27,.12);z-index:60">
+<div style="display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid #EBEBED;position:sticky;top:0;background:#fff"><span style="font-size:14px;font-weight:600;color:#18181B">Notifications</span><button sc-camel-on-click="{{ markRead }}" style="border:0;background:none;font-size:13px;font-weight:500;color:#7C5CFA;cursor:pointer">Mark all read</button></div>
+<sc-for list="{{ notifs }}" as="n" hint-placeholder-count="3">
+<div style="display:flex;gap:10px;padding:12px 16px;border-bottom:1px solid #F0F0F2;background:{{ n.bg }}">
+<span style="width:8px;height:8px;border-radius:50%;margin-top:6px;flex:none;background:{{ n.dot }}"></span>
+<div style="display:flex;flex-direction:column;gap:2px;min-width:0"><span style="font-size:13px;font-weight:600;color:#18181B">{{ n.title }}</span><span style="font-size:13px;color:#3F3F46">{{ n.text }}</span><span style="font-size:12.5px;color:#71717A">{{ n.when }}</span></div>
+</div>
+</sc-for>
+<sc-if value="{{ noNotifs }}"><div style="padding:16px;font-size:13px;color:#71717A">No notifications yet.</div></sc-if>
+</div>
+</sc-if>
+</div>
+<div style="position:relative"><button sc-camel-on-click="{{ toggleUser }}" aria-label="Account menu" aria-haspopup="menu" aria-expanded="{{ umOpenStr }}" style="display:flex;align-items:center;gap:8px;height:40px;padding:0 10px 0 4px;margin-left:4px;border:1px solid {{ umBd }};border-radius:999px;background:{{ umBg }};cursor:pointer" style-hover="background:#F4F4F5"><span style="width:32px;height:32px;flex:none;border-radius:50%;background-color:#18181B;background-image:{{ ownerPhotoBg }};background-size:cover;background-position:center;color:#fff;display:grid;place-items:center;font-size:12px;font-weight:600"><sc-if value="{{ ownerNoPhoto }}">{{ ownerInitials }}</sc-if></span><sc-if value="{{ wide }}"><span style="font-size:13.5px;font-weight:500;color:#18181B">{{ ownerName }}</span></sc-if><span class="ic ic-chev" style="width:14px;height:14px;color:#71717A;transform:rotate({{ umRot }});transition:transform .15s"></span></button><sc-if value="{{ userMenu }}"><div sc-camel-on-click="{{ closeUser }}" style="position:fixed;inset:0;z-index:55"></div><div role="menu" aria-label="Account" style="position:absolute;right:0;top:48px;width:min(264px,calc(100vw - 24px));padding:6px;background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 16px 40px rgba(24,24,27,.14);z-index:60"><div style="display:flex;align-items:center;gap:10px;padding:8px 10px 10px"><span style="width:40px;height:40px;flex:none;border-radius:50%;background-color:#18181B;background-image:{{ ownerPhotoBg }};background-size:cover;background-position:center;color:#fff;display:grid;place-items:center;font-size:14px;font-weight:600"><sc-if value="{{ ownerNoPhoto }}">{{ ownerInitials }}</sc-if></span><div style="display:flex;flex-direction:column;gap:2px;min-width:0"><span style="display:flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:#18181B">{{ ownerName }}<span style="padding:1px 7px;border-radius:999px;background:#F1EDFF;color:#6D4AE8;font-size:11px;font-weight:600">Owner</span></span><span style="font-size:12.5px;color:#71717A;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ ownerEmail }}</span></div></div><div style="height:1px;background:#EBEBED;margin:6px -6px"></div><button role="menuitem" sc-camel-on-click="{{ um.settings }}" style="display:flex;align-items:center;gap:10px;width:100%;height:38px;padding:0 10px;border:0;border-radius:8px;background:none;font-size:14px;font-weight:500;color:#3F3F46;text-align:left;cursor:pointer" style-hover="background:#F4F4F5;color:#18181B"><span class="ic ic-sliders" style="width:17px;height:17px"></span>Shop settings</button><button role="menuitem" sc-camel-on-click="{{ um.reports }}" style="display:flex;align-items:center;gap:10px;width:100%;height:38px;padding:0 10px;border:0;border-radius:8px;background:none;font-size:14px;font-weight:500;color:#3F3F46;text-align:left;cursor:pointer" style-hover="background:#F4F4F5;color:#18181B"><span class="ic ic-chart" style="width:17px;height:17px"></span>Reports</button><button role="menuitem" sc-camel-on-click="{{ um.audit }}" style="display:flex;align-items:center;gap:10px;width:100%;height:38px;padding:0 10px;border:0;border-radius:8px;background:none;font-size:14px;font-weight:500;color:#3F3F46;text-align:left;cursor:pointer" style-hover="background:#F4F4F5;color:#18181B"><span class="ic ic-list" style="width:17px;height:17px"></span>Audit log</button><div style="height:1px;background:#EBEBED;margin:6px -6px"></div><button role="menuitem" sc-camel-on-click="{{ um.logout }}" style="display:flex;align-items:center;gap:10px;width:100%;height:38px;padding:0 10px;border:0;border-radius:8px;background:none;font-size:14px;font-weight:500;color:#C81E3A;text-align:left;cursor:pointer" style-hover="background:#FFF1F2;color:#BE123C"><span class="ic ic-logout" style="width:17px;height:17px"></span>Log out</button></div></sc-if></div>
+</header>
+<main style="padding:24px clamp(16px,2.2vw,28px) 32px;max-width:1480px;width:100%;margin:0 auto;display:flex;flex-direction:column;gap:20px">
+<sc-if value="{{ pg.dashboard }}">
+<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;justify-content:space-between">
+<div><h1 style="margin:0;font-size:24px;font-weight:700;color:#18181B;letter-spacing:-.025em">Dashboard</h1><div style="font-size:14px;color:#71717A;margin-top:4px">{{ todayLabel }}</div></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><button sc-camel-on-click="{{ qa.item }}" style="height:40px;padding:0 16px;border-radius:8px;background:#fff;color:#18181B;border:1px solid #E4E4E7;font-size:14px;font-weight:500;cursor:pointer" style-hover="background:#F4F4F5">Add item</button><button sc-camel-on-click="{{ qa.customer }}" style="height:40px;padding:0 16px;border-radius:8px;background:#7C5CFA;color:#fff;border:0;font-size:14px;font-weight:600;cursor:pointer" style-hover="background:#6A48F0">Add customer</button></div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:16px">
+<sc-for list="{{ kpis }}" as="k" hint-placeholder-count="4">
+<div style="background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);padding:20px;display:flex;flex-direction:column;gap:8px">
+<span style="font-size:13px;font-weight:500;color:#71717A">{{ k.label }}</span>
+<span style="font-size:28px;font-weight:600;letter-spacing:-.02em;color:{{ k.color }};font-variant-numeric:tabular-nums;line-height:1.1">{{ k.value }}</span>
+<span style="font-size:13px;color:#71717A">{{ k.sub }}</span>
+</div>
+</sc-for>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px 24px;padding:14px 20px;background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04)">
+<sc-for list="{{ strip }}" as="x" hint-placeholder-count="4"><div style="display:flex;align-items:baseline;gap:8px"><span style="font-size:18px;font-weight:600;color:#18181B;font-variant-numeric:tabular-nums">{{ x.value }}</span><span style="font-size:13px;color:#71717A">{{ x.label }}</span></div></sc-for>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:16px">
+<div style="background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);display:flex;flex-direction:column;min-width:0">
+<div style="padding:16px 20px;border-bottom:1px solid #E7E7EA;display:flex;align-items:center;justify-content:space-between;gap:12px"><h2 style="margin:0;font-size:16px;font-weight:600;color:#18181B">Recent collections</h2><button sc-camel-on-click="{{ go.collections }}" style="border:0;background:none;font-size:13px;font-weight:500;color:#7C5CFA;cursor:pointer">View all</button></div>
+<sc-for list="{{ recent }}" as="p" hint-placeholder-count="5">
+<div style="display:flex;align-items:center;gap:12px;padding:12px 20px;border-bottom:1px solid #F0F0F2">
+<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><button sc-camel-on-click="{{ p.openCust }}" style="border:0;background:none;padding:0;text-align:left;font-size:14px;font-weight:600;color:#18181B;cursor:pointer">{{ p.cust }}</button><span style="font-size:12.5px;color:#71717A">{{ p.item }} · {{ p.rider }}</span></div>
+<div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px"><span style="font-size:14px;font-weight:600;color:#18181B;font-variant-numeric:tabular-nums">{{ p.amountF }}</span><span style="font-size:12.5px;color:#71717A">{{ p.date }} · {{ p.time }}</span></div>
+</div>
+</sc-for>
+</div>
+<div style="background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);display:flex;flex-direction:column;min-width:0">
+<div style="padding:16px 20px;border-bottom:1px solid #E7E7EA;display:flex;align-items:center;justify-content:space-between;gap:12px"><h2 style="margin:0;font-size:16px;font-weight:600;color:#18181B">Rider performance · today</h2><button sc-camel-on-click="{{ go.riders }}" style="border:0;background:none;font-size:13px;font-weight:500;color:#7C5CFA;cursor:pointer">Riders</button></div>
+<sc-for list="{{ riderPerf }}" as="r" hint-placeholder-count="3">
+<div style="display:flex;flex-direction:column;gap:8px;padding:14px 20px;border-bottom:1px solid #F0F0F2">
+<div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap"><span style="font-size:14px;font-weight:600;color:#18181B">{{ r.name }}</span><span style="font-size:13px;color:#3F3F46;font-variant-numeric:tabular-nums">{{ r.colF }} <span style="color:#71717A">of {{ r.expF }}</span></span></div>
+<div style="position:relative;height:26px;margin:6px 0 2px;border-radius:7px;background:repeating-linear-gradient(90deg,#DEDEE3 0 2px,transparent 2px 7px)"><div style="position:absolute;left:0;top:0;bottom:0;width:{{ r.pct }};border-radius:7px;overflow:hidden;background:linear-gradient(90deg,#C4B5FD,#7C5CFA);box-shadow:inset 0 1px 0 rgba(255,255,255,.3)"><span style="position:absolute;right:8px;top:50%;transform:translateY(-50%);font-size:12px;font-weight:600;color:#fff;white-space:nowrap">{{ r.pctIn }}</span></div><div style="position:absolute;top:-5px;bottom:-3px;width:3px;border-radius:3px;background:#7C5CFA;left:min(calc({{ r.pct }} + 3px),calc(100% - 3px))"><span style="position:absolute;top:-3px;left:50%;width:8px;height:8px;margin-left:-4px;border-radius:50%;background:#7C5CFA;box-shadow:0 0 0 2px #fff"></span></div></div>
+<button sc-camel-on-click="{{ go.riders }}" style="display:flex;align-items:center;gap:8px;height:34px;padding:0 10px 0 12px;border:1px solid #EBEBED;border-radius:9px;background:#FAFAFA;font-size:12.5px;color:#52525B;text-align:left;cursor:pointer" style-hover="background:#F4F4F5"><span style="flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ r.pct }} collected · {{ r.remL }}</span><span class="ic ic-chev" style="width:15px;height:15px;color:#A1A1AA"></span></button>
+</div>
+</sc-for>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px">
+<div style="grid-column:span 2;min-width:0;background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);display:flex;flex-direction:column">
+<div style="padding:16px 20px;border-bottom:1px solid #E7E7EA"><h2 style="margin:0;font-size:16px;font-weight:600;color:#18181B">Overdue customers</h2></div>
+<div style="overflow-x:auto">
+<sc-raw-table style="width:100%;border-collapse:collapse;min-width:560px">
+<sc-raw-thead><sc-raw-tr><sc-raw-th style="text-align:left;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 20px;border-bottom:1px solid #E7E7EA;background:#FAFAFA">Customer</sc-raw-th><sc-raw-th style="text-align:left;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;border-bottom:1px solid #E7E7EA;background:#FAFAFA">Rider</sc-raw-th><sc-raw-th style="text-align:right;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;border-bottom:1px solid #E7E7EA;background:#FAFAFA">Missed</sc-raw-th><sc-raw-th style="text-align:right;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 20px;border-bottom:1px solid #E7E7EA;background:#FAFAFA">Overdue</sc-raw-th></sc-raw-tr></sc-raw-thead>
+<sc-raw-tbody>
+<sc-for list="{{ overdueRows }}" as="c" hint-placeholder-count="3">
+<sc-raw-tr sc-camel-on-click="{{ c.open }}" style="cursor:pointer" style-hover="background:#FAFAFA"><sc-raw-td style="padding:12px 20px;border-bottom:1px solid #F0F0F2;font-size:14px"><div style="font-weight:600;color:#18181B">{{ c.name }}</div><div style="font-size:12.5px;color:#71717A">{{ c.city }} · {{ c.phone }}</div></sc-raw-td><sc-raw-td style="padding:12px 16px;border-bottom:1px solid #F0F0F2;font-size:14px;color:#3F3F46">{{ c.riderName }}</sc-raw-td><sc-raw-td style="padding:12px 16px;border-bottom:1px solid #F0F0F2;font-size:14px;text-align:right;color:#3F3F46">{{ c.missed }}</sc-raw-td><sc-raw-td style="padding:12px 20px;border-bottom:1px solid #F0F0F2;font-size:14px;text-align:right;font-weight:600;color:#C81E3A;font-variant-numeric:tabular-nums">{{ c.overdueF }}</sc-raw-td></sc-raw-tr>
+</sc-for>
+</sc-raw-tbody>
+</sc-raw-table>
+</div><sc-if value="{{ pgr.overdueRows.show }}"><div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 20px;border-top:1px solid #F0F0F2"><span style="font-size:13px;color:#71717A">Showing {{ pgr.overdueRows.from }}–{{ pgr.overdueRows.to }} of {{ pgr.overdueRows.total }}</span><div style="display:flex;align-items:center;gap:4px"><button sc-camel-on-click="{{ pgr.overdueRows.prev }}" aria-label="Previous page" style="width:32px;height:32px;border:1px solid #E4E4E7;border-radius:8px;background:#fff;color:#3F3F46;display:grid;place-items:center;cursor:pointer;opacity:{{ pgr.overdueRows.prevOp }}" style-hover="background:#F4F4F5"><span class="ic ic-chev" style="width:15px;height:15px;transform:rotate(180deg)"></span></button><sc-for list="{{ pgr.overdueRows.pages }}" as="n" hint-placeholder-count="0"><button sc-camel-on-click="{{ n.go }}" style="min-width:32px;height:32px;padding:0 8px;border-radius:8px;border:1px solid {{ n.bd }};background:{{ n.bg }};color:{{ n.fg }};font-size:13px;font-weight:500;cursor:pointer;font-variant-numeric:tabular-nums">{{ n.label }}</button></sc-for><button sc-camel-on-click="{{ pgr.overdueRows.next }}" aria-label="Next page" style="width:32px;height:32px;border:1px solid #E4E4E7;border-radius:8px;background:#fff;color:#3F3F46;display:grid;place-items:center;cursor:pointer;opacity:{{ pgr.overdueRows.nextOp }}" style-hover="background:#F4F4F5"><span class="ic ic-chev" style="width:15px;height:15px;"></span></button></div></div></sc-if>
+<sc-if value="{{ noOverdue }}"><div style="padding:20px;font-size:14px;color:#71717A">No overdue customers. Everyone is up to date.</div></sc-if>
+</div>
+<div style="background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);padding:20px;display:flex;flex-direction:column;gap:10px">
+<h2 style="margin:0 0 4px;font-size:16px;font-weight:600;color:#18181B">Quick actions</h2>
+<button sc-camel-on-click="{{ qa.customer }}" style="height:44px;padding:0 14px;border-radius:8px;background:#fff;border:1px solid #E4E4E7;font-size:14px;font-weight:500;color:#18181B;text-align:left;cursor:pointer" style-hover="background:#F4F4F5">Register customer</button>
+<button sc-camel-on-click="{{ qa.item }}" style="height:44px;padding:0 14px;border-radius:8px;background:#fff;border:1px solid #E4E4E7;font-size:14px;font-weight:500;color:#18181B;text-align:left;cursor:pointer" style-hover="background:#F4F4F5">Add item / installment</button>
+<button sc-camel-on-click="{{ qa.rider }}" style="height:44px;padding:0 14px;border-radius:8px;background:#fff;border:1px solid #E4E4E7;font-size:14px;font-weight:500;color:#18181B;text-align:left;cursor:pointer" style-hover="background:#F4F4F5">Add rider</button>
+<button sc-camel-on-click="{{ qa.report }}" style="height:44px;padding:0 14px;border-radius:8px;background:#fff;border:1px solid #E4E4E7;font-size:14px;font-weight:500;color:#18181B;text-align:left;cursor:pointer" style-hover="background:#F4F4F5">Today's collection report</button>
+</div>
+</div>
+</sc-if>
+<sc-if value="{{ pg.customers }}">
+<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;justify-content:space-between">
+<div><h1 style="margin:0;font-size:24px;font-weight:700;color:#18181B;letter-spacing:-.025em">Customers</h1><div style="font-size:14px;color:#71717A;margin-top:4px">{{ custCount }} customers</div></div>
+<button sc-camel-on-click="{{ qa.customer }}" style="height:40px;padding:0 16px;border-radius:8px;background:#7C5CFA;color:#fff;border:0;font-size:14px;font-weight:600;cursor:pointer" style-hover="background:#6A48F0">Add customer</button>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;padding:16px;background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04)">
+<div style="display:flex;gap:12px;flex-wrap:wrap">
+<div style="flex:1 1 280px;min-width:0"><div style="position:relative;width:100%;min-width:0"><input class="pill-search" type="search" inputmode="search" enterkeyhint="search" autocomplete="off" spellcheck="false" aria-label="Search customers" value="{{ cq }}" sc-camel-on-change="{{ onCq }}" placeholder="Search by name, NIC or phone number" style="height:44px;padding:0 44px 0 42px;font-size:15px"><span class="ic ic-search search-ic" style="left:14px;width:18px;height:18px"></span><sc-if value="{{ cqHas }}"><button class="search-x" sc-camel-on-click="{{ clearCq }}" aria-label="Clear search" style="right:10px;width:26px;height:26px"><span class="ic ic-x" style="width:12px;height:12px"></span></button></sc-if></div></div>
+<sc-raw-select value="{{ crd }}" sc-camel-on-change="{{ onCrd }}" style="flex:0 1 220px;height:44px;border:1px solid #E4E4E7;border-radius:8px;padding:0 10px;font-size:14px;color:#18181B;background:#fff"><option value="all">All riders</option><sc-for list="{{ riderOpts }}" as="o" hint-placeholder-count="0"><option value="{{ o.v }}">{{ o.label }}</option></sc-for></sc-raw-select>
+</div>
+<div style="display:inline-flex;flex-wrap:wrap;gap:2px;padding:4px;background:#F4F4F5;border-radius:12px;align-self:flex-start;max-width:100%"><sc-for list="{{ cstChips }}" as="x" hint-placeholder-count="6"><button sc-camel-on-click="{{ x.go }}" style="display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px;border:0;border-radius:9px;background:{{ x.bg }};color:{{ x.fg }};box-shadow:{{ x.sh }};font-size:13px;font-weight:500;white-space:nowrap;cursor:pointer" style-hover="color:#18181B">{{ x.label }}<sc-if value="{{ x.hasN }}"><span style="color:#A1A1AA">·</span><span style="font-weight:600;color:{{ x.nc }};font-variant-numeric:tabular-nums">{{ x.n }}</span></sc-if></button></sc-for></div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,290px),1fr));gap:16px">
+<sc-for list="{{ custList }}" as="c" hint-placeholder-count="6">
+<button sc-camel-on-click="{{ c.open }}" style="text-align:left;background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);padding:16px;display:flex;flex-direction:column;gap:14px;cursor:pointer" style-hover="border-color:#A1A1AA">
+<div style="display:flex;gap:12px;align-items:center;width:100%">
+<div style="width:44px;height:44px;border-radius:50%;flex:none;overflow:hidden;display:grid;place-items:center;background-color:{{ c.av }};color:#fff;font-weight:600;font-size:15px;background-image:{{ c.photoBg }};background-size:cover;background-position:center"><sc-if value="{{ c.noPhoto }}">{{ c.initials }}</sc-if></div>
+<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><span style="font-size:15px;font-weight:600;color:#18181B">{{ c.name }}</span><span style="font-size:13px;color:#71717A">{{ c.city }} · {{ c.phone }}</span></div>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%"><span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 9px 0 8px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(24,24,27,.05);font-size:12px;font-weight:500;white-space:nowrap;background:{{ c.chip.bg }};color:{{ c.chip.fg }}"><span style="width:8px;height:8px;border-radius:50%;flex:none;box-sizing:border-box;background:{{ c.chip.pd }};border:{{ c.chip.pb }}"></span>{{ c.chip.label }}</span><span style="font-size:12.5px;color:#71717A">{{ c.riderName }}</span></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;padding-top:12px;border-top:1px dashed #E7E7EA">
+<div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:12.5px;color:#71717A">Due now</span><span style="font-size:16px;font-weight:600;color:#18181B;font-variant-numeric:tabular-nums">{{ c.dueNowF }}</span></div>
+<div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:12.5px;color:#71717A">Balance</span><span style="font-size:16px;font-weight:600;color:#18181B;font-variant-numeric:tabular-nums">{{ c.balanceF }}</span></div>
+</div>
+</button>
+</sc-for>
+</div>
+<sc-if value="{{ custEmpty }}"><div style="padding:32px;text-align:center;background:#fff;border:1px dashed #E4E4E7;border-radius:12px;font-size:14px;color:#71717A">No customers match these filters.</div></sc-if>
+</sc-if>
+<sc-if value="{{ pg.profile }}">
+<sc-if value="{{ hasProf }}">
+<button sc-camel-on-click="{{ backCustomers }}" style="align-self:flex-start;border:0;background:none;padding:0;font-size:14px;font-weight:500;color:#7C5CFA;cursor:pointer">← All customers</button>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:16px">
+<div style="grid-column:span 2;min-width:0;background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);padding:20px;display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap">
+<div style="width:72px;height:72px;border-radius:50%;flex:none;overflow:hidden;display:grid;place-items:center;background-color:{{ prof.av }};color:#fff;font-weight:600;font-size:24px;background-image:{{ prof.photoBg }};background-size:cover;background-position:center"><sc-if value="{{ prof.noPhoto }}">{{ prof.initials }}</sc-if></div>
+<div style="flex:1;min-width:200px;display:flex;flex-direction:column;gap:6px"><h1 style="margin:0;font-size:22px;font-weight:600;color:#18181B">{{ prof.name }}</h1><div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 9px 0 8px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(24,24,27,.05);font-size:12px;font-weight:500;white-space:nowrap;background:{{ prof.chip.bg }};color:{{ prof.chip.fg }}"><span style="width:8px;height:8px;border-radius:50%;flex:none;box-sizing:border-box;background:{{ prof.chip.pd }};border:{{ prof.chip.pb }}"></span>{{ prof.chip.label }}</span><span style="font-size:13px;color:#71717A">Customer {{ prof.id }} · since {{ prof.sinceF }}</span></div></div>
+<button sc-camel-on-click="{{ profAddItem }}" style="height:40px;padding:0 16px;border-radius:8px;background:#7C5CFA;color:#fff;border:0;font-size:14px;font-weight:600;cursor:pointer" style-hover="background:#6A48F0">Add item</button>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px 24px">
+<div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:12.5px;color:#71717A">NIC</span><span style="font-size:14px;font-weight:500;color:#18181B">{{ prof.nic }}</span></div>
+<div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:12.5px;color:#71717A">Phone</span><a href="{{ prof.tel }}" style="font-size:14px;font-weight:500">{{ prof.phone }}</a></div>
+<div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:12.5px;color:#71717A">Address</span><span style="font-size:14px;font-weight:500;color:#18181B">{{ prof.address }}</span></div>
+<div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:12.5px;color:#71717A">City / area</span><span style="font-size:14px;font-weight:500;color:#18181B">{{ prof.city }}</span></div>
+<label style="display:flex;flex-direction:column;gap:4px;font-size:12.5px;color:#71717A">Assigned rider<sc-raw-select value="{{ prof.riderId }}" sc-camel-on-change="{{ onAssign }}" style="height:36px;border:1px solid #E4E4E7;border-radius:8px;padding:0 8px;font-size:14px;color:#18181B;background:#fff"><sc-for list="{{ riderOpts }}" as="o" hint-placeholder-count="0"><option value="{{ o.v }}">{{ o.label }}</option></sc-for></sc-raw-select></label>
+<div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:12.5px;color:#71717A">Notes</span><span style="font-size:14px;color:#3F3F46">{{ prof.notes }}</span></div>
+</div>
+</div>
+<div style="background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);overflow:hidden;display:flex;flex-direction:column;min-height:260px">
+<div class="map-img" style="position:relative;flex:1;min-height:220px;overflow:hidden;background-position:center 82%">
+<div style="position:absolute;left:{{ profMap.pin.x }}%;top:{{ profMap.pin.y }}%;transform:translate(-50%,-100%);display:flex;flex-direction:column;align-items:center"><span style="padding:4px 10px;border-radius:999px;background:#18181B;color:#fff;font-size:12px;font-weight:600;white-space:nowrap">{{ prof.name }}</span><span style="width:2px;height:10px;background:#18181B"></span><span style="width:10px;height:10px;border-radius:50%;background:#18181B;border:2px solid #fff;margin-top:-2px"></span></div>
+</div>
+<div style="padding:12px 16px;display:flex;justify-content:space-between;align-items:center;gap:8px;border-top:1px solid #E7E7EA"><span style="font-size:13px;color:#71717A">Map location</span><a href="{{ prof.mapUrl }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500"><span class="gpin" style="width:16px;height:16px"></span>Open in Google Maps</a></div>
+</div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:16px">
+<sc-for list="{{ profStats }}" as="k" hint-placeholder-count="4"><div style="background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);padding:16px 20px;display:flex;flex-direction:column;gap:4px"><span style="font-size:13px;font-weight:500;color:#71717A">{{ k.label }}</span><span style="font-size:22px;font-weight:600;color:#18181B;font-variant-numeric:tabular-nums">{{ k.value }}</span></div></sc-for>
+</div>
+<h2 style="margin:8px 0 0;font-size:17px;font-weight:600;color:#18181B">Active items</h2>
+<sc-if value="{{ profNoItems }}"><div style="padding:24px;background:#fff;border:1px dashed #E4E4E7;border-radius:12px;font-size:14px;color:#71717A">No active installment items. Use “Add item” to start a plan.</div></sc-if>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr));gap:16px;align-items:start">
+<sc-for list="{{ profItems }}" as="it" hint-placeholder-count="2">
+<div style="background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);padding:20px;display:flex;flex-direction:column;gap:16px;min-width:0">
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start"><div style="display:flex;flex-direction:column;gap:2px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#71717A">{{ it.code }}</span><span style="font-size:16px;font-weight:600;color:#18181B">{{ it.name }}</span></div><span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 9px 0 8px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(24,24,27,.05);font-size:12px;font-weight:500;white-space:nowrap;background:{{ it.chip.bg }};color:{{ it.chip.fg }}"><span style="width:8px;height:8px;border-radius:50%;flex:none;box-sizing:border-box;background:{{ it.chip.pd }};border:{{ it.chip.pb }}"></span>{{ it.chip.label }}</span></div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px">
+<div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:12.5px;color:#71717A">Total price</span><span style="font-size:15px;font-weight:600;color:#18181B">{{ it.priceF }}</span></div>
+<div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:12.5px;color:#71717A">Paid</span><span style="font-size:15px;font-weight:600;color:#15803D">{{ it.paidF }}</span></div>
+<div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:12.5px;color:#71717A">Balance</span><span style="font-size:15px;font-weight:600;color:#18181B">{{ it.balanceF }}</span></div>
+</div>
+<div style="position:relative;height:26px;margin:6px 0 2px;border-radius:7px;background:repeating-linear-gradient(90deg,#DEDEE3 0 2px,transparent 2px 7px)"><div style="position:absolute;left:0;top:0;bottom:0;width:{{ it.pct }};border-radius:7px;overflow:hidden;background:linear-gradient(90deg,#86EFAC,#22C55E);box-shadow:inset 0 1px 0 rgba(255,255,255,.3)"><span style="position:absolute;right:8px;top:50%;transform:translateY(-50%);font-size:12px;font-weight:600;color:#fff;white-space:nowrap">{{ it.pctIn }}</span></div><div style="position:absolute;top:-5px;bottom:-3px;width:3px;border-radius:3px;background:#16A34A;left:min(calc({{ it.pct }} + 3px),calc(100% - 3px))"><span style="position:absolute;top:-3px;left:50%;width:8px;height:8px;margin-left:-4px;border-radius:50%;background:#16A34A;box-shadow:0 0 0 2px #fff"></span></div></div>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 12px;font-size:13px"><span style="color:#71717A">Plan</span><span style="color:#18181B;text-align:right">{{ it.plan }}</span><span style="color:#71717A">Next due</span><span style="color:#18181B;text-align:right">{{ it.nextF }}</span><span style="color:#71717A">Due now</span><span style="color:#18181B;text-align:right;font-weight:600">{{ it.dueNowF }}</span><span style="color:#71717A">Rider</span><span style="color:#18181B;text-align:right">{{ it.riderName }}</span></div>
+<button sc-camel-on-click="{{ it.toggle }}" style="align-self:flex-start;border:0;background:none;padding:0;font-size:13px;font-weight:500;color:#7C5CFA;cursor:pointer">{{ it.toggleL }}</button>
+<sc-if value="{{ it.open }}">
+<div style="max-height:320px;overflow:auto;border:1px solid #F0F0F2;border-radius:8px">
+<sc-raw-table style="width:100%;border-collapse:collapse"><sc-raw-thead><sc-raw-tr><sc-raw-th style="text-align:left;font-size:12.5px;font-weight:600;color:#71717A;padding:8px 12px;background:#FAFAFA;position:sticky;top:0">#</sc-raw-th><sc-raw-th style="text-align:left;font-size:12.5px;font-weight:600;color:#71717A;padding:8px 12px;background:#FAFAFA;position:sticky;top:0">Due date</sc-raw-th><sc-raw-th style="text-align:right;font-size:12.5px;font-weight:600;color:#71717A;padding:8px 12px;background:#FAFAFA;position:sticky;top:0">Amount</sc-raw-th><sc-raw-th style="text-align:right;font-size:12.5px;font-weight:600;color:#71717A;padding:8px 12px;background:#FAFAFA;position:sticky;top:0">Status</sc-raw-th></sc-raw-tr></sc-raw-thead>
+<sc-raw-tbody><sc-for list="{{ it.rows }}" as="r" hint-placeholder-count="0"><sc-raw-tr><sc-raw-td style="padding:8px 12px;border-top:1px solid #F0F0F2;font-size:13px;color:#71717A">{{ r.no }}</sc-raw-td><sc-raw-td style="padding:8px 12px;border-top:1px solid #F0F0F2;font-size:13px;color:#18181B;white-space:nowrap">{{ r.date }}</sc-raw-td><sc-raw-td style="padding:8px 12px;border-top:1px solid #F0F0F2;font-size:13px;color:#18181B;text-align:right;white-space:nowrap">{{ r.amountF }}</sc-raw-td><sc-raw-td style="padding:8px 12px;border-top:1px solid #F0F0F2;text-align:right"><span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 9px 0 8px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(24,24,27,.05);font-size:12px;font-weight:500;white-space:nowrap;background:{{ r.chip.bg }};color:{{ r.chip.fg }}"><span style="width:8px;height:8px;border-radius:50%;flex:none;box-sizing:border-box;background:{{ r.chip.pd }};border:{{ r.chip.pb }}"></span>{{ r.chip.label }}</span></sc-raw-td></sc-raw-tr></sc-for></sc-raw-tbody></sc-raw-table>
+</div>
+</sc-if>
+</div>
+</sc-for>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr));gap:16px">
+<div style="background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);min-width:0">
+<div style="padding:16px 20px;border-bottom:1px solid #E7E7EA"><h2 style="margin:0;font-size:16px;font-weight:600;color:#18181B">Payment history</h2></div>
+<div style="max-height:420px;overflow:auto">
+<sc-for list="{{ profPays }}" as="p" hint-placeholder-count="4"><div style="display:flex;gap:12px;align-items:center;padding:12px 20px;border-bottom:1px solid #F0F0F2"><div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;font-weight:500;color:#18181B">{{ p.item }}</span><span style="font-size:12.5px;color:#71717A"><span style="font-family:'IBM Plex Mono',monospace">{{ p.txn }}</span> · {{ p.date }} {{ p.time }} · {{ p.rider }}</span></div><span style="font-size:14px;font-weight:600;color:#18181B;white-space:nowrap">{{ p.amountF }}</span></div></sc-for>
+<sc-if value="{{ profNoPays }}"><div style="padding:20px;font-size:14px;color:#71717A">No payments recorded yet.</div></sc-if>
+</div>
+</div>
+<div style="background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);min-width:0">
+<div style="padding:16px 20px;border-bottom:1px solid #E7E7EA"><h2 style="margin:0;font-size:16px;font-weight:600;color:#18181B">Purchase history</h2></div>
+<sc-for list="{{ profHist }}" as="it" hint-placeholder-count="2"><div style="display:flex;gap:12px;align-items:center;padding:12px 20px;border-bottom:1px solid #F0F0F2;flex-wrap:wrap"><div style="flex:1;min-width:160px;display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;font-weight:500;color:#18181B">{{ it.code }} · {{ it.name }}</span><span style="font-size:12.5px;color:#71717A">{{ it.startF }} → {{ it.endF }} · {{ it.priceF }}</span></div><span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 9px 0 8px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(24,24,27,.05);font-size:12px;font-weight:500;white-space:nowrap;background:{{ it.chip.bg }};color:{{ it.chip.fg }}"><span style="width:8px;height:8px;border-radius:50%;flex:none;box-sizing:border-box;background:{{ it.chip.pd }};border:{{ it.chip.pb }}"></span>{{ it.chip.label }}</span></div></sc-for>
+</div>
+</div>
+</sc-if>
+</sc-if>
+<sc-if value="{{ pg.installments }}">
+<div><h1 style="margin:0;font-size:24px;font-weight:700;color:#18181B;letter-spacing:-.025em">Installments</h1><div style="font-size:14px;color:#71717A;margin-top:4px">Every installment item with its schedule status</div></div>
+<div style="display:inline-flex;flex-wrap:wrap;gap:2px;padding:4px;background:#F4F4F5;border-radius:12px;align-self:flex-start;max-width:100%"><sc-for list="{{ istChips }}" as="x" hint-placeholder-count="6"><button sc-camel-on-click="{{ x.go }}" style="display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px;border:0;border-radius:9px;background:{{ x.bg }};color:{{ x.fg }};box-shadow:{{ x.sh }};font-size:13px;font-weight:500;white-space:nowrap;cursor:pointer" style-hover="color:#18181B">{{ x.label }}<sc-if value="{{ x.hasN }}"><span style="color:#A1A1AA">·</span><span style="font-weight:600;color:{{ x.nc }};font-variant-numeric:tabular-nums">{{ x.n }}</span></sc-if></button></sc-for></div>
+<div style="background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);overflow-x:auto">
+<sc-raw-table style="width:100%;border-collapse:collapse;min-width:900px">
+<sc-raw-thead><sc-raw-tr><sc-raw-th style="text-align:left;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;border-bottom:1px solid #E7E7EA;background:#FAFAFA">Customer</sc-raw-th><sc-raw-th style="text-align:left;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;border-bottom:1px solid #E7E7EA;background:#FAFAFA">Item</sc-raw-th><sc-raw-th style="text-align:left;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;border-bottom:1px solid #E7E7EA;background:#FAFAFA">Plan</sc-raw-th><sc-raw-th style="text-align:right;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;border-bottom:1px solid #E7E7EA;background:#FAFAFA">Price</sc-raw-th><sc-raw-th style="text-align:right;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;border-bottom:1px solid #E7E7EA;background:#FAFAFA">Paid</sc-raw-th><sc-raw-th style="text-align:right;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;border-bottom:1px solid #E7E7EA;background:#FAFAFA">Balance</sc-raw-th><sc-raw-th style="text-align:left;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;border-bottom:1px solid #E7E7EA;background:#FAFAFA">Next due</sc-raw-th><sc-raw-th style="text-align:left;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;border-bottom:1px solid #E7E7EA;background:#FAFAFA">Status</sc-raw-th></sc-raw-tr></sc-raw-thead>
+<sc-raw-tbody><sc-for list="{{ instList }}" as="it" hint-placeholder-count="6"><sc-raw-tr sc-camel-on-click="{{ it.openCust }}" style="cursor:pointer" style-hover="background:#FAFAFA">
+<sc-raw-td style="padding:12px 16px;border-bottom:1px solid #F0F0F2;font-size:14px;font-weight:600;color:#18181B;white-space:nowrap">{{ it.customer }}</sc-raw-td>
+<sc-raw-td style="padding:12px 16px;border-bottom:1px solid #F0F0F2;font-size:14px;color:#3F3F46;white-space:nowrap"><span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#71717A">{{ it.code }}</span> {{ it.name }}</sc-raw-td>
+<sc-raw-td style="padding:12px 16px;border-bottom:1px solid #F0F0F2;font-size:13px;color:#3F3F46;min-width:150px;line-height:1.4">{{ it.plan }}</sc-raw-td>
+<sc-raw-td style="padding:12px 16px;border-bottom:1px solid #F0F0F2;font-size:14px;color:#3F3F46;text-align:right;white-space:nowrap">{{ it.priceF }}</sc-raw-td>
+<sc-raw-td style="padding:12px 16px;border-bottom:1px solid #F0F0F2;font-size:14px;color:#3F3F46;text-align:right;white-space:nowrap">{{ it.paidF }}</sc-raw-td>
+<sc-raw-td style="padding:12px 16px;border-bottom:1px solid #F0F0F2;font-size:14px;font-weight:600;color:#18181B;text-align:right;white-space:nowrap">{{ it.balanceF }}</sc-raw-td>
+<sc-raw-td style="padding:12px 16px;border-bottom:1px solid #F0F0F2;font-size:14px;color:#3F3F46;white-space:nowrap">{{ it.nextF }}</sc-raw-td>
+<sc-raw-td style="padding:12px 16px;border-bottom:1px solid #F0F0F2"><span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 9px 0 8px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(24,24,27,.05);font-size:12px;font-weight:500;white-space:nowrap;background:{{ it.chip.bg }};color:{{ it.chip.fg }}"><span style="width:8px;height:8px;border-radius:50%;flex:none;box-sizing:border-box;background:{{ it.chip.pd }};border:{{ it.chip.pb }}"></span>{{ it.chip.label }}</span></sc-raw-td>
+</sc-raw-tr></sc-for></sc-raw-tbody></sc-raw-table><sc-if value="{{ pgr.instList.show }}"><div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 20px;border-top:1px solid #F0F0F2"><span style="font-size:13px;color:#71717A">Showing {{ pgr.instList.from }}–{{ pgr.instList.to }} of {{ pgr.instList.total }}</span><div style="display:flex;align-items:center;gap:4px"><button sc-camel-on-click="{{ pgr.instList.prev }}" aria-label="Previous page" style="width:32px;height:32px;border:1px solid #E4E4E7;border-radius:8px;background:#fff;color:#3F3F46;display:grid;place-items:center;cursor:pointer;opacity:{{ pgr.instList.prevOp }}" style-hover="background:#F4F4F5"><span class="ic ic-chev" style="width:15px;height:15px;transform:rotate(180deg)"></span></button><sc-for list="{{ pgr.instList.pages }}" as="n" hint-placeholder-count="0"><button sc-camel-on-click="{{ n.go }}" style="min-width:32px;height:32px;padding:0 8px;border-radius:8px;border:1px solid {{ n.bd }};background:{{ n.bg }};color:{{ n.fg }};font-size:13px;font-weight:500;cursor:pointer;font-variant-numeric:tabular-nums">{{ n.label }}</button></sc-for><button sc-camel-on-click="{{ pgr.instList.next }}" aria-label="Next page" style="width:32px;height:32px;border:1px solid #E4E4E7;border-radius:8px;background:#fff;color:#3F3F46;display:grid;place-items:center;cursor:pointer;opacity:{{ pgr.instList.nextOp }}" style-hover="background:#F4F4F5"><span class="ic ic-chev" style="width:15px;height:15px;"></span></button></div></div></sc-if>
+<sc-if value="{{ instEmpty }}"><div style="padding:20px;font-size:14px;color:#71717A">No items with this status.</div></sc-if>
+</div>
+</sc-if>
+<sc-if value="{{ pg.products }}">
+<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;justify-content:space-between">
+<div><h1 style="margin:0;font-size:24px;font-weight:700;color:#18181B;letter-spacing:-.025em">Products</h1><div style="font-size:14px;color:#71717A;margin-top:4px">Catalogue with default installment plans</div></div>
+<button sc-camel-on-click="{{ addProduct }}" style="height:40px;padding:0 16px;border-radius:8px;background:#7C5CFA;color:#fff;border:0;font-size:14px;font-weight:600;cursor:pointer" style-hover="background:#6A48F0">Add product</button>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:16px">
+<sc-for list="{{ products }}" as="p" hint-placeholder-count="6">
+<div style="background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);padding:18px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start"><div style="display:flex;flex-direction:column;gap:2px;min-width:0"><span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#71717A">{{ p.code }}</span><span style="font-size:16px;font-weight:600;color:#18181B">{{ p.name }}</span></div><span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 9px 0 8px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(24,24,27,.05);font-size:12px;font-weight:500;white-space:nowrap;background:{{ p.stockBg }};color:{{ p.stockFg }}"><span style="width:7px;height:7px;border-radius:50%;flex:none;background:currentColor"></span>{{ p.stockL }}</span></div>
+<div style="display:flex;flex-direction:column;gap:2px"><span style="font-size:22px;font-weight:600;color:#18181B">{{ p.priceF }}</span><span style="font-size:13px;color:#71717A">{{ p.plan }}</span></div>
+<div style="font-size:13px;color:#71717A">Cash price {{ p.cashF }} · {{ p.sold }} sold</div>
+<button sc-camel-on-click="{{ p.sell }}" style="margin-top:auto;height:38px;border-radius:8px;background:#fff;border:1px solid #E4E4E7;font-size:14px;font-weight:500;color:#18181B;cursor:pointer" style-hover="background:#F4F4F5">Sell on installment</button>
+</div>
+</sc-for>
+</div>
+</sc-if>
+<sc-if value="{{ pg.inventory }}">
+<div><h1 style="margin:0;font-size:24px;font-weight:700;color:#18181B;letter-spacing:-.025em">Inventory</h1><div style="font-size:14px;color:#71717A;margin-top:4px">Stock, pricing and expected profit</div></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:16px">
+<sc-for list="{{ invStats }}" as="k" hint-placeholder-count="4"><div style="background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);padding:16px 20px;display:flex;flex-direction:column;gap:4px"><span style="font-size:13px;font-weight:500;color:#71717A">{{ k.label }}</span><span style="font-size:22px;font-weight:600;color:#18181B;font-variant-numeric:tabular-nums">{{ k.value }}</span></div></sc-for>
+</div>
+<div style="background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);overflow-x:auto">
+<sc-raw-table style="width:100%;border-collapse:collapse;min-width:1040px">
+<sc-raw-thead><sc-raw-tr><sc-raw-th style="text-align:left;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;border-bottom:1px solid #E7E7EA;background:#FAFAFA">Product</sc-raw-th><sc-raw-th style="text-align:right;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;border-bottom:1px solid #E7E7EA;background:#FAFAFA">In stock</sc-raw-th><sc-raw-th style="text-align:right;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;border-bottom:1px solid #E7E7EA;background:#FAFAFA">Sold</sc-raw-th><sc-raw-th style="text-align:right;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;border-bottom:1px solid #E7E7EA;background:#FAFAFA">Purchase</sc-raw-th><sc-raw-th style="text-align:right;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;border-bottom:1px solid #E7E7EA;background:#FAFAFA">Cash price</sc-raw-th><sc-raw-th style="text-align:right;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;border-bottom:1px solid #E7E7EA;background:#FAFAFA">Installment price</sc-raw-th><sc-raw-th style="text-align:right;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;border-bottom:1px solid #E7E7EA;background:#FAFAFA">Profit / unit</sc-raw-th><sc-raw-th style="text-align:right;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;border-bottom:1px solid #E7E7EA;background:#FAFAFA">Outstanding</sc-raw-th><sc-raw-th style="padding:10px 16px;border-bottom:1px solid #E7E7EA;background:#FAFAFA"></sc-raw-th></sc-raw-tr></sc-raw-thead>
+<sc-raw-tbody><sc-for list="{{ invRows }}" as="p" hint-placeholder-count="6"><sc-raw-tr>
+<sc-raw-td style="padding:12px 16px;border-bottom:1px solid #F0F0F2;font-size:14px;color:#18181B;white-space:nowrap"><span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#71717A">{{ p.code }}</span> <span style="font-weight:600">{{ p.name }}</span></sc-raw-td>
+<sc-raw-td style="padding:12px 16px;border-bottom:1px solid #F0F0F2;text-align:right"><span style="padding:3px 8px;border-radius:999px;font-size:12px;font-weight:600;background:{{ p.stockBg }};color:{{ p.stockFg }}">{{ p.stock }}</span></sc-raw-td>
+<sc-raw-td style="padding:12px 16px;border-bottom:1px solid #F0F0F2;font-size:14px;text-align:right">{{ p.sold }}</sc-raw-td>
+<sc-raw-td style="padding:12px 16px;border-bottom:1px solid #F0F0F2;font-size:14px;text-align:right;white-space:nowrap">{{ p.purchaseF }}</sc-raw-td>
+<sc-raw-td style="padding:12px 16px;border-bottom:1px solid #F0F0F2;font-size:14px;text-align:right;white-space:nowrap">{{ p.cashF }}</sc-raw-td>
+<sc-raw-td style="padding:12px 16px;border-bottom:1px solid #F0F0F2;font-size:14px;text-align:right;white-space:nowrap">{{ p.priceF }}</sc-raw-td>
+<sc-raw-td style="padding:12px 16px;border-bottom:1px solid #F0F0F2;font-size:14px;text-align:right;white-space:nowrap;color:#15803D;font-weight:600">{{ p.profitF }}</sc-raw-td>
+<sc-raw-td style="padding:12px 16px;border-bottom:1px solid #F0F0F2;font-size:14px;text-align:right;white-space:nowrap">{{ p.outF }}</sc-raw-td>
+<sc-raw-td style="padding:8px 16px;border-bottom:1px solid #F0F0F2;text-align:right"><button sc-camel-on-click="{{ p.addStock }}" style="height:32px;padding:0 12px;border-radius:8px;background:#fff;border:1px solid #E4E4E7;font-size:13px;font-weight:500;color:#18181B;cursor:pointer;white-space:nowrap" style-hover="background:#F4F4F5">Add stock</button></sc-raw-td>
+</sc-raw-tr></sc-for></sc-raw-tbody></sc-raw-table>
+</div><sc-if value="{{ pgr.invRows.show }}"><div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 20px;border-top:1px solid #F0F0F2"><span style="font-size:13px;color:#71717A">Showing {{ pgr.invRows.from }}–{{ pgr.invRows.to }} of {{ pgr.invRows.total }}</span><div style="display:flex;align-items:center;gap:4px"><button sc-camel-on-click="{{ pgr.invRows.prev }}" aria-label="Previous page" style="width:32px;height:32px;border:1px solid #E4E4E7;border-radius:8px;background:#fff;color:#3F3F46;display:grid;place-items:center;cursor:pointer;opacity:{{ pgr.invRows.prevOp }}" style-hover="background:#F4F4F5"><span class="ic ic-chev" style="width:15px;height:15px;transform:rotate(180deg)"></span></button><sc-for list="{{ pgr.invRows.pages }}" as="n" hint-placeholder-count="0"><button sc-camel-on-click="{{ n.go }}" style="min-width:32px;height:32px;padding:0 8px;border-radius:8px;border:1px solid {{ n.bd }};background:{{ n.bg }};color:{{ n.fg }};font-size:13px;font-weight:500;cursor:pointer;font-variant-numeric:tabular-nums">{{ n.label }}</button></sc-for><button sc-camel-on-click="{{ pgr.invRows.next }}" aria-label="Next page" style="width:32px;height:32px;border:1px solid #E4E4E7;border-radius:8px;background:#fff;color:#3F3F46;display:grid;place-items:center;cursor:pointer;opacity:{{ pgr.invRows.nextOp }}" style-hover="background:#F4F4F5"><span class="ic ic-chev" style="width:15px;height:15px;"></span></button></div></div></sc-if>
+</sc-if>
+<sc-if value="{{ pg.riders }}">
+<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;justify-content:space-between">
+<div><h1 style="margin:0;font-size:24px;font-weight:700;color:#18181B;letter-spacing:-.025em">Riders</h1><div style="font-size:14px;color:#71717A;margin-top:4px">Collectors, areas and today's performance</div></div>
+<button sc-camel-on-click="{{ addRider }}" style="height:40px;padding:0 16px;border-radius:8px;background:#7C5CFA;color:#fff;border:0;font-size:14px;font-weight:600;cursor:pointer" style-hover="background:#6A48F0">Add rider</button>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:16px">
+<sc-for list="{{ riderCards }}" as="r" hint-placeholder-count="3">
+<div style="background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);padding:20px;display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;gap:12px;align-items:center"><span style="width:44px;height:44px;border-radius:50%;flex:none;display:grid;place-items:center;background-color:{{ r.av }};background-image:{{ r.photoBg }};background-size:cover;background-position:center;color:#fff;font-weight:600"><sc-if value="{{ r.noPhoto }}">{{ r.initials }}</sc-if></span><div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><span style="font-size:16px;font-weight:600;color:#18181B">{{ r.name }}</span><span style="font-size:13px;color:#71717A">{{ r.phone }} · @{{ r.username }}</span></div><span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 9px 0 8px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(24,24,27,.05);font-size:12px;font-weight:500;white-space:nowrap;background:{{ r.stBg }};color:{{ r.stFg }}"><span style="width:7px;height:7px;border-radius:50%;flex:none;background:currentColor"></span>{{ r.stLabel }}</span></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px 12px;font-size:13px"><span style="color:#71717A">Area</span><span style="color:#18181B;text-align:right">{{ r.area }}</span><span style="color:#71717A">Customers</span><span style="color:#18181B;text-align:right">{{ r.custCount }}</span><span style="color:#71717A">This month</span><span style="color:#18181B;text-align:right">{{ r.monthF }}</span></div>
+<div style="display:flex;flex-direction:column;gap:6px;padding-top:12px;border-top:1px dashed #E7E7EA"><div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:#71717A">Today</span><span style="color:#18181B;font-weight:600">{{ r.colF }} <span style="font-weight:400;color:#71717A">of {{ r.expF }}</span></span></div><div style="position:relative;height:26px;margin:6px 0 2px;border-radius:7px;background:repeating-linear-gradient(90deg,#DEDEE3 0 2px,transparent 2px 7px)"><div style="position:absolute;left:0;top:0;bottom:0;width:{{ r.pct }};border-radius:7px;overflow:hidden;background:linear-gradient(90deg,#C4B5FD,#7C5CFA);box-shadow:inset 0 1px 0 rgba(255,255,255,.3)"><span style="position:absolute;right:8px;top:50%;transform:translateY(-50%);font-size:12px;font-weight:600;color:#fff;white-space:nowrap">{{ r.pctIn }}</span></div><div style="position:absolute;top:-5px;bottom:-3px;width:3px;border-radius:3px;background:#7C5CFA;left:min(calc({{ r.pct }} + 3px),calc(100% - 3px))"><span style="position:absolute;top:-3px;left:50%;width:8px;height:8px;margin-left:-4px;border-radius:50%;background:#7C5CFA;box-shadow:0 0 0 2px #fff"></span></div></div><span style="font-size:12.5px;color:#71717A">{{ r.closing }}</span></div>
+<button sc-camel-on-click="{{ r.edit }}" style="height:38px;border-radius:8px;background:#fff;border:1px solid #E4E4E7;font-size:14px;font-weight:500;color:#18181B;cursor:pointer" style-hover="background:#F4F4F5">Edit rider</button>
+</div>
+</sc-for>
+</div>
+</sc-if>
+<sc-if value="{{ pg.collections }}">
+<div><h1 style="margin:0;font-size:24px;font-weight:700;color:#18181B;letter-spacing:-.025em">Collections</h1><div style="font-size:14px;color:#71717A;margin-top:4px">Payment transactions and expected vs collected</div></div>
+<div style="display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end;padding:16px;background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04)">
+<label style="display:flex;flex-direction:column;gap:6px;font-size:12.5px;font-weight:500;color:#71717A">Date<input type="date" value="{{ colDate }}" sc-camel-on-change="{{ onColDate }}" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 10px;font-size:14px;color:#18181B"></label>
+<div style="display:flex;gap:6px"><button sc-camel-on-click="{{ colToday }}" style="height:40px;padding:0 12px;border-radius:8px;background:#fff;border:1px solid #E4E4E7;font-size:13px;font-weight:500;color:#18181B;cursor:pointer">Today</button><button sc-camel-on-click="{{ colAll }}" style="height:40px;padding:0 12px;border-radius:8px;background:#fff;border:1px solid #E4E4E7;font-size:13px;font-weight:500;color:#18181B;cursor:pointer">All dates</button></div>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:12.5px;font-weight:500;color:#71717A">Rider<sc-raw-select value="{{ colRider }}" sc-camel-on-change="{{ onColRider }}" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 8px;font-size:14px;color:#18181B;background:#fff"><option value="all">All riders</option><sc-for list="{{ riderOpts }}" as="o" hint-placeholder-count="0"><option value="{{ o.v }}">{{ o.label }}</option></sc-for></sc-raw-select></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:12.5px;font-weight:500;color:#71717A">Status<sc-raw-select value="{{ colSt }}" sc-camel-on-change="{{ onColSt }}" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 8px;font-size:14px;color:#18181B;background:#fff"><option value="all">All</option><option value="completed">Completed</option><option value="corrected">Corrected</option></sc-raw-select></label>
+<label style="flex:1 1 200px;display:flex;flex-direction:column;gap:6px;font-size:12.5px;font-weight:500;color:#71717A">Customer or transaction<div style="position:relative;width:100%;min-width:0"><input class="pill-search" type="search" inputmode="search" enterkeyhint="search" autocomplete="off" spellcheck="false" aria-label="Search collections" value="{{ colQ }}" sc-camel-on-change="{{ onColQ }}" placeholder="Customer name or TXN ID" style="height:40px;padding:0 44px 0 38px;font-size:14px"><span class="ic ic-search search-ic" style="left:14px;width:18px;height:18px"></span><sc-if value="{{ colQHas }}"><button class="search-x" sc-camel-on-click="{{ clearColQ }}" aria-label="Clear search" style="right:10px;width:26px;height:26px"><span class="ic ic-x" style="width:12px;height:12px"></span></button></sc-if></div></label>
+</div>
+<sc-if value="{{ hasColDate }}">
+<div style="background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);overflow-x:auto">
+<div style="padding:16px 20px;border-bottom:1px solid #E7E7EA;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap"><h2 style="margin:0;font-size:16px;font-weight:600;color:#18181B">Expected vs collected · {{ colDateF }}</h2><span style="font-size:14px;color:#3F3F46">{{ reconTot.colF }} of {{ reconTot.expF }}</span></div>
+<sc-raw-table style="width:100%;border-collapse:collapse;min-width:560px"><sc-raw-thead><sc-raw-tr><sc-raw-th style="text-align:left;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 20px;background:#FAFAFA">Rider</sc-raw-th><sc-raw-th style="text-align:right;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;background:#FAFAFA">Expected</sc-raw-th><sc-raw-th style="text-align:right;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;background:#FAFAFA">Collected</sc-raw-th><sc-raw-th style="text-align:right;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;background:#FAFAFA">Difference</sc-raw-th><sc-raw-th style="text-align:right;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 20px;background:#FAFAFA">Rate</sc-raw-th></sc-raw-tr></sc-raw-thead>
+<sc-raw-tbody><sc-for list="{{ recon }}" as="r" hint-placeholder-count="3"><sc-raw-tr><sc-raw-td style="padding:12px 20px;border-top:1px solid #F0F0F2;font-size:14px;font-weight:600;color:#18181B">{{ r.name }}</sc-raw-td><sc-raw-td style="padding:12px 16px;border-top:1px solid #F0F0F2;font-size:14px;text-align:right">{{ r.expF }}</sc-raw-td><sc-raw-td style="padding:12px 16px;border-top:1px solid #F0F0F2;font-size:14px;text-align:right">{{ r.colF }}</sc-raw-td><sc-raw-td style="padding:12px 16px;border-top:1px solid #F0F0F2;font-size:14px;text-align:right;font-weight:600;color:{{ r.diffFg }}">{{ r.diffF }}</sc-raw-td><sc-raw-td style="padding:12px 20px;border-top:1px solid #F0F0F2;font-size:14px;text-align:right">{{ r.pct }}</sc-raw-td></sc-raw-tr></sc-for></sc-raw-tbody></sc-raw-table>
+</div>
+</sc-if>
+<div style="background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);overflow:hidden">
+<div style="padding:16px 20px;border-bottom:1px solid #E7E7EA;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap"><h2 style="margin:0;font-size:16px;font-weight:600;color:#18181B">Transactions</h2><span style="font-size:13px;color:#71717A">{{ colCount }}</span></div>
+<div style="overflow-x:auto"><sc-raw-table style="width:100%;border-collapse:collapse;min-width:960px">
+<sc-raw-thead><sc-raw-tr><sc-raw-th style="text-align:left;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 20px;background:#FAFAFA">Transaction ID</sc-raw-th><sc-raw-th style="text-align:left;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;background:#FAFAFA">Date &amp; time</sc-raw-th><sc-raw-th style="text-align:left;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;background:#FAFAFA">Customer</sc-raw-th><sc-raw-th style="text-align:left;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;background:#FAFAFA">Item</sc-raw-th><sc-raw-th style="text-align:left;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;background:#FAFAFA">Rider</sc-raw-th><sc-raw-th style="text-align:right;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;background:#FAFAFA">Amount</sc-raw-th><sc-raw-th style="text-align:left;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;background:#FAFAFA">Status</sc-raw-th><sc-raw-th style="padding:10px 20px;background:#FAFAFA"></sc-raw-th></sc-raw-tr></sc-raw-thead>
+<sc-raw-tbody><sc-for list="{{ colRows }}" as="p" hint-placeholder-count="6"><sc-raw-tr>
+<sc-raw-td style="padding:12px 20px;border-top:1px solid #F0F0F2;font-family:'IBM Plex Mono',monospace;font-size:13px;color:#18181B;white-space:nowrap">{{ p.txn }}</sc-raw-td>
+<sc-raw-td style="padding:12px 16px;border-top:1px solid #F0F0F2;font-size:14px;white-space:nowrap">{{ p.date }} · {{ p.time }}</sc-raw-td>
+<sc-raw-td style="padding:12px 16px;border-top:1px solid #F0F0F2;font-size:14px;white-space:nowrap"><button sc-camel-on-click="{{ p.openCust }}" style="border:0;background:none;padding:0;font-size:14px;font-weight:600;color:#18181B;cursor:pointer">{{ p.cust }}</button></sc-raw-td>
+<sc-raw-td style="padding:12px 16px;border-top:1px solid #F0F0F2;font-size:14px;white-space:nowrap">{{ p.item }}</sc-raw-td>
+<sc-raw-td style="padding:12px 16px;border-top:1px solid #F0F0F2;font-size:14px;white-space:nowrap">{{ p.rider }}</sc-raw-td>
+<sc-raw-td style="padding:12px 16px;border-top:1px solid #F0F0F2;font-size:14px;font-weight:600;color:#18181B;text-align:right;white-space:nowrap">{{ p.amountF }}</sc-raw-td>
+<sc-raw-td style="padding:12px 16px;border-top:1px solid #F0F0F2"><span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 9px 0 8px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(24,24,27,.05);font-size:12px;font-weight:500;white-space:nowrap;background:{{ p.stBg }};color:{{ p.stFg }}"><span style="width:7px;height:7px;border-radius:50%;flex:none;background:currentColor"></span>{{ p.stLabel }}</span></sc-raw-td>
+<sc-raw-td style="padding:8px 20px;border-top:1px solid #F0F0F2;text-align:right"><button sc-camel-on-click="{{ p.correct }}" style="height:30px;padding:0 10px;border-radius:6px;background:#fff;border:1px solid #E4E4E7;font-size:12.5px;font-weight:500;color:#18181B;cursor:pointer" style-hover="background:#F4F4F5">Correct</button></sc-raw-td>
+</sc-raw-tr></sc-for></sc-raw-tbody></sc-raw-table></div><sc-if value="{{ pgr.colRows.show }}"><div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 20px;border-top:1px solid #F0F0F2"><span style="font-size:13px;color:#71717A">Showing {{ pgr.colRows.from }}–{{ pgr.colRows.to }} of {{ pgr.colRows.total }}</span><div style="display:flex;align-items:center;gap:4px"><button sc-camel-on-click="{{ pgr.colRows.prev }}" aria-label="Previous page" style="width:32px;height:32px;border:1px solid #E4E4E7;border-radius:8px;background:#fff;color:#3F3F46;display:grid;place-items:center;cursor:pointer;opacity:{{ pgr.colRows.prevOp }}" style-hover="background:#F4F4F5"><span class="ic ic-chev" style="width:15px;height:15px;transform:rotate(180deg)"></span></button><sc-for list="{{ pgr.colRows.pages }}" as="n" hint-placeholder-count="0"><button sc-camel-on-click="{{ n.go }}" style="min-width:32px;height:32px;padding:0 8px;border-radius:8px;border:1px solid {{ n.bd }};background:{{ n.bg }};color:{{ n.fg }};font-size:13px;font-weight:500;cursor:pointer;font-variant-numeric:tabular-nums">{{ n.label }}</button></sc-for><button sc-camel-on-click="{{ pgr.colRows.next }}" aria-label="Next page" style="width:32px;height:32px;border:1px solid #E4E4E7;border-radius:8px;background:#fff;color:#3F3F46;display:grid;place-items:center;cursor:pointer;opacity:{{ pgr.colRows.nextOp }}" style-hover="background:#F4F4F5"><span class="ic ic-chev" style="width:15px;height:15px;"></span></button></div></div></sc-if>
+<sc-if value="{{ colEmpty }}"><div style="padding:20px;font-size:14px;color:#71717A">No payments match these filters.</div></sc-if>
+</div>
+<div style="background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);overflow:hidden">
+<div style="padding:16px 20px;border-bottom:1px solid #E7E7EA"><h2 style="margin:0;font-size:16px;font-weight:600;color:#18181B">Rider daily closings</h2></div>
+<div style="overflow-x:auto"><sc-raw-table style="width:100%;border-collapse:collapse;min-width:820px">
+<sc-raw-thead><sc-raw-tr><sc-raw-th style="text-align:left;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 20px;background:#FAFAFA">Rider</sc-raw-th><sc-raw-th style="text-align:left;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;background:#FAFAFA">Submitted</sc-raw-th><sc-raw-th style="text-align:right;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;background:#FAFAFA">Expected</sc-raw-th><sc-raw-th style="text-align:right;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;background:#FAFAFA">Collected</sc-raw-th><sc-raw-th style="text-align:right;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;background:#FAFAFA">Cash submitted</sc-raw-th><sc-raw-th style="text-align:right;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;background:#FAFAFA">Difference</sc-raw-th><sc-raw-th style="text-align:left;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 20px;background:#FAFAFA">Note</sc-raw-th></sc-raw-tr></sc-raw-thead>
+<sc-raw-tbody><sc-for list="{{ closings }}" as="x" hint-placeholder-count="0"><sc-raw-tr><sc-raw-td style="padding:12px 20px;border-top:1px solid #F0F0F2;font-size:14px;font-weight:600;color:#18181B">{{ x.rider }}</sc-raw-td><sc-raw-td style="padding:12px 16px;border-top:1px solid #F0F0F2;font-size:14px;white-space:nowrap">{{ x.when }}</sc-raw-td><sc-raw-td style="padding:12px 16px;border-top:1px solid #F0F0F2;font-size:14px;text-align:right">{{ x.expF }}</sc-raw-td><sc-raw-td style="padding:12px 16px;border-top:1px solid #F0F0F2;font-size:14px;text-align:right">{{ x.colF }}</sc-raw-td><sc-raw-td style="padding:12px 16px;border-top:1px solid #F0F0F2;font-size:14px;text-align:right">{{ x.cashF }}</sc-raw-td><sc-raw-td style="padding:12px 16px;border-top:1px solid #F0F0F2;font-size:14px;text-align:right;font-weight:600;color:{{ x.diffFg }}">{{ x.diffF }}</sc-raw-td><sc-raw-td style="padding:12px 20px;border-top:1px solid #F0F0F2;font-size:13px;color:#3F3F46">{{ x.note }}</sc-raw-td></sc-raw-tr></sc-for></sc-raw-tbody></sc-raw-table></div><sc-if value="{{ pgr.closings.show }}"><div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 20px;border-top:1px solid #F0F0F2"><span style="font-size:13px;color:#71717A">Showing {{ pgr.closings.from }}–{{ pgr.closings.to }} of {{ pgr.closings.total }}</span><div style="display:flex;align-items:center;gap:4px"><button sc-camel-on-click="{{ pgr.closings.prev }}" aria-label="Previous page" style="width:32px;height:32px;border:1px solid #E4E4E7;border-radius:8px;background:#fff;color:#3F3F46;display:grid;place-items:center;cursor:pointer;opacity:{{ pgr.closings.prevOp }}" style-hover="background:#F4F4F5"><span class="ic ic-chev" style="width:15px;height:15px;transform:rotate(180deg)"></span></button><sc-for list="{{ pgr.closings.pages }}" as="n" hint-placeholder-count="0"><button sc-camel-on-click="{{ n.go }}" style="min-width:32px;height:32px;padding:0 8px;border-radius:8px;border:1px solid {{ n.bd }};background:{{ n.bg }};color:{{ n.fg }};font-size:13px;font-weight:500;cursor:pointer;font-variant-numeric:tabular-nums">{{ n.label }}</button></sc-for><button sc-camel-on-click="{{ pgr.closings.next }}" aria-label="Next page" style="width:32px;height:32px;border:1px solid #E4E4E7;border-radius:8px;background:#fff;color:#3F3F46;display:grid;place-items:center;cursor:pointer;opacity:{{ pgr.closings.nextOp }}" style-hover="background:#F4F4F5"><span class="ic ic-chev" style="width:15px;height:15px;"></span></button></div></div></sc-if>
+<sc-if value="{{ noClosings }}"><div style="padding:20px;font-size:14px;color:#71717A">No closings submitted for this date yet.</div></sc-if>
+</div>
+</sc-if>
+<sc-if value="{{ pg.reports }}">
+<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;justify-content:space-between">
+<div><h1 style="margin:0;font-size:24px;font-weight:700;color:#18181B;letter-spacing:-.025em">Reports</h1><div style="font-size:14px;color:#71717A;margin-top:4px">{{ report.title }}</div></div>
+<div style="display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap">
+<sc-if value="{{ repShowDate }}"><input type="date" value="{{ repDate }}" sc-camel-on-change="{{ onRepDate }}" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 10px;font-size:14px;color:#18181B"></sc-if>
+<sc-if value="{{ repShowMonth }}"><input type="month" value="{{ repMonth }}" sc-camel-on-change="{{ onRepMonth }}" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 10px;font-size:14px;color:#18181B"></sc-if>
+<button sc-camel-on-click="{{ exportCsv }}" style="height:40px;padding:0 16px;border-radius:8px;background:#7C5CFA;color:#fff;border:0;font-size:14px;font-weight:600;cursor:pointer" style-hover="background:#6A48F0">Export CSV</button>
+</div>
+</div>
+<div style="display:inline-flex;flex-wrap:wrap;gap:2px;padding:4px;background:#F4F4F5;border-radius:12px;align-self:flex-start;max-width:100%"><sc-for list="{{ repTabs }}" as="x" hint-placeholder-count="6"><button sc-camel-on-click="{{ x.go }}" style="display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px;border:0;border-radius:9px;background:{{ x.bg }};color:{{ x.fg }};box-shadow:{{ x.sh }};font-size:13px;font-weight:500;white-space:nowrap;cursor:pointer" style-hover="color:#18181B">{{ x.label }}<sc-if value="{{ x.hasN }}"><span style="color:#A1A1AA">·</span><span style="font-weight:600;color:{{ x.nc }};font-variant-numeric:tabular-nums">{{ x.n }}</span></sc-if></button></sc-for></div>
+<sc-if value="{{ report.hasSummary }}"><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:16px"><sc-for list="{{ report.summary }}" as="k" hint-placeholder-count="3"><div style="background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);padding:16px 20px;display:flex;flex-direction:column;gap:4px"><span style="font-size:13px;font-weight:500;color:#71717A">{{ k.label }}</span><span style="font-size:22px;font-weight:600;color:#18181B;font-variant-numeric:tabular-nums">{{ k.value }}</span></div></sc-for></div></sc-if>
+<div style="background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);overflow-x:auto">
+<sc-raw-table style="width:100%;border-collapse:collapse;min-width:760px">
+<sc-raw-thead><sc-raw-tr><sc-for list="{{ report.cols }}" as="c" hint-placeholder-count="5"><sc-raw-th style="text-align:{{ c.ta }};font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;background:#FAFAFA;white-space:nowrap">{{ c.v }}</sc-raw-th></sc-for></sc-raw-tr></sc-raw-thead>
+<sc-raw-tbody><sc-for list="{{ report.rows }}" as="r" hint-placeholder-count="5"><sc-raw-tr><sc-for list="{{ r.cells }}" as="c" hint-placeholder-count="5"><sc-raw-td style="text-align:{{ c.ta }};padding:11px 16px;border-top:1px solid #F0F0F2;font-size:14px;color:#3F3F46;white-space:nowrap;font-variant-numeric:tabular-nums">{{ c.v }}</sc-raw-td></sc-for></sc-raw-tr></sc-for></sc-raw-tbody>
+</sc-raw-table><sc-if value="{{ pgr.rep.show }}"><div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 20px;border-top:1px solid #F0F0F2"><span style="font-size:13px;color:#71717A">Showing {{ pgr.rep.from }}–{{ pgr.rep.to }} of {{ pgr.rep.total }}</span><div style="display:flex;align-items:center;gap:4px"><button sc-camel-on-click="{{ pgr.rep.prev }}" aria-label="Previous page" style="width:32px;height:32px;border:1px solid #E4E4E7;border-radius:8px;background:#fff;color:#3F3F46;display:grid;place-items:center;cursor:pointer;opacity:{{ pgr.rep.prevOp }}" style-hover="background:#F4F4F5"><span class="ic ic-chev" style="width:15px;height:15px;transform:rotate(180deg)"></span></button><sc-for list="{{ pgr.rep.pages }}" as="n" hint-placeholder-count="0"><button sc-camel-on-click="{{ n.go }}" style="min-width:32px;height:32px;padding:0 8px;border-radius:8px;border:1px solid {{ n.bd }};background:{{ n.bg }};color:{{ n.fg }};font-size:13px;font-weight:500;cursor:pointer;font-variant-numeric:tabular-nums">{{ n.label }}</button></sc-for><button sc-camel-on-click="{{ pgr.rep.next }}" aria-label="Next page" style="width:32px;height:32px;border:1px solid #E4E4E7;border-radius:8px;background:#fff;color:#3F3F46;display:grid;place-items:center;cursor:pointer;opacity:{{ pgr.rep.nextOp }}" style-hover="background:#F4F4F5"><span class="ic ic-chev" style="width:15px;height:15px;"></span></button></div></div></sc-if>
+<sc-if value="{{ report.empty }}"><div style="padding:20px;font-size:14px;color:#71717A">No records for this period.</div></sc-if>
+</div>
+</sc-if>
+<sc-if value="{{ pg.audit }}">
+<div><h1 style="margin:0;font-size:24px;font-weight:700;color:#18181B;letter-spacing:-.025em">Audit log</h1><div style="font-size:14px;color:#71717A;margin-top:4px">Riders cannot delete or edit completed payments. Every authorised correction is recorded here.</div></div>
+<div style="background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);overflow-x:auto">
+<sc-raw-table style="width:100%;border-collapse:collapse;min-width:960px">
+<sc-raw-thead><sc-raw-tr><sc-raw-th style="text-align:left;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 20px;background:#FAFAFA">When</sc-raw-th><sc-raw-th style="text-align:left;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;background:#FAFAFA">User</sc-raw-th><sc-raw-th style="text-align:left;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;background:#FAFAFA">Action</sc-raw-th><sc-raw-th style="text-align:left;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;background:#FAFAFA">Transaction</sc-raw-th><sc-raw-th style="text-align:right;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;background:#FAFAFA">Old value</sc-raw-th><sc-raw-th style="text-align:right;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 16px;background:#FAFAFA">New value</sc-raw-th><sc-raw-th style="text-align:left;font-size:12.5px;font-weight:600;color:#71717A;padding:10px 20px;background:#FAFAFA">Reason</sc-raw-th></sc-raw-tr></sc-raw-thead>
+<sc-raw-tbody><sc-for list="{{ audit }}" as="a" hint-placeholder-count="1"><sc-raw-tr><sc-raw-td style="padding:12px 20px;border-top:1px solid #F0F0F2;font-size:14px;white-space:nowrap">{{ a.when }}</sc-raw-td><sc-raw-td style="padding:12px 16px;border-top:1px solid #F0F0F2;font-size:14px;white-space:nowrap">{{ a.user }}</sc-raw-td><sc-raw-td style="padding:12px 16px;border-top:1px solid #F0F0F2;font-size:14px;color:#18181B;font-weight:500;white-space:nowrap">{{ a.action }}</sc-raw-td><sc-raw-td style="padding:12px 16px;border-top:1px solid #F0F0F2;font-size:13px;white-space:nowrap"><span style="font-family:'IBM Plex Mono',monospace">{{ a.txn }}</span><div style="font-size:12.5px;color:#71717A">{{ a.ref }}</div></sc-raw-td><sc-raw-td style="padding:12px 16px;border-top:1px solid #F0F0F2;font-size:14px;text-align:right;color:#C81E3A;text-decoration:line-through;white-space:nowrap">{{ a.old }}</sc-raw-td><sc-raw-td style="padding:12px 16px;border-top:1px solid #F0F0F2;font-size:14px;text-align:right;color:#15803D;font-weight:600;white-space:nowrap">{{ a.nw }}</sc-raw-td><sc-raw-td style="padding:12px 20px;border-top:1px solid #F0F0F2;font-size:13px;color:#3F3F46;min-width:240px;white-space:normal">{{ a.reason }}</sc-raw-td></sc-raw-tr></sc-for></sc-raw-tbody></sc-raw-table><sc-if value="{{ pgr.audit.show }}"><div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 20px;border-top:1px solid #F0F0F2"><span style="font-size:13px;color:#71717A">Showing {{ pgr.audit.from }}–{{ pgr.audit.to }} of {{ pgr.audit.total }}</span><div style="display:flex;align-items:center;gap:4px"><button sc-camel-on-click="{{ pgr.audit.prev }}" aria-label="Previous page" style="width:32px;height:32px;border:1px solid #E4E4E7;border-radius:8px;background:#fff;color:#3F3F46;display:grid;place-items:center;cursor:pointer;opacity:{{ pgr.audit.prevOp }}" style-hover="background:#F4F4F5"><span class="ic ic-chev" style="width:15px;height:15px;transform:rotate(180deg)"></span></button><sc-for list="{{ pgr.audit.pages }}" as="n" hint-placeholder-count="0"><button sc-camel-on-click="{{ n.go }}" style="min-width:32px;height:32px;padding:0 8px;border-radius:8px;border:1px solid {{ n.bd }};background:{{ n.bg }};color:{{ n.fg }};font-size:13px;font-weight:500;cursor:pointer;font-variant-numeric:tabular-nums">{{ n.label }}</button></sc-for><button sc-camel-on-click="{{ pgr.audit.next }}" aria-label="Next page" style="width:32px;height:32px;border:1px solid #E4E4E7;border-radius:8px;background:#fff;color:#3F3F46;display:grid;place-items:center;cursor:pointer;opacity:{{ pgr.audit.nextOp }}" style-hover="background:#F4F4F5"><span class="ic ic-chev" style="width:15px;height:15px;"></span></button></div></div></sc-if>
+<sc-if value="{{ noAudit }}"><div style="padding:20px;font-size:14px;color:#71717A">No corrections recorded.</div></sc-if>
+</div>
+</sc-if>
+<sc-if value="{{ pg.settings }}">
+<div style="max-width:560px;width:100%;display:flex;flex-direction:column;gap:40px;padding-top:4px">
+<div style="display:flex;flex-direction:column;gap:4px"><h1 style="margin:0;font-size:24px;font-weight:700;color:#18181B;letter-spacing:-.025em">Settings</h1><span style="font-size:14px;color:#71717A">Manage your shop profile and app data.</span></div>
+<section style="display:flex;flex-direction:column;gap:18px">
+<div style="display:flex;flex-direction:column;gap:2px"><h2 style="margin:0;font-size:15px;font-weight:600;color:#18181B">Shop details</h2><span style="font-size:13px;color:#71717A">Changes save automatically.</span></div>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Shop name<input class="set-in" value="{{ shop.name }}" sc-camel-on-change="{{ onShop.name }}"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Phone<input class="set-in" value="{{ shop.phone }}" sc-camel-on-change="{{ onShop.phone }}"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Address<input class="set-in" value="{{ shop.address }}" sc-camel-on-change="{{ onShop.address }}"><span style="font-size:12.5px;font-weight:400;color:#71717A;margin-top:-1px">Shown on receipts</span></label>
+<div style="display:flex;align-items:center;gap:8px;font-size:13px;color:#71717A"><span class="ic ic-users" style="width:15px;height:15px"></span>Owner account · <span style="color:#3F3F46;font-weight:500">{{ owner.email }}</span></div>
+</section>
+<section style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between">
+<div style="display:flex;flex-direction:column;gap:2px;min-width:0;flex:1 1 260px"><h2 style="margin:0;font-size:15px;font-weight:600;color:#18181B">Demo data</h2><span style="font-size:13px;color:#71717A">Data is stored in this browser. Reset to restore the sample dataset.</span></div>
+<button sc-camel-on-click="{{ resetDemo }}" style="height:38px;padding:0 14px;border:0;border-radius:8px;background:none;color:#C81E3A;font-size:14px;font-weight:600;cursor:pointer" style-hover="background:#FFF1F2">Reset demo data</button>
+</section>
+</div>
+</sc-if>
+</main>
+</div>
+</div>
+</sc-if>
+<sc-if value="{{ isRider }}" hint-placeholder-val="{{ false }}">
+<div style="min-height:100vh;background:#EBEBED;display:flex;justify-content:center">
+<div style="width:100%;max-width:480px;min-height:100vh;background:#fff;display:flex;flex-direction:column;box-shadow:0 0 0 1px #E4E4E7">
+<header style="background:#fff;color:#18181B;border-bottom:1px solid #E7E7EA;padding:16px;display:{{ rHdrD }};flex-direction:column;gap:4px;position:sticky;top:0;z-index:20">
+<sc-if value="{{ rIsHome }}">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px"><span style="font-size:13px;font-weight:700;color:#18181B">COLLECTO</span><span style="font-size:12.5px;color:#71717A">{{ todayLabel }}</span></div>
+<div style="font-size:22px;font-weight:600;margin-top:6px">{{ greet }}</div>
+</sc-if>
+<sc-if value="{{ rNotHome }}">
+<div style="display:flex;align-items:center;gap:8px;min-height:40px">
+<sc-if value="{{ rShowBack }}"><button sc-camel-on-click="{{ rBackGo }}" aria-label="Back" style="width:44px;height:44px;margin-left:-10px;border:0;background:none;color:#18181B;font-size:22px;cursor:pointer">←</button></sc-if>
+<span style="font-size:18px;font-weight:600">{{ rTitle }}</span>
+</div>
+</sc-if>
+</header>
+<div style="flex:1;padding:{{ rPad }};display:flex;flex-direction:column;gap:16px">
+<sc-if value="{{ rp.home }}">
+<div style="margin:-16px -16px 0;padding:20px 20px 88px;background:linear-gradient(180deg,#D6E8FF 0%,#E6F0FF 100%);border-radius:0 0 26px 26px;color:#0B2545;display:flex;flex-direction:column;gap:10px"><div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><span style="display:flex;align-items:center;gap:8px;min-width:0;font-size:14px;font-weight:600;color:#1E3A5F"><span class="ic ic-map" style="width:17px;height:17px;flex:none"></span><span style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ me.area }}</span></span><span style="width:38px;height:38px;flex:none;border-radius:50%;border:2px solid #fff;box-shadow:0 2px 6px rgba(11,37,69,.15);background-color:#1E3A5F;background-image:{{ me.photoBg }};background-size:cover;background-position:center;color:#fff;display:grid;place-items:center;font-size:13px;font-weight:600"><sc-if value="{{ me.noPhoto }}">{{ me.initials }}</sc-if></span></div><div style="font-size:28px;line-height:1.15;font-weight:700;letter-spacing:-.02em;margin-top:6px">{{ greet }}!<br><span style="color:#2F5B8C">Ready for today's rounds?</span></div><span style="align-self:flex-start;display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.75);font-size:12.5px;font-weight:600;color:#1E3A5F"><span class="ic ic-cal" style="width:13px;height:13px"></span>{{ todayLabel }}</span></div>
+<div style="margin-top:-72px;position:relative;background:#fff;border-radius:20px;box-shadow:0 12px 32px rgba(11,37,69,.12);padding:16px;display:flex;flex-direction:column;gap:12px"><h2 style="margin:0 0 2px;font-size:17px;font-weight:700;color:#0B2545">Today's collection</h2><div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px"><sc-for list="{{ rKpis }}" as="k" hint-placeholder-count="3"><div style="background:#F3F7FD;border-radius:12px;padding:12px 10px;display:flex;flex-direction:column;gap:4px;min-width:0"><span style="font-size:12.5px;font-weight:500;color:#5B6B80">{{ k.label }}</span><span style="font-size:15.5px;font-weight:700;color:{{ k.color }};font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ k.value }}</span></div></sc-for></div><div style="display:flex;gap:8px"><div style="flex:1;background:#F3F7FD;border-radius:12px;padding:12px;display:flex;align-items:baseline;gap:6px"><span style="font-size:20px;font-weight:700;color:#0B2545">{{ rCount }}</span><span style="font-size:13px;color:#5B6B80">customers today</span></div><div style="flex:1;background:#FFF1F2;border-radius:12px;padding:12px;display:flex;align-items:baseline;gap:6px"><span style="font-size:20px;font-weight:700;color:#C81E3A">{{ rOverdue }}</span><span style="font-size:13px;color:#9F3A4B">overdue</span></div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><button sc-camel-on-click="{{ goMap }}" style="display:flex;align-items:center;justify-content:center;gap:8px;height:50px;border-radius:12px;background:#7C5CFA;color:#fff;border:0;font-size:15px;font-weight:600;cursor:pointer;box-shadow:0 6px 14px rgba(124,92,250,.28)"><span class="ic ic-map" style="width:17px;height:17px"></span>View map</button><button sc-camel-on-click="{{ goCusts }}" style="display:flex;align-items:center;justify-content:center;gap:8px;height:50px;border-radius:12px;background:#F3F7FD;color:#0B2545;border:0;font-size:15px;font-weight:600;cursor:pointer"><span class="ic ic-users" style="width:17px;height:17px"></span>Customers</button></div>
+<sc-if value="{{ notClosed }}"><button sc-camel-on-click="{{ goClosing }}" style="height:48px;border-radius:10px;background:#fff;color:#18181B;border:1px dashed #A1A1AA;font-size:14px;font-weight:600;cursor:pointer">Daily closing</button></sc-if>
+<sc-if value="{{ closed }}"><button sc-camel-on-click="{{ goClosing }}" style="height:48px;border-radius:10px;background:#EAF7EE;color:#15803D;border:0;font-size:14px;font-weight:600;cursor:pointer">✓ {{ closedAt }}</button></sc-if>
+</div>
+<h2 style="margin:4px 0 0;font-size:16px;font-weight:600;color:#18181B">Today's visits</h2>
+<div style="display:flex;flex-direction:column">
+<sc-for list="{{ rToday }}" as="c" hint-placeholder-count="4">
+<button sc-camel-on-click="{{ c.ropen }}" style="background:none;border:0;border-bottom:1px solid #EBEBED;border-radius:0;padding:14px 0;display:flex;gap:12px;align-items:center;text-align:left;width:100%;cursor:pointer">
+<div style="width:44px;height:44px;border-radius:50%;flex:none;overflow:hidden;display:grid;place-items:center;background-color:{{ c.av }};color:#fff;font-weight:600;font-size:15px;background-image:{{ c.photoBg }};background-size:cover;background-position:center"><sc-if value="{{ c.noPhoto }}">{{ c.initials }}</sc-if></div>
+<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><span style="font-size:15px;font-weight:600;color:#18181B">{{ c.name }}</span><span style="font-size:13px;color:#71717A;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ c.address }}, {{ c.city }}</span></div>
+<div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px"><span style="font-size:15px;font-weight:700;color:#18181B;white-space:nowrap">{{ c.dueNowF }}</span><span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 9px 0 8px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(24,24,27,.05);font-size:12px;font-weight:500;white-space:nowrap;background:{{ c.chip.bg }};color:{{ c.chip.fg }}"><span style="width:8px;height:8px;border-radius:50%;flex:none;box-sizing:border-box;background:{{ c.chip.pd }};border:{{ c.chip.pb }}"></span>{{ c.chip.label }}</span></div>
+</button>
+</sc-for></div>
+<sc-if value="{{ rNoToday }}"><div style="padding:20px;text-align:center;background:#fff;border:1px dashed #E4E4E7;border-radius:12px;font-size:14px;color:#71717A">No collections scheduled today.</div></sc-if>
+</sc-if>
+<sc-if value="{{ rp.map }}">
+<div class="map-img" style="position:relative;flex:1;min-height:420px;overflow:hidden">
+<div style="position:absolute;top:0;left:0;right:0;z-index:6;display:flex;gap:6px;flex-wrap:wrap;padding:8px 10px;background:rgba(255,255,255,0.55);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border-bottom:1px solid rgba(24,24,27,0.06);pointer-events:none"><sc-for list="{{ legend }}" as="l" hint-placeholder-count="4"><span style="display:inline-flex;align-items:stretch;border-radius:4px;overflow:hidden;background:#fff;box-shadow:0 2px 6px rgba(24,24,27,0.18);font-size:12px;font-weight:600;color:#18181B"><span style="display:grid;place-items:center;width:26px;background:{{ l.dot }};color:#fff"><span class="ic {{ l.ico }}" style="width:13px;height:13px"></span></span><span style="padding:5px 9px">{{ l.label }} · {{ l.count }}</span></span></sc-for></div>
+<sc-for list="{{ rMap.markers }}" as="m" hint-placeholder-count="0">
+<button sc-camel-on-click="{{ m.open }}" aria-label="{{ m.full }}" style="position:absolute;left:{{ m.x }}%;top:{{ m.y }}%;transform:translate(-18px,calc(-100% - 7px));z-index:{{ m.z }};padding:0;border:0;background:none;cursor:pointer;text-align:left"><span style="display:flex;align-items:stretch;border:1.5px solid #18181B;border-radius:5px;overflow:hidden;background:#fff;box-shadow:{{ m.ring }}0 3px 10px rgba(24,24,27,0.22)"><span style="flex:none;display:grid;place-items:center;width:33px;background:{{ m.dot }};color:#fff"><span class="ic {{ m.ico }}" style="width:16px;height:16px"></span></span><span style="padding:5px 10px;font-size:12.5px;line-height:1.25;font-weight:700;color:#18181B;white-space:nowrap">{{ m.label }}</span></span><span style="position:absolute;left:12px;bottom:-5px;width:10px;height:10px;background:{{ m.dot }};border-right:1.5px solid #18181B;border-bottom:1.5px solid #18181B;transform:rotate(45deg)"></span></button>
+</sc-for>
+<sc-if value="{{ hasMapSel }}">
+<div style="position:absolute;left:10px;right:10px;bottom:10px;z-index:10;background:#fff;border-radius:16px;box-shadow:0 10px 30px rgba(24,24,27,0.138);padding:16px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;gap:12px;align-items:center">
+<div style="width:48px;height:48px;border-radius:50%;flex:none;overflow:hidden;display:grid;place-items:center;background-color:{{ ms.av }};color:#fff;font-weight:600;background-image:{{ ms.photoBg }};background-size:cover;background-position:center"><sc-if value="{{ ms.noPhoto }}">{{ ms.initials }}</sc-if></div>
+<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><span style="font-size:16px;font-weight:600;color:#18181B">{{ ms.name }}</span><a href="{{ ms.tel }}" style="font-size:13px">{{ ms.phone }}</a></div>
+<button sc-camel-on-click="{{ closeMapSel }}" aria-label="Close" style="width:36px;height:36px;border:0;border-radius:8px;background:#F4F4F5;font-size:16px;color:#3F3F46;cursor:pointer">✕</button>
+</div>
+<div style="font-size:13px;color:#3F3F46">{{ ms.address }}, {{ ms.city }}</div>
+<div style="display:flex;justify-content:space-between;gap:12px;align-items:center"><div style="display:flex;flex-direction:column"><span style="font-size:12.5px;color:#71717A">Today's total</span><span style="font-size:20px;font-weight:700;color:#18181B">{{ ms.dueNowF }}</span></div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px"><span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 9px 0 8px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(24,24,27,.05);font-size:12px;font-weight:500;white-space:nowrap;background:{{ ms.chip.bg }};color:{{ ms.chip.fg }}"><span style="width:8px;height:8px;border-radius:50%;flex:none;box-sizing:border-box;background:{{ ms.chip.pd }};border:{{ ms.chip.pb }}"></span>{{ ms.chip.label }}</span><span style="font-size:12.5px;color:#71717A">{{ ms.overdueCount }}</span></div></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><a href="{{ ms.navUrl }}" target="_blank" rel="noopener" style="height:48px;border-radius:10px;background:#fff;border:1px solid #E4E4E7;color:#18181B;font-size:15px;font-weight:600;display:flex;align-items:center;justify-content:center;text-decoration:none">Navigate</a><button sc-camel-on-click="{{ ms.ropen }}" style="height:48px;border-radius:10px;background:#7C5CFA;color:#fff;border:0;font-size:15px;font-weight:600;cursor:pointer">Open</button></div>
+</div>
+</sc-if>
+</div>
+</sc-if>
+<sc-if value="{{ rp.customers }}">
+<div style="position:relative;width:100%;min-width:0"><input class="pill-search" type="search" inputmode="search" enterkeyhint="search" autocomplete="off" spellcheck="false" aria-label="Search customers" value="{{ rq }}" sc-camel-on-change="{{ onRq }}" placeholder="Name, address or phone" style="height:48px;padding:0 44px 0 42px;font-size:16px"><span class="ic ic-search search-ic" style="left:14px;width:18px;height:18px"></span><sc-if value="{{ rqHas }}"><button class="search-x" sc-camel-on-click="{{ clearRq }}" aria-label="Clear search" style="right:10px;width:26px;height:26px"><span class="ic ic-x" style="width:12px;height:12px"></span></button></sc-if></div>
+<div style="display:inline-flex;flex-wrap:wrap;gap:2px;padding:4px;background:#F4F4F5;border-radius:12px;align-self:flex-start;max-width:100%"><sc-for list="{{ rstChips }}" as="x" hint-placeholder-count="4"><button sc-camel-on-click="{{ x.go }}" style="display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px;border:0;border-radius:9px;background:{{ x.bg }};color:{{ x.fg }};box-shadow:{{ x.sh }};font-size:13px;font-weight:500;white-space:nowrap;cursor:pointer" style-hover="color:#18181B">{{ x.label }}<sc-if value="{{ x.hasN }}"><span style="color:#A1A1AA">·</span><span style="font-weight:600;color:{{ x.nc }};font-variant-numeric:tabular-nums">{{ x.n }}</span></sc-if></button></sc-for></div>
+<div style="display:flex;flex-direction:column">
+<sc-for list="{{ rList }}" as="c" hint-placeholder-count="4">
+<button sc-camel-on-click="{{ c.ropen }}" style="background:none;border:0;border-bottom:1px solid #EBEBED;border-radius:0;padding:14px 0;display:flex;gap:12px;align-items:center;text-align:left;width:100%;cursor:pointer">
+<div style="width:44px;height:44px;border-radius:50%;flex:none;overflow:hidden;display:grid;place-items:center;background-color:{{ c.av }};color:#fff;font-weight:600;font-size:15px;background-image:{{ c.photoBg }};background-size:cover;background-position:center"><sc-if value="{{ c.noPhoto }}">{{ c.initials }}</sc-if></div>
+<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><span style="font-size:15px;font-weight:600;color:#18181B">{{ c.name }}</span><span style="font-size:13px;color:#71717A;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ c.city }} · {{ c.phone }}</span></div>
+<div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px"><span style="font-size:15px;font-weight:700;color:#18181B;white-space:nowrap">{{ c.dueNowF }}</span><span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 9px 0 8px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(24,24,27,.05);font-size:12px;font-weight:500;white-space:nowrap;background:{{ c.chip.bg }};color:{{ c.chip.fg }}"><span style="width:8px;height:8px;border-radius:50%;flex:none;box-sizing:border-box;background:{{ c.chip.pd }};border:{{ c.chip.pb }}"></span>{{ c.chip.label }}</span></div>
+</button>
+</sc-for></div>
+<sc-if value="{{ rEmpty }}"><div style="padding:20px;text-align:center;font-size:14px;color:#71717A">No customers found.</div></sc-if>
+</sc-if>
+<sc-if value="{{ rp.detail }}"><sc-if value="{{ hasDet }}">
+<div style="background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);padding:16px;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;gap:14px;align-items:center">
+<div style="width:60px;height:60px;border-radius:50%;flex:none;overflow:hidden;display:grid;place-items:center;background-color:{{ det.av }};color:#fff;font-weight:600;font-size:20px;background-image:{{ det.photoBg }};background-size:cover;background-position:center"><sc-if value="{{ det.noPhoto }}">{{ det.initials }}</sc-if></div>
+<div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:4px"><span style="font-size:18px;font-weight:600;color:#18181B">{{ det.name }}</span><span style="align-self:flex-start;display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 9px 0 8px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(24,24,27,.05);font-size:12px;font-weight:500;white-space:nowrap;background:{{ det.chip.bg }};color:{{ det.chip.fg }}"><span style="width:8px;height:8px;border-radius:50%;flex:none;box-sizing:border-box;background:{{ det.chip.pd }};border:{{ det.chip.pb }}"></span>{{ det.chip.label }}</span></div>
+</div>
+<div style="font-size:14px;color:#3F3F46;line-height:1.5">{{ det.address }}, {{ det.city }}<br>NIC {{ det.nic }}</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><a href="{{ det.tel }}" style="height:46px;border-radius:10px;background:#fff;border:1px solid #E4E4E7;color:#18181B;font-size:14px;font-weight:600;display:flex;align-items:center;justify-content:center;text-decoration:none">Call {{ det.phone }}</a><a href="{{ det.navUrl }}" target="_blank" rel="noopener" style="height:46px;border-radius:10px;background:#fff;border:1px solid #E4E4E7;color:#18181B;font-size:14px;font-weight:600;display:flex;align-items:center;justify-content:center;text-decoration:none">Navigate</a></div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px">
+<div style="background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);padding:12px 10px;display:flex;flex-direction:column;gap:2px"><span style="font-size:12.5px;font-weight:500;color:#71717A">Due now</span><span style="font-size:16px;font-weight:700;color:#18181B;white-space:nowrap">{{ det.dueNowF }}</span></div>
+<div style="background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);padding:12px 10px;display:flex;flex-direction:column;gap:2px"><span style="font-size:12.5px;font-weight:500;color:#71717A">Overdue</span><span style="font-size:16px;font-weight:700;color:#C81E3A;white-space:nowrap">{{ det.overdueF }}</span></div>
+<div style="background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);padding:12px 10px;display:flex;flex-direction:column;gap:2px"><span style="font-size:12.5px;font-weight:500;color:#71717A">Balance</span><span style="font-size:16px;font-weight:700;color:#18181B;white-space:nowrap">{{ det.balanceF }}</span></div>
+</div>
+<h2 style="margin:4px 0 0;font-size:16px;font-weight:600;color:#18181B">Active items</h2>
+<sc-for list="{{ detItems }}" as="it" hint-placeholder-count="2">
+<div style="background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);padding:16px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start"><div style="display:flex;flex-direction:column;gap:2px"><span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#71717A">{{ it.code }}</span><span style="font-size:16px;font-weight:600;color:#18181B">{{ it.name }}</span></div><span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 9px 0 8px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(24,24,27,.05);font-size:12px;font-weight:500;white-space:nowrap;background:{{ it.chip.bg }};color:{{ it.chip.fg }}"><span style="width:8px;height:8px;border-radius:50%;flex:none;box-sizing:border-box;background:{{ it.chip.pd }};border:{{ it.chip.pb }}"></span>{{ it.chip.label }}</span></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px 12px;font-size:14px"><span style="color:#71717A">Total price</span><span style="color:#18181B;text-align:right">{{ it.priceF }}</span><span style="color:#71717A">Paid</span><span style="color:#15803D;text-align:right">{{ it.paidF }}</span><span style="color:#71717A">Balance</span><span style="color:#18181B;text-align:right">{{ it.balanceF }}</span><span style="color:#71717A">Frequency</span><span style="color:#18181B;text-align:right">{{ it.freqL }} · {{ it.amountF }}</span><span style="color:#71717A">Next payment</span><span style="color:#18181B;text-align:right">{{ it.nextF }}</span></div>
+<div style="display:flex;justify-content:space-between;align-items:center;padding-top:12px;border-top:1px dashed #E7E7EA"><span style="font-size:14px;font-weight:500;color:#3F3F46">Amount due</span><span style="font-size:18px;font-weight:700;color:#18181B">{{ it.dueNowF }}</span></div>
+</div>
+</sc-for>
+<sc-if value="{{ detNoItems }}"><div style="padding:20px;text-align:center;background:#fff;border:1px dashed #E4E4E7;border-radius:12px;font-size:14px;color:#71717A">All items for this customer are fully paid.</div></sc-if>
+<sc-if value="{{ detHasItems }}"><button sc-camel-on-click="{{ startCollect }}" style="height:60px;border-radius:12px;background:#7C5CFA;color:#fff;border:0;font-size:17px;font-weight:700;letter-spacing:.01em;cursor:pointer;position:sticky;bottom:88px;box-shadow:0 8px 20px rgba(124,92,250,.28)">COLLECT PAYMENT</button></sc-if>
+<h2 style="margin:4px 0 0;font-size:16px;font-weight:600;color:#18181B">Recent payments</h2>
+<div>
+<sc-for list="{{ detPays }}" as="p" hint-placeholder-count="3"><div style="display:flex;gap:12px;align-items:center;padding:13px 0;border-bottom:1px solid #EBEBED"><div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;color:#18181B">{{ p.item }}</span><span style="font-size:12.5px;color:#71717A">{{ p.date }} · {{ p.time }}</span></div><span style="font-size:14px;font-weight:600;color:#18181B;white-space:nowrap">{{ p.amountF }}</span></div></sc-for>
+<sc-if value="{{ detNoPays }}"><div style="padding:14px;font-size:14px;color:#71717A">No payments yet.</div></sc-if>
+</div>
+</sc-if></sc-if>
+<sc-if value="{{ rp.collect }}"><sc-if value="{{ hasDet }}">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px"><div style="display:flex;flex-direction:column"><span style="font-size:13px;color:#71717A">Collecting from</span><span style="font-size:18px;font-weight:600;color:#18181B">{{ det.name }}</span></div><span style="display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 9px 0 8px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(24,24,27,.05);font-size:12px;font-weight:500;white-space:nowrap;background:{{ det.chip.bg }};color:{{ det.chip.fg }}"><span style="width:8px;height:8px;border-radius:50%;flex:none;box-sizing:border-box;background:{{ det.chip.pd }};border:{{ det.chip.pb }}"></span>{{ det.chip.label }}</span></div>
+<sc-for list="{{ colRows }}" as="r" hint-placeholder-count="2">
+<div style="background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);padding:14px;display:flex;flex-direction:column;gap:12px">
+<label style="display:flex;gap:12px;align-items:center;cursor:pointer"><input type="checkbox" checked="{{ r.on }}" sc-camel-on-change="{{ r.toggle }}" style="width:24px;height:24px;flex:none;accent-color:#7C5CFA"><span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><span style="font-size:15px;font-weight:600;color:#18181B">{{ r.name }}</span><span style="font-size:12.5px;color:#71717A">{{ r.code }} · Due {{ r.dueF }} · Balance {{ r.balanceF }}</span></span></label>
+<div style="display:flex;align-items:center;gap:8px;height:52px;border:1px solid #E4E4E7;border-radius:10px;padding:0 14px;background:#fff"><span style="font-size:15px;font-weight:600;color:#71717A">Rs.</span><input inputmode="numeric" value="{{ r.val }}" sc-camel-on-change="{{ r.onAmt }}" placeholder="0" style="flex:1;min-width:0;border:0;outline:0;font-size:20px;font-weight:700;color:#18181B;background:transparent;font-variant-numeric:tabular-nums"></div>
+</div>
+</sc-for>
+<div style="display:flex;justify-content:space-between;align-items:center;padding:16px;background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04)"><span style="font-size:15px;font-weight:500;color:#3F3F46">Total to collect</span><span style="font-size:24px;font-weight:700;color:#18181B">{{ colTotal }}</span></div>
+<sc-if value="{{ hasCErr }}"><div style="padding:12px;border-radius:10px;background:#FFEEF0;color:#C81E3A;font-size:14px">{{ cErr }}</div></sc-if>
+<button sc-camel-on-click="{{ doCollect }}" style="height:60px;border-radius:12px;background:#7C5CFA;color:#fff;border:0;font-size:17px;font-weight:700;letter-spacing:.06em;cursor:pointer">COLLECT</button>
+<div style="font-size:12.5px;color:#71717A;text-align:center">You will confirm the amount before it is submitted.</div>
+</sc-if></sc-if>
+<sc-if value="{{ rp.success }}"><sc-if value="{{ hasLast }}">
+<div style="background:#fff;border:1px solid #E7E7EA;border-radius:16px;padding:24px 16px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center">
+<span style="width:64px;height:64px;border-radius:50%;background:#22C55E;color:#fff;display:grid;place-items:center;font-size:30px;font-weight:700">✓</span>
+<span style="font-size:18px;font-weight:600;color:#18181B;margin-top:6px">Payment successful</span>
+<span style="font-size:32px;font-weight:700;color:#18181B;font-variant-numeric:tabular-nums">{{ last.totalF }}</span>
+<span style="font-size:14px;color:#71717A">from {{ last.cust }}</span>
+</div>
+<div style="background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);padding:16px;display:flex;flex-direction:column;gap:12px">
+<sc-for list="{{ last.lines }}" as="l" hint-placeholder-count="1"><div style="display:flex;justify-content:space-between;gap:12px;align-items:flex-start;padding-bottom:12px;border-bottom:1px solid #F0F0F2"><div style="display:flex;flex-direction:column;gap:2px;min-width:0"><span style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#18181B">{{ l.txn }}</span><span style="font-size:13px;color:#71717A">{{ l.item }}</span></div><span style="font-size:15px;font-weight:600;color:#18181B;white-space:nowrap">{{ l.amountF }}</span></div></sc-for>
+<div style="display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:14px"><span style="color:#71717A">Customer</span><span style="color:#18181B;text-align:right">{{ last.cust }}</span><span style="color:#71717A">Date &amp; time</span><span style="color:#18181B;text-align:right">{{ last.when }}</span><span style="color:#71717A">Rider</span><span style="color:#18181B;text-align:right">{{ last.rider }}</span></div>
+</div>
+<button sc-camel-on-click="{{ showReceipt }}" style="height:52px;border-radius:10px;background:#7C5CFA;color:#fff;border:0;font-size:15px;font-weight:600;cursor:pointer">View receipt</button>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><button sc-camel-on-click="{{ successDone }}" style="height:48px;border-radius:10px;background:#fff;color:#18181B;border:1px solid #E4E4E7;font-size:14px;font-weight:600;cursor:pointer">Back to customer</button><button sc-camel-on-click="{{ successHome }}" style="height:48px;border-radius:10px;background:#fff;color:#18181B;border:1px solid #E4E4E7;font-size:14px;font-weight:600;cursor:pointer">Home</button></div>
+</sc-if></sc-if>
+<sc-if value="{{ rp.closing }}">
+<sc-if value="{{ closed }}">
+<div style="background:#EAF7EE;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:4px"><span style="font-size:16px;font-weight:600;color:#15803D">✓ Day closed at {{ cloRec.time }}</span><span style="font-size:13px;color:#15803D">The owner has been notified.</span></div>
+<div style="background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);padding:16px;display:grid;grid-template-columns:1fr auto;gap:12px;font-size:15px"><span style="color:#71717A">Expected</span><span style="color:#18181B;font-weight:600">{{ cloRec.expF }}</span><span style="color:#71717A">Collected ({{ cloRec.count }})</span><span style="color:#18181B;font-weight:600">{{ cloRec.colF }}</span><span style="color:#71717A">Pending</span><span style="color:#18181B;font-weight:600">{{ cloRec.pendF }}</span><span style="color:#71717A">Cash submitted</span><span style="color:#18181B;font-weight:600">{{ cloRec.cashF }}</span><span style="color:#71717A">Difference</span><span style="color:#18181B;font-weight:600">{{ cloRec.diffF }}</span><span style="color:#71717A">Note</span><span style="color:#18181B">{{ cloRec.note }}</span></div>
+</sc-if>
+<sc-if value="{{ notClosed }}">
+<div style="background:#fff;border:1px solid #E7E7EA;border-radius:12px;box-shadow:0 1px 2px rgba(24,24,27,.04);padding:16px;display:grid;grid-template-columns:1fr auto;gap:12px;font-size:15px"><span style="color:#71717A">Expected today</span><span style="color:#18181B;font-weight:600">{{ close.expF }}</span><span style="color:#71717A">Collected ({{ close.count }} payments)</span><span style="color:#15803D;font-weight:600">{{ close.colF }}</span><span style="color:#71717A">Pending</span><span style="color:#A16207;font-weight:600">{{ close.pendF }}</span></div>
+<label style="display:flex;flex-direction:column;gap:8px;font-size:14px;font-weight:600;color:#18181B">Cash submitted<div style="display:flex;align-items:center;gap:8px;height:56px;border:1px solid #E4E4E7;border-radius:10px;padding:0 14px;background:#fff"><span style="font-size:15px;font-weight:600;color:#71717A">Rs.</span><input inputmode="numeric" value="{{ close.cash }}" sc-camel-on-change="{{ onCash }}" placeholder="0" style="flex:1;min-width:0;border:0;outline:0;font-size:22px;font-weight:700;color:#18181B;background:transparent"></div></label>
+<div style="display:flex;justify-content:space-between;font-size:14px"><span style="color:#71717A">Difference vs collected</span><span style="font-weight:600;color:{{ close.diffFg }}">{{ close.diffF }}</span></div>
+<label style="display:flex;flex-direction:column;gap:8px;font-size:14px;font-weight:600;color:#18181B">Note<textarea value="{{ close.note }}" sc-camel-on-change="{{ onCloseNote }}" rows="3" placeholder="Required if cash differs" style="border:1px solid #E4E4E7;border-radius:10px;padding:12px;font-size:15px;color:#18181B;resize:vertical"></textarea></label>
+<sc-if value="{{ close.hasErr }}"><div style="padding:12px;border-radius:10px;background:#FFEEF0;color:#C81E3A;font-size:14px">{{ close.err }}</div></sc-if>
+<button sc-camel-on-click="{{ submitClosing }}" style="height:56px;border-radius:12px;background:#7C5CFA;color:#fff;border:0;font-size:16px;font-weight:700;cursor:pointer">Submit closing</button>
+</sc-if>
+</sc-if>
+<sc-if value="{{ rp.history }}">
+<sc-for list="{{ hist }}" as="g" hint-placeholder-count="2">
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:15px;font-weight:600;color:#18181B">{{ g.label }}</span><span style="font-size:13px;color:#71717A">{{ g.count }} · {{ g.totalF }}</span></div>
+<div>
+<sc-for list="{{ g.list }}" as="p" hint-placeholder-count="2"><div style="display:flex;gap:12px;align-items:center;padding:13px 0;border-bottom:1px solid #EBEBED"><div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><span style="font-size:14px;font-weight:600;color:#18181B">{{ p.cust }}</span><span style="font-size:12.5px;color:#71717A">{{ p.time }} · {{ p.item }}</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#71717A">{{ p.txn }}</span></div><span style="font-size:15px;font-weight:600;color:#18181B;white-space:nowrap">{{ p.amountF }}</span></div></sc-for>
+</div>
+</div>
+</sc-for>
+<sc-if value="{{ noHist }}"><div style="padding:20px;text-align:center;font-size:14px;color:#71717A">No payments collected yet.</div></sc-if>
+</sc-if>
+<sc-if value="{{ rp.profile }}">
+<div style="display:flex;flex-direction:column;gap:36px;padding:8px 4px 0">
+<div style="display:flex;align-items:center;gap:16px"><span style="width:64px;height:64px;flex:none;border-radius:50%;background-color:#18181B;background-image:{{ me.photoBg }};background-size:cover;background-position:center;color:#fff;display:grid;place-items:center;font-size:22px;font-weight:600"><sc-if value="{{ me.noPhoto }}">{{ me.initials }}</sc-if></span><div style="display:flex;flex-direction:column;gap:3px;min-width:0"><span style="font-size:20px;font-weight:700;color:#18181B;letter-spacing:-.01em">{{ me.name }}</span><span style="font-size:13px;color:#71717A">Rider / Collector</span></div></div>
+<section style="display:flex;flex-direction:column;gap:18px"><div style="display:flex;flex-direction:column;gap:2px"><h2 style="margin:0;font-size:15px;font-weight:600;color:#18181B">Account details</h2><span style="font-size:13px;color:#71717A">Ask the shop owner to change these.</span></div><sc-for list="{{ rProfInfo }}" as="x" hint-placeholder-count="3"><div style="display:flex;flex-direction:column;gap:6px"><span style="font-size:13px;font-weight:500;color:#3F3F46">{{ x.label }}</span><div style="min-height:44px;padding:12px 14px;border-radius:10px;background:#F4F4F5;font-size:14.5px;color:#18181B">{{ x.value }}</div></div></sc-for></section>
+<section style="display:flex;flex-direction:column;gap:14px"><div style="display:flex;flex-direction:column;gap:2px"><h2 style="margin:0;font-size:15px;font-weight:600;color:#18181B">Overview</h2><span style="font-size:13px;color:#71717A">Your customers and collections this month.</span></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><sc-for list="{{ rProfStats }}" as="x" hint-placeholder-count="2"><div style="padding:14px;border-radius:10px;background:#F4F4F5;display:flex;flex-direction:column;gap:4px"><span style="font-size:12.5px;color:#71717A">{{ x.label }}</span><span style="font-size:19px;font-weight:700;color:#18181B;font-variant-numeric:tabular-nums">{{ x.value }}</span></div></sc-for></div></section>
+<section style="display:flex;flex-direction:column;gap:14px"><div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between"><div style="display:flex;flex-direction:column;gap:2px;flex:1 1 200px;min-width:0"><h2 style="margin:0;font-size:15px;font-weight:600;color:#18181B">Daily closing</h2><span style="font-size:13px;color:#71717A">Submit today's collected cash to the shop.</span></div><button sc-camel-on-click="{{ goClosing }}" style="height:38px;padding:0 14px;border:0;border-radius:8px;background:none;color:#7C5CFA;font-size:14px;font-weight:600;cursor:pointer" style-hover="background:#F1EDFF">Open</button></div><div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between"><div style="display:flex;flex-direction:column;gap:2px;flex:1 1 200px;min-width:0"><h2 style="margin:0;font-size:15px;font-weight:600;color:#18181B">Sign out</h2><span style="font-size:13px;color:#71717A">Log out of COLLECTO on this device.</span></div><button sc-camel-on-click="{{ logout }}" style="height:38px;padding:0 14px;border:0;border-radius:8px;background:none;color:#C81E3A;font-size:14px;font-weight:600;cursor:pointer" style-hover="background:#FFF1F2">Log out</button></div></section>
+</div>
+</sc-if>
+</div>
+<nav style="position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;height:72px;background:#fff;border-top:1px solid #E7E7EA;display:grid;grid-template-columns:repeat(5,1fr);z-index:30;padding-bottom:env(safe-area-inset-bottom)">
+<sc-for list="{{ rTabs }}" as="t" hint-placeholder-count="5"><button sc-camel-on-click="{{ t.go }}" style="border:0;background:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer;color:{{ t.fg }};font-size:12px;font-weight:{{ t.fw }}"><span class="ic {{ t.ic }}" style="width:22px;height:22px"></span>{{ t.label }}</button></sc-for>
+</nav>
+</div>
+</div>
+</sc-if>
+<sc-if value="{{ hasModal }}" hint-placeholder-val="{{ false }}">
+<div sc-camel-on-click="{{ closeModalBg }}" style="position:fixed;inset:0;z-index:100;background:rgba(24,24,27,0.275);display:flex;align-items:flex-start;justify-content:center;padding:clamp(12px,6vh,64px) 12px;overflow:auto">
+<div style="width:100%;max-width:{{ modalW }};background:#fff;border-radius:16px;box-shadow:0 20px 50px rgba(24,24,27,0.138);display:flex;flex-direction:column">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;border-bottom:1px solid #E7E7EA"><h2 style="margin:0;font-size:17px;font-weight:600;color:#18181B">{{ modalTitle }}</h2><button sc-camel-on-click="{{ closeModal }}" aria-label="Close" style="width:36px;height:36px;border:0;border-radius:8px;background:#F4F4F5;font-size:16px;color:#3F3F46;cursor:pointer">✕</button></div>
+<div style="padding:20px;display:flex;flex-direction:column;gap:16px">
+<sc-if value="{{ md.customer }}">
+<div style="display:flex;gap:16px;align-items:center">
+<div style="width:64px;height:64px;border-radius:50%;flex:none;overflow:hidden;background-color:#F0F0F2;display:grid;place-items:center;font-size:12px;color:#71717A;background-image:{{ photoBg }};background-size:cover;background-position:center"><sc-if value="{{ noPhoto }}">Photo</sc-if></div>
+<label style="height:40px;padding:0 16px;border-radius:12px;border:1.5px dashed #D4D4D8;background:#fff;display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:#3F3F46;cursor:pointer" style-hover="border-color:#A1A1AA;background:#FAFAFA"><span class="ic ic-upload" style="width:18px;height:18px"></span>Upload photo<input type="file" accept="image/*" sc-camel-on-change="{{ onPhoto }}" style="display:none"></label>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:14px">
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Full name<input value="{{ f.name }}" sc-camel-on-change="{{ fs.name }}" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 12px;font-size:14px;color:#18181B"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">NIC<input value="{{ f.nic }}" sc-camel-on-change="{{ fs.nic }}" placeholder="e.g. 199012345678" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 12px;font-size:14px;color:#18181B"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Phone<input inputmode="tel" value="{{ f.phone }}" sc-camel-on-change="{{ fs.phone }}" placeholder="07X XXX XXXX" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 12px;font-size:14px;color:#18181B"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">City / area<input list="cl-areas" value="{{ f.city }}" sc-camel-on-change="{{ fs.city }}" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 12px;font-size:14px;color:#18181B"></label>
+<datalist id="cl-areas"><sc-for list="{{ areaOpts }}" as="o" hint-placeholder-count="0"><option value="{{ o.v }}"></option></sc-for></datalist>
+</div>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Address<input value="{{ f.address }}" sc-camel-on-change="{{ fs.address }}" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 12px;font-size:14px;color:#18181B"></label>
+<div style="display:flex;flex-direction:column;gap:6px"><div style="display:flex;justify-content:space-between;gap:12px;font-size:13px;font-weight:500;color:#3F3F46"><span>Map pin — click the map to place</span><span style="color:#71717A;font-weight:400">{{ pick.coords }}</span></div>
+<div class="map-img" sc-camel-on-click="{{ onPin }}" style="position:relative;height:220px;border-radius:10px;border:1px solid #E4E4E7;overflow:hidden;cursor:crosshair">
+<sc-if value="{{ pick.hasPin }}"><span style="position:absolute;left:{{ pick.pin.x }}%;top:{{ pick.pin.y }}%;transform:translate(-50%,-50%);width:16px;height:16px;border-radius:50%;background:#18181B;border:3px solid #fff;box-shadow:0 0 0 2px #7C5CFA;pointer-events:none"></span></sc-if>
+</div></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:14px">
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Assigned rider<sc-raw-select value="{{ f.riderId }}" sc-camel-on-change="{{ fs.riderId }}" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 8px;font-size:14px;color:#18181B;background:#fff"><sc-for list="{{ mRiderOpts }}" as="o" hint-placeholder-count="0"><option value="{{ o.v }}">{{ o.label }}</option></sc-for></sc-raw-select></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Notes<input value="{{ f.notes }}" sc-camel-on-change="{{ fs.notes }}" placeholder="Optional" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 12px;font-size:14px;color:#18181B"></label>
+</div>
+<sc-if value="{{ fErr }}"><div style="padding:10px 12px;border-radius:8px;background:#FFEEF0;color:#C81E3A;font-size:13px">{{ f.err }}</div></sc-if>
+<div style="display:flex;justify-content:flex-end;gap:8px"><button sc-camel-on-click="{{ closeModal }}" style="height:40px;padding:0 16px;border-radius:8px;background:#fff;color:#18181B;border:1px solid #E4E4E7;font-size:14px;font-weight:500;cursor:pointer">Cancel</button><button sc-camel-on-click="{{ saveCustomer }}" style="height:40px;padding:0 16px;border-radius:8px;background:#7C5CFA;color:#fff;border:0;font-size:14px;font-weight:600;cursor:pointer">Register customer</button></div>
+</sc-if>
+<sc-if value="{{ md.item }}">
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Customer<sc-raw-select value="{{ f.customerId }}" sc-camel-on-change="{{ fs.customerId }}" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 8px;font-size:14px;color:#18181B;background:#fff"><option value="">Select customer</option><sc-for list="{{ custOpts }}" as="o" hint-placeholder-count="0"><option value="{{ o.v }}">{{ o.label }}</option></sc-for></sc-raw-select></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Item (code · name)<sc-raw-select value="{{ f.code }}" sc-camel-on-change="{{ fs.code }}" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 8px;font-size:14px;color:#18181B;background:#fff"><option value="">Select product</option><sc-for list="{{ prodOpts }}" as="o" hint-placeholder-count="0"><option value="{{ o.v }}">{{ o.label }}</option></sc-for></sc-raw-select></label>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px">
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Price (Rs.)<input inputmode="numeric" value="{{ f.price }}" sc-camel-on-change="{{ fs.price }}" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 12px;font-size:14px;color:#18181B"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Payment period (months)<input inputmode="numeric" value="{{ f.period }}" sc-camel-on-change="{{ fs.period }}" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 12px;font-size:14px;color:#18181B"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Frequency<sc-raw-select value="{{ f.freq }}" sc-camel-on-change="{{ fs.freq }}" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 8px;font-size:14px;color:#18181B;background:#fff"><sc-for list="{{ freqOpts }}" as="o" hint-placeholder-count="0"><option value="{{ o.v }}">{{ o.label }}</option></sc-for></sc-raw-select></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Amount per payment<input inputmode="numeric" value="{{ f.amount }}" sc-camel-on-change="{{ fs.amount }}" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 12px;font-size:14px;color:#18181B"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Start date<input type="date" value="{{ f.start }}" sc-camel-on-change="{{ fs.start }}" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 10px;font-size:14px;color:#18181B"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Assigned rider<sc-raw-select value="{{ f.riderId }}" sc-camel-on-change="{{ fs.riderId }}" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 8px;font-size:14px;color:#18181B;background:#fff"><sc-for list="{{ mRiderOpts }}" as="o" hint-placeholder-count="0"><option value="{{ o.v }}">{{ o.label }}</option></sc-for></sc-raw-select></label>
+</div>
+<div style="padding:14px 16px;border-radius:10px;background:#F4F4F5;display:flex;flex-direction:column;gap:8px">
+<span style="font-size:13px;font-weight:500;color:#71717A">Generated schedule</span>
+<sc-if value="{{ prev.ok }}"><span style="font-size:15px;font-weight:600;color:#18181B">{{ prev.text }}</span><span style="font-size:13px;color:#3F3F46">{{ prev.range }}</span><div style="display:flex;flex-wrap:wrap;gap:6px"><sc-for list="{{ prev.dates }}" as="x" hint-placeholder-count="0"><span style="padding:3px 8px;border-radius:999px;background:#fff;border:1px solid #E7E7EA;font-size:12px;color:#3F3F46">{{ x.d }}</span></sc-for><span style="font-size:12.5px;color:#71717A;align-self:center">{{ prev.more }}</span></div></sc-if>
+<sc-if value="{{ prevNo }}"><span style="font-size:13px;color:#71717A">Choose a product and payment terms to preview the schedule.</span></sc-if>
+</div>
+<sc-if value="{{ fErr }}"><div style="padding:10px 12px;border-radius:8px;background:#FFEEF0;color:#C81E3A;font-size:13px">{{ f.err }}</div></sc-if>
+<div style="display:flex;justify-content:flex-end;gap:8px"><button sc-camel-on-click="{{ closeModal }}" style="height:40px;padding:0 16px;border-radius:8px;background:#fff;color:#18181B;border:1px solid #E4E4E7;font-size:14px;font-weight:500;cursor:pointer">Cancel</button><button sc-camel-on-click="{{ saveItem }}" style="height:40px;padding:0 16px;border-radius:8px;background:#7C5CFA;color:#fff;border:0;font-size:14px;font-weight:600;cursor:pointer">Create plan</button></div>
+</sc-if>
+<sc-if value="{{ md.product }}">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px">
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Item code<input value="{{ f.code }}" sc-camel-on-change="{{ fs.code }}" placeholder="e.g. KT-110" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 12px;font-size:14px;color:#18181B"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Item name<input value="{{ f.pname }}" sc-camel-on-change="{{ fs.pname }}" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 12px;font-size:14px;color:#18181B"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Purchase price<input inputmode="numeric" value="{{ f.purchase }}" sc-camel-on-change="{{ fs.purchase }}" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 12px;font-size:14px;color:#18181B"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Cash selling price<input inputmode="numeric" value="{{ f.cash }}" sc-camel-on-change="{{ fs.cash }}" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 12px;font-size:14px;color:#18181B"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Installment price<input inputmode="numeric" value="{{ f.price }}" sc-camel-on-change="{{ fs.price }}" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 12px;font-size:14px;color:#18181B"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Opening stock<input inputmode="numeric" value="{{ f.stock }}" sc-camel-on-change="{{ fs.stock }}" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 12px;font-size:14px;color:#18181B"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Default frequency<sc-raw-select value="{{ f.freq }}" sc-camel-on-change="{{ fs.freq }}" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 8px;font-size:14px;color:#18181B;background:#fff"><sc-for list="{{ freqOpts }}" as="o" hint-placeholder-count="0"><option value="{{ o.v }}">{{ o.label }}</option></sc-for></sc-raw-select></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Period (months)<input inputmode="numeric" value="{{ f.period }}" sc-camel-on-change="{{ fs.period }}" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 12px;font-size:14px;color:#18181B"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Amount per payment<input inputmode="numeric" value="{{ f.amount }}" sc-camel-on-change="{{ fs.amount }}" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 12px;font-size:14px;color:#18181B"></label>
+</div>
+<sc-if value="{{ fErr }}"><div style="padding:10px 12px;border-radius:8px;background:#FFEEF0;color:#C81E3A;font-size:13px">{{ f.err }}</div></sc-if>
+<div style="display:flex;justify-content:flex-end;gap:8px"><button sc-camel-on-click="{{ closeModal }}" style="height:40px;padding:0 16px;border-radius:8px;background:#fff;color:#18181B;border:1px solid #E4E4E7;font-size:14px;font-weight:500;cursor:pointer">Cancel</button><button sc-camel-on-click="{{ saveProduct }}" style="height:40px;padding:0 16px;border-radius:8px;background:#7C5CFA;color:#fff;border:0;font-size:14px;font-weight:600;cursor:pointer">Add product</button></div>
+</sc-if>
+<sc-if value="{{ md.stock }}">
+<div style="font-size:14px;color:#3F3F46">{{ f.code }} · {{ f.pname }}</div>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Units received<input inputmode="numeric" value="{{ f.qty }}" sc-camel-on-change="{{ fs.qty }}" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 12px;font-size:14px;color:#18181B"></label>
+<sc-if value="{{ fErr }}"><div style="padding:10px 12px;border-radius:8px;background:#FFEEF0;color:#C81E3A;font-size:13px">{{ f.err }}</div></sc-if>
+<div style="display:flex;justify-content:flex-end;gap:8px"><button sc-camel-on-click="{{ closeModal }}" style="height:40px;padding:0 16px;border-radius:8px;background:#fff;color:#18181B;border:1px solid #E4E4E7;font-size:14px;font-weight:500;cursor:pointer">Cancel</button><button sc-camel-on-click="{{ saveStock }}" style="height:40px;padding:0 16px;border-radius:8px;background:#7C5CFA;color:#fff;border:0;font-size:14px;font-weight:600;cursor:pointer">Add stock</button></div>
+</sc-if>
+<sc-if value="{{ md.rider }}">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px">
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Full name<input value="{{ f.name }}" sc-camel-on-change="{{ fs.name }}" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 12px;font-size:14px;color:#18181B"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Phone<input inputmode="tel" value="{{ f.phone }}" sc-camel-on-change="{{ fs.phone }}" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 12px;font-size:14px;color:#18181B"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Assigned area<input value="{{ f.area }}" sc-camel-on-change="{{ fs.area }}" placeholder="e.g. Maharagama, Nugegoda" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 12px;font-size:14px;color:#18181B"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Username<input value="{{ f.username }}" sc-camel-on-change="{{ fs.username }}" autocomplete="off" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 12px;font-size:14px;color:#18181B"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Password<input type="password" value="{{ f.password }}" sc-camel-on-change="{{ fs.password }}" autocomplete="new-password" placeholder="Leave blank to keep (edit)" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 12px;font-size:14px;color:#18181B"></label>
+</div>
+<label style="display:flex;align-items:center;gap:8px;font-size:14px;color:#18181B;cursor:pointer"><input type="checkbox" checked="{{ f.active }}" sc-camel-on-change="{{ toggleActive }}" style="width:18px;height:18px;accent-color:#7C5CFA">Active — rider can sign in and collect</label>
+<sc-if value="{{ fErr }}"><div style="padding:10px 12px;border-radius:8px;background:#FFEEF0;color:#C81E3A;font-size:13px">{{ f.err }}</div></sc-if>
+<div style="display:flex;justify-content:flex-end;gap:8px"><button sc-camel-on-click="{{ closeModal }}" style="height:40px;padding:0 16px;border-radius:8px;background:#fff;color:#18181B;border:1px solid #E4E4E7;font-size:14px;font-weight:500;cursor:pointer">Cancel</button><button sc-camel-on-click="{{ saveRider }}" style="height:40px;padding:0 16px;border-radius:8px;background:#7C5CFA;color:#fff;border:0;font-size:14px;font-weight:600;cursor:pointer">Save rider</button></div>
+</sc-if>
+<sc-if value="{{ md.correct }}">
+<div style="padding:12px 14px;border-radius:10px;background:#FEF5DC;color:#A16207;font-size:13px;line-height:1.5">Corrections never delete the transaction. The old and new values, your name and the reason are written to the audit log.</div>
+<div style="display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:14px"><span style="color:#71717A">Transaction</span><span style="font-family:'IBM Plex Mono',monospace;color:#18181B">{{ f.txn }}</span><span style="color:#71717A">Customer</span><span style="color:#18181B">{{ f.custName }}</span><span style="color:#71717A">Current amount</span><span style="color:#18181B;font-weight:600">{{ f.cur }}</span></div>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Corrected amount (Rs.)<input inputmode="numeric" value="{{ f.amount }}" sc-camel-on-change="{{ fs.amount }}" style="height:40px;border:1px solid #E4E4E7;border-radius:8px;padding:0 12px;font-size:14px;color:#18181B"></label>
+<label style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:#3F3F46">Reason<textarea value="{{ f.reason }}" sc-camel-on-change="{{ fs.reason }}" rows="3" style="border:1px solid #E4E4E7;border-radius:8px;padding:10px 12px;font-size:14px;color:#18181B;resize:vertical"></textarea></label>
+<sc-if value="{{ fErr }}"><div style="padding:10px 12px;border-radius:8px;background:#FFEEF0;color:#C81E3A;font-size:13px">{{ f.err }}</div></sc-if>
+<div style="display:flex;justify-content:flex-end;gap:8px"><button sc-camel-on-click="{{ closeModal }}" style="height:40px;padding:0 16px;border-radius:8px;background:#fff;color:#18181B;border:1px solid #E4E4E7;font-size:14px;font-weight:500;cursor:pointer">Cancel</button><button sc-camel-on-click="{{ saveCorrection }}" style="height:40px;padding:0 16px;border-radius:8px;background:#7C5CFA;color:#fff;border:0;font-size:14px;font-weight:600;cursor:pointer">Save correction</button></div>
+</sc-if>
+<sc-if value="{{ md.confirm }}">
+<div style="font-size:14px;color:#3F3F46">Collecting from <strong style="color:#18181B">{{ cf.cust }}</strong></div>
+<div style="display:flex;flex-direction:column;border:1px solid #E7E7EA;border-radius:10px">
+<sc-for list="{{ cf.lines }}" as="l" hint-placeholder-count="1"><div style="display:flex;justify-content:space-between;gap:12px;padding:12px 14px;border-bottom:1px solid #F0F0F2;font-size:14px"><span style="color:#3F3F46">{{ l.item }}</span><span style="color:#18181B;font-weight:600;white-space:nowrap">{{ l.amountF }}</span></div></sc-for>
+<div style="display:flex;justify-content:space-between;gap:12px;padding:14px;font-size:16px"><span style="font-weight:600;color:#18181B">Total</span><span style="font-size:24px;font-weight:700;color:#18181B">{{ cf.totalF }}</span></div>
+</div>
+<div style="font-size:13px;color:#71717A">Completed payments cannot be deleted or edited by riders.</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><button sc-camel-on-click="{{ closeModal }}" style="height:52px;border-radius:10px;background:#fff;color:#18181B;border:1px solid #E4E4E7;font-size:15px;font-weight:600;cursor:pointer">Cancel</button><button sc-camel-on-click="{{ submitPay }}" style="height:52px;border-radius:10px;background:#15803D;color:#fff;border:0;font-size:15px;font-weight:700;cursor:pointer">Confirm &amp; submit</button></div>
+</sc-if>
+<sc-if value="{{ md.receipt }}">
+<div style="display:flex;flex-direction:column;align-items:center;gap:2px;text-align:center;padding-bottom:12px;border-bottom:1px dashed #E4E4E7"><span style="font-size:16px;font-weight:700;color:#18181B">{{ rc.shop }}</span><span style="font-size:12.5px;color:#71717A">{{ rc.addr }} · {{ rc.phone }}</span><span style="font-size:12.5px;font-weight:600;color:#3F3F46;margin-top:6px;letter-spacing:.08em">PAYMENT RECEIPT</span></div>
+<div style="display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:14px"><span style="color:#71717A">Customer</span><span style="color:#18181B;text-align:right">{{ rc.cust }}</span><span style="color:#71717A">Date &amp; time</span><span style="color:#18181B;text-align:right">{{ rc.when }}</span><span style="color:#71717A">Collected by</span><span style="color:#18181B;text-align:right">{{ rc.rider }}</span></div>
+<div style="display:flex;flex-direction:column;border-top:1px dashed #E4E4E7;border-bottom:1px dashed #E4E4E7;padding:8px 0">
+<sc-for list="{{ rc.lines }}" as="l" hint-placeholder-count="1"><div style="display:flex;justify-content:space-between;gap:12px;padding:6px 0;font-size:14px"><span style="display:flex;flex-direction:column"><span style="color:#18181B">{{ l.item }}</span><span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:#71717A">{{ l.txn }}</span></span><span style="color:#18181B;font-weight:600;white-space:nowrap">{{ l.amountF }}</span></div></sc-for>
+</div>
+<div style="display:flex;justify-content:space-between;font-size:16px"><span style="font-weight:600;color:#18181B">Total paid</span><span style="font-weight:700;color:#18181B">{{ rc.totalF }}</span></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><button sc-camel-on-click="{{ rc.copy }}" style="height:48px;border-radius:10px;background:#fff;color:#18181B;border:1px solid #E4E4E7;font-size:14px;font-weight:600;cursor:pointer">Copy receipt</button><button sc-camel-on-click="{{ closeModal }}" style="height:48px;border-radius:10px;background:#7C5CFA;color:#fff;border:0;font-size:14px;font-weight:600;cursor:pointer">Done</button></div>
+</sc-if>
+</div>
+</div>
+</div>
+</sc-if>
+<sc-if value="{{ hasToast }}" hint-placeholder-val="{{ false }}">
+<div role="status" style="position:fixed;left:50%;bottom:{{ toastBottom }};transform:translateX(-50%);z-index:200;background:#18181B;color:#fff;padding:12px 18px;border-radius:10px;font-size:14px;font-weight:500;box-shadow:0 10px 30px rgba(24,24,27,0.165);max-width:calc(100vw - 32px)">{{ toast }}</div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script="">
+class Component extends DCLogic {
+  state = this.init();
+  init(){
+    const base={ready:false,role:null,riderId:null,page:'dashboard',sel:null,openItem:null,drawer:false,notifOpen:false,modal:null,f:{},toast:null,vw:typeof window!=='undefined'?window.innerWidth:1280,
+      lg:{role:'owner',user:'owner@collecto.lk',pass:'owner123',remember:true,err:'',info:''},gq:'',cq:'',cst:'all',crd:'all',ist:'all',colDate:'2026-10-13',colRider:'all',colQ:'',colSt:'all',
+      rep:'daily',repDate:'2026-10-13',repMonth:'2026-10',rp:'home',rSel:null,rBack:'home',mapSel:null,rq:'',rst:'all',collect:{},cErr:'',lastTx:null,cash:'',closeNote:'',closeErr:'',dbView:'board',dbRider:'all',dbFilt:false};
+    return window.CL&&window.CLV?{...base,...this.boot()}:base;
+  }
+  boot(){
+    let data=null;try{data=JSON.parse(localStorage.getItem('collecto-data-v1'));}catch(e){}
+    if(!data||data.v!==1)data=CL.buildSeed();else CL.addSeedPhotos(data);
+    let ss=null;try{ss=JSON.parse(localStorage.getItem('collecto-session-v1')||sessionStorage.getItem('collecto-session-v1'));}catch(e){}
+    if(ss&&ss.role==='rider'&&!data.riders.find(r=>r.id===ss.riderId))ss=null;
+    return {ready:true,data,role:ss?ss.role:null,riderId:ss?ss.riderId||null:null};
+  }
+  componentDidMount(){
+    this._r=()=>this.setState({vw:window.innerWidth});window.addEventListener('resize',this._r);this._k=e=>{const t=document.activeElement;if(e.key==='Escape'&&(this.state.userMenu||this.state.notifOpen)){this.setState({userMenu:false,notifOpen:false});return;}if(e.key==='/'&&!(t&&/INPUT|TEXTAREA|SELECT/.test(t.tagName))){const i=document.querySelector('input[placeholder="Search anything"]');if(i){e.preventDefault();i.focus();}}};window.addEventListener('keydown',this._k);
+    if(!this.state.ready){this._p=setInterval(()=>{if(window.CL&&window.CLV){clearInterval(this._p);this.setState(this.boot());}},50);}
+  }
+  componentWillUnmount(){window.removeEventListener('resize',this._r);clearInterval(this._p);clearTimeout(this._t);}
+  componentDidUpdate(p,ps){if(this.state.data&&ps.data!==this.state.data){try{localStorage.setItem('collecto-data-v1',JSON.stringify(this.state.data));}catch(e){}}}
+  toast(m){this.setState({toast:m});clearTimeout(this._t);this._t=setTimeout(()=>this.setState({toast:null}),3200);}
+  save(){try{localStorage.setItem('collecto-data-v1',JSON.stringify(this.state.data));}catch(e){}}
+  mut(fn){this.setState(s=>{const d=JSON.parse(JSON.stringify(s.data));fn(d);return{data:d};},()=>this.save());}
+  setLg(o){this.setState(s=>({lg:{...s.lg,...o}}));}
+  openCust(id){this.setState({role:'owner',page:'profile',sel:id,openItem:null,drawer:false,gq:'',notifOpen:false});}
+  openModal(m,f){this.setState({modal:m,f:{err:'',...f},notifOpen:false});}
+  closeModal(){this.setState({modal:null,f:{}});}
+  err(e){this.setState(s=>({f:{...s.f,err:e}}));}
+  openCustomerModal(){this.openModal('customer',{name:'',nic:'',phone:'',address:'',city:'',riderId:this.state.data.riders[0].id,notes:'',photo:'',lat:null,lng:null});}
+  openItemModal(cid,code){const p=this.state.data.products.find(x=>x.code===code);const c=this.state.data.customers.find(x=>x.id===cid);
+    this.openModal('item',{customerId:cid||'',code:code||'',price:p?String(p.price):'',freq:p?p.freq:'weekly',period:p?String(p.period):'',amount:p?String(p.amount):'',start:CL.addD(CL.TODAY,7),riderId:c?c.riderId:this.state.data.riders[0].id});}
+  openRiderModal(r){this.openModal('rider',r?{id:r.id,name:r.name,phone:r.phone,area:r.area,username:r.username,password:'',active:r.active}:{id:'',name:'',phone:'',area:'',username:'',password:'',active:true});}
+  setF(k,v){this.setState(s=>{const f={...s.f,[k]:v};
+    if(s.modal==='item'){
+      if(k==='code'){const p=s.data.products.find(x=>x.code===v);if(p)Object.assign(f,{price:String(p.price),freq:p.freq,period:String(p.period),amount:String(p.amount)});}
+      if(k==='customerId'){const c=s.data.customers.find(x=>x.id===v);if(c)f.riderId=c.riderId;}
+      if(['price','freq','period'].includes(k)){const cnt=f.freq==='weekly'?(+f.period)*4:(+f.period);if(+f.price>0&&cnt>0)f.amount=String(Math.ceil(f.price/cnt/10)*10);}
+    }
+    if(s.modal==='customer'&&k==='city'&&!s.f.pinned){const a=CL.AREAS[v.trim()];if(a){f.lat=a[0];f.lng=a[1];}}
+    return{f};});}
+  fs(){if(!this._fs){this._fs={};CLV.KEYS.forEach(k=>this._fs[k]=e=>this.setF(k,e.target.value));}return this._fs;}
+  doLogin(){const {lg,data}=this.state;const u=lg.user.trim().toLowerCase();
+    if(!u||!lg.pass)return this.setLg({err:'Enter your username and password.',info:''});
+    let ss=null;
+    if(lg.role==='owner'){const o=data.owner;if((u===o.email||u===o.username)&&lg.pass===o.password)ss={role:'owner'};}
+    else{const ud=u.replace(/\D/g,'');const r=data.riders.find(r=>(r.username===u||(ud.length>=9&&r.phone.replace(/\D/g,'')===ud))&&r.password===lg.pass);
+      if(r&&!r.active)return this.setLg({err:'This rider account is inactive. Please contact the owner.',info:''});
+      if(r)ss={role:'rider',riderId:r.id};}
+    if(!ss)return this.setLg({err:'Incorrect username or password.',info:''});
+    try{(lg.remember?localStorage:sessionStorage).setItem('collecto-session-v1',JSON.stringify(ss));}catch(e){}
+    this.setState({role:ss.role,riderId:ss.riderId||null,page:'dashboard',rp:'home',lg:{...lg,err:'',info:''}});}
+  logout(){try{localStorage.removeItem('collecto-session-v1');sessionStorage.removeItem('collecto-session-v1');}catch(e){}
+    this.setState(s=>({role:null,riderId:null,modal:null,notifOpen:false,drawer:false,lg:{...s.lg,pass:'',err:'',info:''}}));}
+  saveCustomer(){const {f,data:d}=this.state;const nic=(f.nic||'').trim().toUpperCase(),ph=(f.phone||'').replace(/\D/g,'');
+    let e='';
+    if(!f.name||f.name.trim().length<3)e="Enter the customer's full name.";
+    else if(!/^(\d{9}[VX]|\d{12})$/.test(nic))e='NIC must be 9 digits followed by V/X, or 12 digits.';
+    else if(d.customers.some(c=>c.nic.toUpperCase()===nic))e='A customer with this NIC is already registered.';
+    else if(ph.length!==10)e='Phone number must have 10 digits.';
+    else if(!f.address.trim()||!f.city.trim())e='Enter the address and city/area.';
+    else if(f.lat==null)e='Set the customer location on the map.';
+    else if(!f.riderId)e='Assign a rider.';
+    if(e)return this.err(e);
+    const id='C'+(Math.max(...d.customers.map(c=>+c.id.slice(1)))+1);
+    this.mut(x=>x.customers.push({id,name:f.name.trim(),nic,phone:ph.replace(/(\d{3})(\d{3})(\d{4})/,'$1 $2 $3'),address:f.address.trim(),city:f.city.trim(),riderId:f.riderId,lat:+f.lat.toFixed(5),lng:+f.lng.toFixed(5),notes:(f.notes||'').trim(),photo:f.photo||'',since:CL.TODAY}));
+    this.setState({modal:null,f:{},page:'profile',sel:id});this.toast('Customer registered');}
+  saveItem(){const {f,data:d}=this.state;const p=d.products.find(x=>x.code===f.code),price=+f.price,amount=+f.amount,period=+f.period;
+    let e='';
+    if(!f.customerId)e='Select a customer.';else if(!p)e='Select a product.';else if(p.stock<1)e='This product is out of stock. Add stock in Inventory first.';
+    else if(!(price>0))e='Enter a valid price.';else if(!(period>0))e='Enter the payment period in months.';
+    else if(!(amount>0)||amount>price)e='Amount per payment must be more than 0 and not more than the price.';
+    else if(!f.start)e='Choose a start date.';else if(!f.riderId)e='Assign a rider.';
+    if(e)return this.err(e);
+    const id='IT'+(Math.max(0,...d.items.map(i=>+i.id.slice(2)))+1);
+    this.mut(x=>{x.items.push({id,customerId:f.customerId,riderId:f.riderId,code:p.code,name:p.name,price,freq:f.freq,amount,period,start:f.start});const pp=x.products.find(y=>y.code===p.code);pp.stock-=1;pp.sold+=1;});
+    this.setState({modal:null,f:{},page:'profile',sel:f.customerId});this.toast('Installment plan created · schedule generated');}
+  saveProduct(){const {f,data:d}=this.state;const code=(f.code||'').trim().toUpperCase();const n=k=>+f[k];
+    let e='';
+    if(!code)e='Enter an item code.';else if(d.products.some(p=>p.code===code))e='This item code already exists.';else if(!(f.pname||'').trim())e='Enter the item name.';
+    else if(!(n('purchase')>0&&n('cash')>0&&n('price')>0))e='Enter purchase, cash and installment prices.';
+    else if(!(n('period')>0)||!(n('amount')>0))e='Enter the default plan (period and amount per payment).';
+    else if(!(Number.isInteger(n('stock'))&&n('stock')>=0))e='Stock must be a whole number.';
+    if(e)return this.err(e);
+    this.mut(x=>x.products.push({code,name:f.pname.trim(),purchase:n('purchase'),cash:n('cash'),price:n('price'),freq:f.freq,amount:n('amount'),period:n('period'),stock:n('stock'),sold:0}));
+    this.closeModal();this.toast('Product added');}
+  saveStock(){const f=this.state.f,q=+f.qty;if(!(Number.isInteger(q)&&q>0))return this.err('Enter a whole number greater than 0.');
+    this.mut(x=>{x.products.find(p=>p.code===f.code).stock+=q;});this.closeModal();this.toast(q+' unit(s) added to '+f.pname);}
+  saveRider(){const {f,data:d}=this.state;const u=(f.username||'').trim().toLowerCase(),ph=(f.phone||'').replace(/\D/g,'');
+    let e='';
+    if(!f.name.trim())e='Enter the rider name.';else if(ph.length!==10)e='Phone number must have 10 digits.';else if(!f.area.trim())e='Enter the assigned area.';
+    else if(!/^[a-z0-9._-]{3,}$/.test(u))e='Username must be at least 3 characters (letters, numbers, . _ -).';
+    else if(d.riders.some(r=>r.username===u&&r.id!==f.id))e='This username is already taken.';
+    else if(!f.id&&(f.password||'').length<4)e='Password must be at least 4 characters.';
+    if(e)return this.err(e);
+    const phone=ph.replace(/(\d{3})(\d{3})(\d{4})/,'$1 $2 $3');
+    this.mut(x=>{if(f.id){const r=x.riders.find(r=>r.id===f.id);Object.assign(r,{name:f.name.trim(),phone,area:f.area.trim(),username:u,active:!!f.active});if(f.password)r.password=f.password;}
+      else x.riders.push({id:'R'+(Math.max(...x.riders.map(r=>+r.id.slice(1)))+1),name:f.name.trim(),phone,area:f.area.trim(),username:u,password:f.password,active:!!f.active});});
+    this.closeModal();this.toast(f.id?'Rider updated':'Rider account created');}
+  saveCorrection(){const {f,data:d}=this.state;const a=+f.amount,p=d.payments.find(x=>x.id===f.payId);
+    if(!(a>0))return this.err('Enter a valid amount.');if(a===p.amount)return this.err('The new amount is the same as the current amount.');
+    if((f.reason||'').trim().length<5)return this.err('A reason is required for every correction.');
+    const t=CL.nowT();
+    this.mut(x=>{const q=x.payments.find(y=>y.id===p.id);const old=q.amount;q.amount=a;q.status='corrected';
+      x.audit.unshift({id:'A'+(x.audit.length+1)+'-'+Date.now(),date:CL.TODAY,time:t,user:x.owner.name,action:'Payment amount corrected',txn:q.txn,ref:f.custName,old:CL.fmt(old),nw:CL.fmt(a),reason:f.reason.trim()});});
+    this.closeModal();this.toast('Correction saved to audit log');}
+  doCollect(){const s=this.state,D=this._D,c=D.cmap[s.rSel];const sel=c.act.filter(x=>s.collect[x.id]&&s.collect[x.id].on);
+    if(!sel.length)return this.setState({cErr:'Select at least one item to collect.'});
+    for(const x of sel){const v=+s.collect[x.id].val;if(!(v>0))return this.setState({cErr:'Enter an amount for '+x.name+'.'});if(v>x.balance)return this.setState({cErr:'Amount for '+x.name+' is more than its balance ('+CL.fmt(x.balance)+').'});}
+    this.setState({cErr:'',modal:'confirm'});}
+  submitPay(){const s=this.state,D=this._D,c=D.cmap[s.rSel],me=D.rmap[s.riderId];
+    const sel=c.act.filter(x=>s.collect[x.id]&&s.collect[x.id].on&&+s.collect[x.id].val>0);
+    let seq=s.data.seq;const t=CL.nowT();
+    const np=sel.map(x=>{seq++;return{id:'P'+seq,txn:CL.txnId(CL.TODAY,seq),itemId:x.id,customerId:c.id,riderId:me.id,amount:Math.round(+s.collect[x.id].val),date:CL.TODAY,time:t,status:'completed'};});
+    const total=CL.sum(np.map(p=>p.amount));
+    this.mut(x=>{x.payments.push(...np);x.seq=seq;x.notifs.unshift({id:'N'+Date.now(),type:'payment',title:'Payment received',text:CL.fmt(total)+' from '+c.name+' · '+me.name,date:CL.TODAY,time:t,read:false});});
+    this.setState({modal:null,rp:'success',collect:{},lastTx:{cust:c.name,custId:c.id,phone:c.phone,total,time:t,date:CL.TODAY,rider:me.name,lines:np.map(p=>({txn:p.txn,item:D.imap[p.itemId].code+' · '+D.imap[p.itemId].name,amount:p.amount}))}});
+    this.toast('Payment recorded · owner notified');}
+  submitClosing(exp,col,pend,count){const s=this.state,me=this._D.rmap[s.riderId];
+    if(s.cash==='')return this.setState({closeErr:'Enter the cash amount you are submitting.'});
+    const cash=+s.cash,t=CL.nowT(),diff=cash-col;
+    if(diff!==0&&!s.closeNote.trim())return this.setState({closeErr:'Cash differs from collected amount. Add a note explaining the difference.'});
+    this.mut(x=>{x.closings.push({id:'CL'+Date.now(),riderId:me.id,date:CL.TODAY,time:t,expected:exp,collected:col,pending:pend,cash,count,note:s.closeNote.trim()});
+      x.notifs.unshift({id:'N'+Date.now(),type:'closing',title:'Daily closing submitted',text:me.name+' · collected '+CL.fmt(col)+', cash submitted '+CL.fmt(cash)+(diff?' (difference '+CL.fmt(diff)+')':''),date:CL.TODAY,time:t,read:false});});
+    this.setState({cash:'',closeNote:'',closeErr:''});this.toast('Daily closing submitted');}
+  exportCsv(r){const esc=v=>'"'+String(v).replace(/"/g,'""')+'"';
+    const csv=[r.cols.map(c=>esc(c.v)).join(','),...r.rows.map(x=>x.cells.map(c=>esc(c.v)).join(','))].join('\n');
+    const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([csv],{type:'text/csv'}));a.download='collecto-'+this.state.rep+'-report.csv';document.body.appendChild(a);a.click();a.remove();this.toast('Report exported as CSV');}
+  copyReceipt(t){try{navigator.clipboard.writeText(t);this.toast('Receipt copied');}catch(e){}}
+  onPhoto(e){const file=e.target.files&&e.target.files[0];if(!file)return;const r=new FileReader();
+    r.onload=()=>{const img=new Image();img.onload=()=>{const c=document.createElement('canvas'),S=160,m=Math.min(img.width,img.height);c.width=c.height=S;
+      c.getContext('2d').drawImage(img,(img.width-m)/2,(img.height-m)/2,m,m,0,0,S,S);this.setState(s=>({f:{...s.f,photo:c.toDataURL('image/jpeg',.8)}}));};img.src=r.result;};r.readAsDataURL(file);}
+  onPin(e){const r=e.currentTarget.getBoundingClientRect(),b=CL.BOUNDS,px=(e.clientX-r.left)/r.width,py=(e.clientY-r.top)/r.height;
+    this.setState(s=>({f:{...s.f,lat:b.lat1-py*(b.lat1-b.lat0),lng:b.lng0+px*(b.lng1-b.lng0),pinned:true}}));}
+  modalVals(){const s=this.state,f=s.f||{},d=s.data,{fmt,fd,proj,BOUNDS,AREAS}=CL;
+    const T={customer:'Register customer',item:'Add item / installment',product:'Add product',stock:'Add stock',rider:f.id?'Edit rider':'Add rider',correct:'Correct payment',confirm:'Confirm payment',receipt:'Digital receipt'};
+    const v={hasModal:!!s.modal,md:{[s.modal||'none']:true},modalTitle:T[s.modal]||'',modalW:s.modal==='customer'?'760px':'540px',f,fs:this.fs(),fErr:!!f.err,
+      closeModal:()=>this.closeModal(),closeModalBg:e=>{if(e.target===e.currentTarget)this.closeModal();},
+      saveCustomer:()=>this.saveCustomer(),saveItem:()=>this.saveItem(),saveProduct:()=>this.saveProduct(),saveStock:()=>this.saveStock(),saveRider:()=>this.saveRider(),saveCorrection:()=>this.saveCorrection(),submitPay:()=>this.submitPay(),
+      onPhoto:e=>this.onPhoto(e),onPin:e=>this.onPin(e),toggleActive:()=>this.setF('active',!f.active),
+      mRiderOpts:d.riders.filter(r=>r.active||r.id===f.riderId).map(r=>({v:r.id,label:r.name+' — '+r.area})),areaOpts:Object.keys(AREAS).map(a=>({v:a})),
+      custOpts:d.customers.map(c=>({v:c.id,label:c.name+' · '+c.nic})),prodOpts:d.products.map(p=>({v:p.code,label:p.code+' · '+p.name+' ('+p.stock+' in stock)'})),
+      freqOpts:[{v:'weekly',label:'Weekly'},{v:'monthly',label:'Monthly'}],hasPhoto:!!f.photo,noPhoto:!f.photo,photoBg:CL.bg(f.photo)};
+    if(s.modal==='customer'){v.pick={areas:CLV.mapLayer([],BOUNDS).areas,hasPin:f.lat!=null,pin:f.lat!=null?proj(f.lat,f.lng,BOUNDS):{x:0,y:0},coords:f.lat!=null?f.lat.toFixed(5)+', '+f.lng.toFixed(5):'Not set'};}
+    if(s.modal==='item'){const price=+f.price,amount=+f.amount;const ok=price>0&&amount>0&&amount<=price&&f.start;
+      if(ok){const ds=CL.sched({price,amount,freq:f.freq,start:f.start});v.prev={ok:true,text:ds.length+' '+f.freq+' payments of '+fmt(amount)+(price%amount?' (last '+fmt(price-amount*(ds.length-1))+')':''),range:fd(ds[0])+' → '+fd(ds[ds.length-1]),dates:ds.slice(0,6).map(x=>({d:fd(x)})),more:ds.length>6?'+ '+(ds.length-6)+' more':''};}
+      else v.prev={ok:false};v.prevNo=!ok;v.custLocked=!!this._itemLock;}
+    if(s.modal==='confirm'&&this._D){const c=this._D.cmap[s.rSel];if(c){const lines=c.act.filter(x=>s.collect[x.id]&&s.collect[x.id].on&&+s.collect[x.id].val>0).map(x=>({item:x.code+' · '+x.name,amountF:fmt(+s.collect[x.id].val)}));
+      v.cf={cust:c.name,lines,totalF:fmt(CL.sum(lines.map(l=>+l.amountF.replace(/\D/g,''))))};}}
+    if(s.modal==='receipt'&&s.lastTx){const l=s.lastTx;const txt=[d.shop.name,d.shop.address,'Payment receipt','Customer: '+l.cust,'Date: '+fd(l.date)+' '+l.time,...l.lines.map(x=>x.txn+'  '+x.item+'  '+fmt(x.amount)),'Total: '+fmt(l.total),'Collected by: '+l.rider].join('\n');
+      v.rc={shop:d.shop.name,addr:d.shop.address,phone:d.shop.phone,cust:l.cust,when:fd(l.date)+' · '+l.time,rider:l.rider,totalF:fmt(l.total),lines:l.lines.map(x=>({...x,amountF:fmt(x.amount)})),copy:()=>this.copyReceipt(txt)};}
+    return v;}
+  renderVals(){
+    const s=this.state;
+    if(!s.ready)return{loading:true,isLogin:false,isOwner:false,isRider:false};
+    this._D=CLV.derive(s.data);const D=this._D;
+    const lr=s.lg.role==='rider';
+    const v={loading:false,isLogin:!s.role,isOwner:s.role==='owner',isRider:s.role==='rider',shopName:s.data.shop.name,toast:s.toast,hasToast:!!s.toast,
+      todayLabel:CL.pd(CL.TODAY).toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'}),
+      lg:s.lg,lgHasErr:!!s.lg.err,lgHasInfo:!!s.lg.info,lgUserLabel:lr?'Username or phone':'Email or username',
+      lgTab:{ownerBg:lr?'transparent':'#fff',ownerFg:lr?'#71717A':'#18181B',riderBg:lr?'#fff':'transparent',riderFg:lr?'#18181B':'#71717A'},
+      lgOwner:()=>this.setLg({role:'owner',user:'owner@collecto.lk',pass:'owner123',err:'',info:''}),lgRider:()=>this.setLg({role:'rider',user:'kasun',pass:'1234',err:'',info:''}),
+      lgUser:e=>this.setLg({user:e.target.value,err:''}),lgPass:e=>this.setLg({pass:e.target.value,err:''}),lgRemember:()=>this.setLg({remember:!s.lg.remember}),
+      lgKey:e=>{if(e.key==='Enter')this.doLogin();},doLogin:()=>this.doLogin(),logout:()=>this.logout(),
+      lgForgot:()=>this.setLg({err:'',info:lr?'Riders: ask the shop owner to reset your password from the Riders screen.':'A password reset link would be sent to the registered owner email. (Not connected in this demo.)'})};
+    if(s.role==='owner')Object.assign(v,CLV.owner(this,s.vw<960));
+    if(s.role==='rider')Object.assign(v,CLV.rider(this));
+    Object.assign(v,this.modalVals());
+    v.toastBottom=s.role==='rider'?'92px':'24px';
+    return v;
+  }
+}
+</script>
+
+
+</body></html>
