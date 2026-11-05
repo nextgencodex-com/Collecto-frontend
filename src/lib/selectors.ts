@@ -17,10 +17,22 @@ export function derive(d: AppData): Derived {
   const cmap: Record<string, CalcCustomer> = {};
   const imap: Record<string, CalcItem> = {};
   d.riders.forEach((r) => (rmap[r.id] = r));
-  const items = d.items.map((it) => calcItem(it, pays));
-  items.forEach((i) => (imap[i.id] = i));
+
+  // Group once so the work is O(items + payments), not O(items x payments) (hours of CPU on a big shop).
+  const paysByItem = new Map<string, Payment[]>();
+  const paidTodayByCustomer = new Map<string, Payment[]>();
+  for (const p of pays) {
+    (paysByItem.get(p.itemId) ?? paysByItem.set(p.itemId, []).get(p.itemId)!).push(p);
+    if (p.date === TODAY) (paidTodayByCustomer.get(p.customerId) ?? paidTodayByCustomer.set(p.customerId, []).get(p.customerId)!).push(p);
+  }
+  const items = d.items.map((it) => calcItem(it, paysByItem.get(it.id) ?? []));
+  const itemsByCustomer = new Map<string, CalcItem[]>();
+  for (const i of items) {
+    imap[i.id] = i;
+    (itemsByCustomer.get(i.customerId) ?? itemsByCustomer.set(i.customerId, []).get(i.customerId)!).push(i);
+  }
   const custs = d.customers.map((c) => {
-    const its = items.filter((x) => x.customerId === c.id);
+    const its = itemsByCustomer.get(c.id) ?? [];
     const act = its.filter((x) => x.status !== "DONE");
     const status: Status = act.length
       ? act.reduce<Status>((a, x) => (RANK[x.status] < RANK[a] ? x.status : a), "UPCOMING")
@@ -39,7 +51,7 @@ export function derive(d: AppData): Derived {
       paid: sum(its.map((x) => x.paid)),
       total: sum(its.map((x) => x.price)),
       missed: sum(act.map((x) => x.missed)),
-      paidToday: sum(pays.filter((p) => p.customerId === c.id && p.date === TODAY).map((p) => p.amount)),
+      paidToday: sum((paidTodayByCustomer.get(c.id) ?? []).map((p) => p.amount)),
       riderName: rmap[c.riderId]?.name ?? "Unassigned",
     };
     cmap[c.id] = o;
