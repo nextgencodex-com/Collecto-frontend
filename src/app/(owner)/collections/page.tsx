@@ -54,7 +54,14 @@ export default function CollectionsPage() {
       <div className="card flex flex-wrap items-end gap-3 p-4">
         <label className={label}>
           Date
-          <input type="date" value={date} onChange={(e) => setDate(e.target.value)} className={`${ctl} px-2.5`} />
+          <input
+            type="date"
+            value={date}
+            min={data.paymentsFrom ?? undefined}
+            max={TODAY}
+            onChange={(e) => setDate(e.target.value)}
+            className={`${ctl} px-2.5`}
+          />
         </label>
         <div className="flex gap-1.5">
           <button onClick={() => setDate(TODAY)} className="h-10 rounded-lg border border-line-input bg-white px-3 text-13 font-medium text-ink hover:bg-hover">

@@ -1,13 +1,20 @@
 // Faithful port of the prototype's calculation core (reference/logic-core.js).
 import type { CalcItem, Item, Payment, Status } from "./types";
 
-/**
- * "Today" for every due-date calculation: the current date in the shop's time zone, matching the
- * backend's APP_TZ. NEXT_PUBLIC_DEMO_TODAY pins it (set the backend's APP_TODAY to the same value).
- */
-export const TODAY =
-  process.env.NEXT_PUBLIC_DEMO_TODAY ||
+/** The current date in the shop's time zone according to this device's clock. */
+export const localToday = () =>
   new Intl.DateTimeFormat("en-CA", { timeZone: process.env.NEXT_PUBLIC_APP_TZ || "Asia/Colombo" }).format(new Date());
+
+/**
+ * "Today" for every due-date calculation. It starts as the device's date and is replaced by the
+ * server's date on every bootstrap (see setToday), so the app always agrees with the backend, even if
+ * the backend pins its date (APP_TODAY) or the device clock is wrong. It is a live binding: modules that
+ * import it see the new value.
+ */
+export let TODAY = process.env.NEXT_PUBLIC_DEMO_TODAY || localToday();
+export const setToday = (d: string) => {
+  TODAY = d;
+};
 
 export const pad = (n: number) => String(n).padStart(2, "0");
 export const iso = (d: Date) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
@@ -97,8 +104,10 @@ export function calcItem(it: Item, pays: Payment[]): CalcItem {
   const dates = sched(it);
   const cum = cumF(it);
   const ps = pays.filter((p) => p.itemId === it.id);
-  const paid = sum(ps.map((p) => p.amount));
-  const paidBefore = sum(ps.filter((p) => p.date < TODAY).map((p) => p.amount));
+  // payments older than the bootstrap window arrive as one number per item (all of them predate today)
+  const prior = it.priorPaid ?? 0;
+  const paid = r2(sum(ps.map((p) => p.amount)) + prior);
+  const paidBefore = r2(sum(ps.filter((p) => p.date < TODAY).map((p) => p.amount)) + prior);
   const cT = dates.filter((d) => d <= TODAY).length;
   const cB = dates.filter((d) => d < TODAY).length;
   const expT = cT ? cum(cT - 1) : 0;
@@ -133,6 +142,7 @@ export function expectedOn(it: CalcItem, date: string, pays: Payment[]) {
   const cum = cumF(it);
   const c = it.dates.filter((d) => d <= date).length;
   const e = c ? cum(c - 1) : 0;
-  const pb = sum(pays.filter((p) => p.itemId === it.id && p.date < date).map((p) => p.amount));
+  // exact for dates on or after the bootstrap window start (everything earlier is in priorPaid)
+  const pb = r2(sum(pays.filter((p) => p.itemId === it.id && p.date < date).map((p) => p.amount)) + (it.priorPaid ?? 0));
   return r2(Math.max(0, e - pb));
 }

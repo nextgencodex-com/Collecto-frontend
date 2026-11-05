@@ -3,7 +3,7 @@
 // and then `reload()`s this store; components keep reading `data` / `useDerived()` exactly as before.
 import { create } from "zustand";
 import { useMemo } from "react";
-import { AREAS } from "@/lib/calc";
+import { AREAS, TODAY, setToday } from "@/lib/calc";
 import { derive } from "@/lib/selectors";
 import type { AppData, Freq, LastTx, Session } from "@/lib/types";
 import { type AuthPayload, type Result, fail, ok, onSessionLost, refreshAccessToken, request, setAccessToken } from "@/services/http";
@@ -27,6 +27,8 @@ export interface RiderForm {
 }
 
 export const emptyData = (): AppData => ({
+  today: TODAY,
+  paymentsFrom: null,
   shop: { name: "", phone: "", address: "" },
   owner: { name: "", email: "", username: "", photo: "" },
   riders: [],
@@ -67,6 +69,7 @@ export const useAppStore = create<AppState>()((set, get) => {
   const enter = async (auth: AuthPayload): Promise<Result<Session>> => {
     const res = await request<AppData>("GET", "/bootstrap");
     if (!res.ok) return fail(res.error);
+    setToday(res.value.today);
     set({ data: res.value, session: auth.session });
     return ok(auth.session);
   };
@@ -110,7 +113,10 @@ export const useAppStore = create<AppState>()((set, get) => {
 
     reload: async () => {
       const res = await request<AppData>("GET", "/bootstrap");
-      if (res.ok) set({ data: res.value });
+      if (res.ok) {
+        setToday(res.value.today);
+        set({ data: res.value });
+      }
       return res.ok ? ok(undefined) : fail(res.error);
     },
 

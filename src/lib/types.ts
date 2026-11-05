@@ -64,6 +64,11 @@ export interface Item {
   amount: number;
   period: number;
   start: string;
+  /**
+   * Total of this item's payments dated before `AppData.paymentsFrom` (those payments are not sent
+   * individually). 0 when the server sends the whole history.
+   */
+  priorPaid?: number;
 }
 
 export interface Payment {
@@ -127,6 +132,10 @@ export interface Extension {
 
 /** The GET /bootstrap payload (role-scoped by the server). */
 export interface AppData {
+  /** The server's date (shop time zone), YYYY-MM-DD. All due-date maths is relative to it. */
+  today: string;
+  /** Individual payments are only included from this date on (earlier ones are summed in `Item.priorPaid`). */
+  paymentsFrom: string | null;
   shop: Shop;
   owner: Owner;
   riders: Rider[];
