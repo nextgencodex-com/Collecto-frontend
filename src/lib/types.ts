@@ -12,7 +12,6 @@ export interface Owner {
   name: string;
   email: string;
   username: string;
-  password: string;
   photo: string;
 }
 
@@ -22,7 +21,6 @@ export interface Rider {
   phone: string;
   area: string;
   username: string;
-  password: string;
   active: boolean;
   photo?: string;
 }
@@ -66,6 +64,11 @@ export interface Item {
   amount: number;
   period: number;
   start: string;
+  /**
+   * Total of this item's payments dated before `AppData.paymentsFrom` (those payments are not sent
+   * individually). 0 when the server sends the whole history.
+   */
+  priorPaid?: number;
 }
 
 export interface Payment {
@@ -127,9 +130,12 @@ export interface Extension {
   reason: string;
 }
 
+/** The GET /bootstrap payload (role-scoped by the server). */
 export interface AppData {
-  v: 1;
-  seq: number;
+  /** The server's date (shop time zone), YYYY-MM-DD. All due-date maths is relative to it. */
+  today: string;
+  /** Individual payments are only included from this date on (earlier ones are summed in `Item.priorPaid`). */
+  paymentsFrom: string | null;
   shop: Shop;
   owner: Owner;
   riders: Rider[];
@@ -140,8 +146,7 @@ export interface AppData {
   audit: AuditEntry[];
   notifs: Notification[];
   closings: Closing[];
-  /** optional so data saved before this feature still loads */
-  extensions?: Extension[];
+  extensions: Extension[];
 }
 
 export interface Session {

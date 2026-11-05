@@ -70,3 +70,10 @@ export function FormActions({ onCancel, submitLabel, onSubmit }: { onCancel: () 
 
 /** Numeric-only text input helper. */
 export const digits = (v: string) => v.replace(/[^\d]/g, "");
+
+/** Money input helper: digits with an optional decimal point and at most 2 decimals (paise). */
+export const decimal = (v: string) =>
+  v
+    .replace(/[^\d.]/g, "")
+    .replace(/^(\d*\.\d*)\./, "$1")
+    .replace(/^(\d*\.\d{2}).*$/, "$1");

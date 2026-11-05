@@ -5,7 +5,7 @@ import { fd, fmt } from "@/lib/calc";
 import type { LastTx } from "@/lib/types";
 import { api } from "@/services/api";
 import { useAppStore } from "@/store/app-store";
-import { Field, FormActions, FormError, ModalFrame, TextInput, digits } from "./frame";
+import { Field, FormActions, FormError, ModalFrame, TextInput, decimal } from "./frame";
 
 export function CorrectPaymentDialog({ payId, onClose }: { payId: string; onClose: () => void }) {
   const data = useAppStore((s) => s.data);
@@ -39,7 +39,7 @@ export function CorrectPaymentDialog({ payId, onClose }: { payId: string; onClos
           <span className="font-semibold text-ink">{fmt(p.amount)}</span>
         </div>
         <Field label="Corrected amount (Rs.)">
-          <TextInput inputMode="numeric" value={amount} onChange={(e) => setAmount(digits(e.target.value))} />
+          <TextInput inputMode="decimal" value={amount} onChange={(e) => setAmount(decimal(e.target.value))} />
         </Field>
         <Field label="Reason">
           <textarea

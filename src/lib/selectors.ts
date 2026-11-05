@@ -1,6 +1,5 @@
 // Pure data derivations (port of derive()/report()/map helpers in reference/view-models.js).
-import { AREAS, BOUNDS, RANK, TODAY, calcItem, cumF, expectedOn, fd, fmt, pct, proj, sum, type Bounds } from "./calc";
-import { ST } from "./status";
+import { AREAS, BOUNDS, RANK, TODAY, calcItem, cumF, fmt, pct, proj, sum, type Bounds } from "./calc";
 import type { AppData, CalcCustomer, CalcItem, Payment, Rider, Status } from "./types";
 
 export interface Derived {
@@ -18,10 +17,22 @@ export function derive(d: AppData): Derived {
   const cmap: Record<string, CalcCustomer> = {};
   const imap: Record<string, CalcItem> = {};
   d.riders.forEach((r) => (rmap[r.id] = r));
-  const items = d.items.map((it) => calcItem(it, pays));
-  items.forEach((i) => (imap[i.id] = i));
+
+  // Group once so the work is O(items + payments), not O(items x payments) (hours of CPU on a big shop).
+  const paysByItem = new Map<string, Payment[]>();
+  const paidTodayByCustomer = new Map<string, Payment[]>();
+  for (const p of pays) {
+    (paysByItem.get(p.itemId) ?? paysByItem.set(p.itemId, []).get(p.itemId)!).push(p);
+    if (p.date === TODAY) (paidTodayByCustomer.get(p.customerId) ?? paidTodayByCustomer.set(p.customerId, []).get(p.customerId)!).push(p);
+  }
+  const items = d.items.map((it) => calcItem(it, paysByItem.get(it.id) ?? []));
+  const itemsByCustomer = new Map<string, CalcItem[]>();
+  for (const i of items) {
+    imap[i.id] = i;
+    (itemsByCustomer.get(i.customerId) ?? itemsByCustomer.set(i.customerId, []).get(i.customerId)!).push(i);
+  }
   const custs = d.customers.map((c) => {
-    const its = items.filter((x) => x.customerId === c.id);
+    const its = itemsByCustomer.get(c.id) ?? [];
     const act = its.filter((x) => x.status !== "DONE");
     const status: Status = act.length
       ? act.reduce<Status>((a, x) => (RANK[x.status] < RANK[a] ? x.status : a), "UPCOMING")
@@ -40,7 +51,7 @@ export function derive(d: AppData): Derived {
       paid: sum(its.map((x) => x.paid)),
       total: sum(its.map((x) => x.price)),
       missed: sum(act.map((x) => x.missed)),
-      paidToday: sum(pays.filter((p) => p.customerId === c.id && p.date === TODAY).map((p) => p.amount)),
+      paidToday: sum((paidTodayByCustomer.get(c.id) ?? []).map((p) => p.amount)),
       riderName: rmap[c.riderId]?.name ?? "Unassigned",
     };
     cmap[c.id] = o;
@@ -132,83 +143,6 @@ export interface Report {
   cols: Cell[];
   rows: Cell[][];
   summary: { label: string; value: string }[];
-}
-
-export function buildReport(d: AppData, D: Derived, rep: ReportKey, repDate: string, repMonth: string): Report {
-  const pays = D.pays;
-  const L = (v: string | number): Cell => ({ v: String(v) });
-  const R = (v: string | number): Cell => ({ v: String(v), right: true });
-  const cn = (id: string) => custName(D, id);
-  const rn = (id: string) => riderName(D, id);
-  const iname = (id: string) => itemLabel(D, id);
-  let title = "";
-  let cols: Cell[] = [];
-  let rows: Cell[][] = [];
-  let summary: [string, string | number][] = [];
-
-  if (rep === "daily") {
-    const ps = pays.filter((p) => p.date === repDate);
-    title = "Daily collection report · " + fd(repDate);
-    cols = [L("Transaction"), L("Time"), L("Customer"), L("Item"), L("Rider"), R("Amount")];
-    rows = ps.map((p) => [L(p.txn), L(p.time), L(cn(p.customerId)), L(iname(p.itemId)), L(rn(p.riderId)), R(fmt(p.amount))]);
-    const exp = sum(D.items.map((i) => expectedOn(i, repDate, pays)));
-    const col = sum(ps.map((p) => p.amount));
-    summary = [["Expected", fmt(exp)], ["Collected", fmt(col)], ["Difference", fmt(col - exp)], ["Payments", ps.length]];
-  } else if (rep === "monthly") {
-    const m = repMonth;
-    const ps = pays.filter((p) => p.date.startsWith(m));
-    const by: Record<string, Payment[]> = {};
-    ps.forEach((p) => (by[p.date] = by[p.date] || []).push(p));
-    title = "Monthly collection report · " + new Date(m + "-01T00:00").toLocaleDateString("en-GB", { month: "long", year: "numeric" });
-    cols = [L("Date"), R("Payments"), R("Collected")];
-    rows = Object.keys(by).sort().map((k) => [L(fd(k)), R(by[k].length), R(fmt(sum(by[k].map((p) => p.amount))))]);
-    let due = 0, done = 0, over = 0;
-    D.items.forEach((it) => {
-      const cum = cumF(it);
-      it.dates.forEach((dt, i) => {
-        if (!dt.startsWith(m)) return;
-        due++;
-        if (cum(i) <= it.paid) done++;
-        else if (dt < TODAY) over++;
-      });
-    });
-    summary = [["Collected", fmt(sum(ps.map((p) => p.amount)))], ["Installments due", due], ["Completed", done], ["Overdue", over]];
-  } else if (rep === "person") {
-    title = "Person-wise outstanding report";
-    cols = [L("Customer"), L("NIC"), L("Rider"), R("Active items"), R("Total"), R("Paid"), R("Balance"), R("Overdue")];
-    rows = D.custs
-      .filter((c) => c.balance > 0)
-      .sort((a, b) => b.balance - a.balance)
-      .map((c) => [L(c.name), L(c.nic), L(c.riderName), R(c.act.length), R(fmt(c.total)), R(fmt(c.paid)), R(fmt(c.balance)), R(fmt(c.overdue))]);
-    summary = [["Customers with balance", rows.length], ["Total outstanding", fmt(sum(D.custs.map((c) => c.balance)))], ["Total overdue", fmt(sum(D.custs.map((c) => c.overdue)))]];
-  } else if (rep === "item") {
-    title = "Item-wise balance report";
-    cols = [L("Item"), L("Customer"), R("Price"), R("Paid"), R("Balance"), L("Next due"), L("Status")];
-    rows = D.items.map((i) => [L(i.code + " · " + i.name), L(cn(i.customerId)), R(fmt(i.price)), R(fmt(i.paid)), R(fmt(i.balance)), L(i.next ? fd(i.next) : "—"), L(ST[i.status].label)]);
-    summary = [["Items", D.items.length], ["Completed", D.items.filter((i) => i.status === "DONE").length], ["Outstanding value", fmt(sum(D.items.map((i) => i.balance)))]];
-  } else if (rep === "rider") {
-    const m = repDate.slice(0, 7);
-    title = "Rider performance · " + fd(repDate);
-    cols = [L("Rider"), L("Area"), R("Customers"), R("Expected"), R("Collected"), R("Rate"), R("Month to date")];
-    rows = d.riders.map((r) => {
-      const e = sum(D.items.filter((i) => i.riderId === r.id).map((i) => expectedOn(i, repDate, pays)));
-      const c = sum(pays.filter((p) => p.riderId === r.id && p.date === repDate).map((p) => p.amount));
-      const mtd = sum(pays.filter((p) => p.riderId === r.id && p.date.startsWith(m) && p.date <= repDate).map((p) => p.amount));
-      return [L(r.name), L(r.area), R(D.custs.filter((x) => x.riderId === r.id).length), R(fmt(e)), R(fmt(c)), R(pct(c, e) + "%"), R(fmt(mtd))];
-    });
-  } else {
-    title = "Overdue installments report";
-    cols = [L("Customer"), L("Phone"), L("Item"), L("Rider"), R("Missed"), R("Overdue amount"), L("Oldest due")];
-    rows = D.items
-      .filter((i) => i.overdue > 0)
-      .sort((a, b) => b.overdue - a.overdue)
-      .map((i) => {
-        const c = D.cmap[i.customerId];
-        return [L(c.name), L(c.phone), L(i.code + " · " + i.name), L(c.riderName), R(i.missed), R(fmt(i.overdue)), L(fd(i.oldest))];
-      });
-    summary = [["Overdue items", rows.length], ["Overdue amount", fmt(sum(D.items.map((i) => i.overdue)))]];
-  }
-  return { title, cols, rows, summary: summary.map(([label, value]) => ({ label, value: String(value) })) };
 }
 
 export function reportToCsv(r: Report) {

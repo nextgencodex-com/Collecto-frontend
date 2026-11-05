@@ -8,8 +8,8 @@ import { api } from "@/services/api";
 import { type CustomerForm, areaCoords, useAppStore } from "@/store/app-store";
 import { Field, FormActions, FormError, ModalFrame, SelectInput, TextInput } from "./frame";
 
-/** Crop an uploaded image to a 160px square JPEG data URL (as in the prototype). */
-function readPhoto(file: File): Promise<string> {
+/** Crop an uploaded image to a 160px square JPEG: a data URL for the preview and a Blob for upload. */
+function readPhoto(file: File): Promise<{ url: string; blob: Blob }> {
   return new Promise((resolve, reject) => {
     const r = new FileReader();
     r.onerror = reject;
@@ -21,7 +21,11 @@ function readPhoto(file: File): Promise<string> {
         const m = Math.min(img.width, img.height);
         c.width = c.height = S;
         c.getContext("2d")!.drawImage(img, (img.width - m) / 2, (img.height - m) / 2, m, m, 0, 0, S, S);
-        resolve(c.toDataURL("image/jpeg", 0.8));
+        c.toBlob(
+          (blob) => (blob ? resolve({ url: c.toDataURL("image/jpeg", 0.8), blob }) : reject(new Error("Could not read the image"))),
+          "image/jpeg",
+          0.8,
+        );
       };
       img.onerror = reject;
       img.src = r.result as string;
@@ -33,7 +37,7 @@ function readPhoto(file: File): Promise<string> {
 export function CustomerDialog({ onClose }: { onClose: () => void }) {
   const router = useRouter();
   const riders = useAppStore((s) => s.data.riders);
-  const [f, setF] = useState<CustomerForm>({ name: "", nic: "", phone: "", address: "", city: "", riderId: riders[0]?.id ?? "", notes: "", photo: "", lat: null, lng: null });
+  const [f, setF] = useState<CustomerForm>({ name: "", nic: "", phone: "", address: "", city: "", riderId: riders[0]?.id ?? "", notes: "", photo: "", photoBlob: null, lat: null, lng: null });
   const [pinned, setPinned] = useState(false);
   const [err, setErr] = useState("");
   const set = <K extends keyof CustomerForm>(k: K, v: CustomerForm[K]) => setF((x) => ({ ...x, [k]: v }));
@@ -83,7 +87,13 @@ export function CustomerDialog({ onClose }: { onClose: () => void }) {
               className="hidden"
               onChange={async (e) => {
                 const file = e.target.files?.[0];
-                if (file) set("photo", await readPhoto(file));
+                if (!file) return;
+                try {
+                  const { url, blob } = await readPhoto(file);
+                  setF((x) => ({ ...x, photo: url, photoBlob: blob }));
+                } catch {
+                  setErr("That image could not be read. Choose a JPEG, PNG or WebP file.");
+                }
               }}
             />
           </label>

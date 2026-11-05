@@ -2,11 +2,11 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
-import { TODAY, addD, fd, fmt, sched } from "@/lib/calc";
+import { TODAY, addD, fd, fmt, r2, sched } from "@/lib/calc";
 import type { Freq } from "@/lib/types";
 import { api } from "@/services/api";
 import { type ItemForm, useAppStore } from "@/store/app-store";
-import { Field, FormActions, FormError, ModalFrame, SelectInput, TextInput, digits } from "./frame";
+import { Field, FormActions, FormError, ModalFrame, SelectInput, TextInput, decimal, digits } from "./frame";
 
 export function ItemDialog({ customerId = "", code = "", lockCustomer, onClose }: { customerId?: string; code?: string; lockCustomer?: boolean; onClose: () => void }) {
   const router = useRouter();
@@ -85,7 +85,7 @@ export function ItemDialog({ customerId = "", code = "", lockCustomer, onClose }
         </Field>
         <div className="grid grid-cols-[repeat(auto-fit,minmax(140px,1fr))] gap-3.5">
           <Field label="Price (Rs.)">
-            <TextInput inputMode="numeric" value={f.price} onChange={(e) => set("price", digits(e.target.value))} />
+            <TextInput inputMode="decimal" value={f.price} onChange={(e) => set("price", decimal(e.target.value))} />
           </Field>
           <Field label="Payment period (months)">
             <TextInput inputMode="numeric" value={f.period} onChange={(e) => set("period", digits(e.target.value))} />
@@ -97,13 +97,13 @@ export function ItemDialog({ customerId = "", code = "", lockCustomer, onClose }
             </SelectInput>
           </Field>
           <Field label="Amount per payment">
-            <TextInput inputMode="numeric" value={f.amount} onChange={(e) => set("amount", digits(e.target.value))} />
+            <TextInput inputMode="decimal" value={f.amount} onChange={(e) => set("amount", decimal(e.target.value))} />
           </Field>
           <Field label="Start date">
             <TextInput type="date" value={f.start} onChange={(e) => set("start", e.target.value)} />
           </Field>
-          <Field label="Assigned rider">
-            <SelectInput value={f.riderId} onChange={(e) => set("riderId", e.target.value)}>
+          <Field label="Assigned rider (the customer's rider)">
+            <SelectInput value={f.riderId} onChange={(e) => set("riderId", e.target.value)} disabled>
               {data.riders
                 .filter((r) => r.active || r.id === f.riderId)
                 .map((r) => (
@@ -121,7 +121,7 @@ export function ItemDialog({ customerId = "", code = "", lockCustomer, onClose }
             <>
               <span className="text-[15px] font-semibold text-ink">
                 {ds.length} {f.freq} payments of {fmt(amount)}
-                {price % amount ? ` (last ${fmt(price - amount * (ds.length - 1))})` : ""}
+                {Math.round(price * 100) % Math.round(amount * 100) ? ` (last ${fmt(r2(price - amount * (ds.length - 1)))})` : ""}
               </span>
               <span className="text-13 text-body">
                 {fd(ds[0])} → {fd(ds[ds.length - 1])}

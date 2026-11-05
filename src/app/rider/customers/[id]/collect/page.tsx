@@ -2,7 +2,7 @@
 import { useParams, useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
-import { ModalFrame, digits } from "@/components/modals/frame";
+import { ModalFrame, decimal } from "@/components/modals/frame";
 import { StatusChip } from "@/components/ui-collecto/primitives";
 import { fmt, sum } from "@/lib/calc";
 import { api } from "@/services/api";
@@ -21,6 +21,7 @@ export default function RiderCollectPage() {
   );
   const [err, setErr] = useState("");
   const [confirm, setConfirm] = useState(false);
+  const [busy, setBusy] = useState(false);
   if (!r) return null;
   if (!c) return <div className="p-5 text-center text-sm text-muted-ink">Customer not found.</div>;
 
@@ -40,10 +41,17 @@ export default function RiderCollectPage() {
   };
 
   const submit = async () => {
-    await api.payments.record(
+    if (busy) return;
+    setBusy(true);
+    const res = await api.payments.record(
       c.id,
       chosen.map((x) => ({ itemId: x.id, amount: +sel[x.id].val })),
     );
+    setBusy(false);
+    if (!res.ok) {
+      setConfirm(false);
+      return setErr(res.error);
+    }
     toast("Payment recorded · owner notified");
     router.replace("/rider/success");
   };
@@ -79,10 +87,10 @@ export default function RiderCollectPage() {
             <div className="flex h-[52px] items-center gap-2 rounded-[10px] border border-line-input bg-white px-3.5 focus-within:border-brand focus-within:shadow-[0_0_0_3px_rgba(124,92,250,.15)]">
               <span className="text-[15px] font-semibold text-muted-ink">Rs.</span>
               <input
-                inputMode="numeric"
+                inputMode="decimal"
                 aria-label={`Amount for ${x.name}`}
                 value={s.val}
-                onChange={(e) => setSel((z) => ({ ...z, [x.id]: { on: true, val: digits(e.target.value) } }))}
+                onChange={(e) => setSel((z) => ({ ...z, [x.id]: { on: true, val: decimal(e.target.value) } }))}
                 placeholder="0"
                 className="num min-w-0 flex-1 border-0 bg-transparent text-xl font-bold text-ink !shadow-none outline-none"
               />
@@ -129,7 +137,7 @@ export default function RiderCollectPage() {
             <button onClick={() => setConfirm(false)} className="h-[52px] rounded-[10px] border border-line-input bg-white text-[15px] font-semibold text-ink hover:bg-hover">
               Cancel
             </button>
-            <button onClick={submit} className="h-[52px] rounded-[10px] border-0 bg-success text-[15px] font-bold text-white hover:bg-[#166534]">
+            <button onClick={submit} disabled={busy} className="h-[52px] rounded-[10px] border-0 bg-success disabled:opacity-60 text-[15px] font-bold text-white hover:bg-[#166534]">
               Confirm &amp; submit
             </button>
           </div>
