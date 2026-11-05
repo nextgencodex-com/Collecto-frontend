@@ -1,8 +1,13 @@
 // Faithful port of the prototype's calculation core (reference/logic-core.js).
 import type { CalcItem, Item, Payment, Status } from "./types";
 
-/** Demo "today". The seed data and every due-date calculation is relative to this date. */
-export const TODAY = process.env.NEXT_PUBLIC_DEMO_TODAY ?? "2026-10-13";
+/**
+ * "Today" for every due-date calculation: the current date in the shop's time zone, matching the
+ * backend's APP_TZ. NEXT_PUBLIC_DEMO_TODAY pins it (set the backend's APP_TODAY to the same value).
+ */
+export const TODAY =
+  process.env.NEXT_PUBLIC_DEMO_TODAY ||
+  new Intl.DateTimeFormat("en-CA", { timeZone: process.env.NEXT_PUBLIC_APP_TZ || "Asia/Colombo" }).format(new Date());
 
 export const pad = (n: number) => String(n).padStart(2, "0");
 export const iso = (d: Date) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
@@ -23,12 +28,18 @@ export const addM = (s: string, n: number) => {
   d.setDate(Math.min(day, new Date(d.getFullYear(), d.getMonth() + 1, 0).getDate()));
   return iso(d);
 };
-export const fmt = (n: number | null | undefined) => "Rs. " + Math.round(n || 0).toLocaleString("en-US");
+/** Rounds to paise. Every money sum/difference goes through this so floats never drift (0.1 + 0.2). */
+export const r2 = (n: number) => Math.round(n * 100) / 100;
+/** "Rs. 1,000" for whole amounts, "Rs. 1,234.50" otherwise (same as the backend). */
+export const fmt = (n: number | null | undefined) => {
+  const v = r2(n || 0);
+  return "Rs. " + v.toLocaleString("en-US", { minimumFractionDigits: Number.isInteger(v) ? 0 : 2, maximumFractionDigits: 2 });
+};
 export const fd = (s: string | null | undefined) =>
   s ? pd(s).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }) : "—";
 export const fds = (s: string) =>
   pd(s).toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short" });
-export const sum = (a: number[]) => a.reduce((x, y) => x + y, 0);
+export const sum = (a: number[]) => r2(a.reduce((x, y) => x + y, 0));
 export const nowT = () => {
   const d = new Date();
   return `${pad(d.getHours())}:${pad(d.getMinutes())}`;
@@ -64,10 +75,14 @@ export const proj = (lat: number, lng: number, b: Bounds) => ({
 
 type SchedInput = Pick<Item, "price" | "amount" | "freq" | "start">;
 export const sched = (it: SchedInput) => {
-  const n = Math.ceil(it.price / it.amount);
+  const n = Math.ceil(Math.round(it.price * 100) / Math.round(it.amount * 100));
   return Array.from({ length: n }, (_, i) => (it.freq === "weekly" ? addD(it.start, 7 * i) : addM(it.start, i)));
 };
-export const cumF = (it: Pick<Item, "price" | "amount">) => (i: number) => Math.min(it.price, (i + 1) * it.amount);
+export const cumF = (it: Pick<Item, "price" | "amount">) => {
+  const price = Math.round(it.price * 100);
+  const amount = Math.round(it.amount * 100);
+  return (i: number) => Math.min(price, (i + 1) * amount) / 100;
+};
 export const initials = (n: string) =>
   n
     .split(" ")
@@ -88,10 +103,10 @@ export function calcItem(it: Item, pays: Payment[]): CalcItem {
   const cB = dates.filter((d) => d < TODAY).length;
   const expT = cT ? cum(cT - 1) : 0;
   const expB = cB ? cum(cB - 1) : 0;
-  const balance = Math.max(0, it.price - paid);
-  const overdue = Math.max(0, expB - paid);
-  const dueNow = Math.min(balance, Math.max(0, expT - paid));
-  const dueToday = Math.max(0, dueNow - overdue);
+  const balance = r2(Math.max(0, it.price - paid));
+  const overdue = r2(Math.max(0, expB - paid));
+  const dueNow = r2(Math.min(balance, Math.max(0, expT - paid)));
+  const dueToday = r2(Math.max(0, dueNow - overdue));
   const ni = dates.findIndex((_, i) => cum(i) > paid);
   const status: Status =
     balance <= 0 ? "DONE" : overdue > 0 ? "OVERDUE" : dueToday > 0 ? "DUE" : cT === 0 ? "UPCOMING" : "PAID";
@@ -103,7 +118,7 @@ export function calcItem(it: Item, pays: Payment[]): CalcItem {
     overdue,
     dueNow,
     dueToday,
-    expectedToday: Math.max(0, expT - paidBefore),
+    expectedToday: r2(Math.max(0, expT - paidBefore)),
     next: ni >= 0 ? dates[ni] : null,
     status,
     missed: dates.filter((d, i) => d < TODAY && cum(i) > paid).length,
@@ -119,5 +134,5 @@ export function expectedOn(it: CalcItem, date: string, pays: Payment[]) {
   const c = it.dates.filter((d) => d <= date).length;
   const e = c ? cum(c - 1) : 0;
   const pb = sum(pays.filter((p) => p.itemId === it.id && p.date < date).map((p) => p.amount));
-  return Math.max(0, e - pb);
+  return r2(Math.max(0, e - pb));
 }

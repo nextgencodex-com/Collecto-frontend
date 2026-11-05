@@ -4,15 +4,16 @@ import { toast } from "sonner";
 import type { Freq } from "@/lib/types";
 import { api } from "@/services/api";
 import type { ProductForm } from "@/store/app-store";
-import { Field, FormActions, FormError, ModalFrame, SelectInput, TextInput, digits } from "./frame";
+import { Field, FormActions, FormError, ModalFrame, SelectInput, TextInput, decimal, digits } from "./frame";
 
 export function ProductDialog({ onClose }: { onClose: () => void }) {
   const [f, setF] = useState<ProductForm>({ code: "", pname: "", purchase: "", cash: "", price: "", freq: "weekly", amount: "", period: "", stock: "" });
   const [err, setErr] = useState("");
   const set = (k: keyof ProductForm, v: string) => setF((x) => ({ ...x, [k]: v }));
-  const num = (k: keyof ProductForm, label: string) => (
+  // money fields accept paise; stock and period are whole numbers
+  const num = (k: keyof ProductForm, label: string, money = true) => (
     <Field label={label}>
-      <TextInput inputMode="numeric" value={f[k]} onChange={(e) => set(k, digits(e.target.value))} />
+      <TextInput inputMode={money ? "decimal" : "numeric"} value={f[k]} onChange={(e) => set(k, (money ? decimal : digits)(e.target.value))} />
     </Field>
   );
 
@@ -37,14 +38,14 @@ export function ProductDialog({ onClose }: { onClose: () => void }) {
           {num("purchase", "Purchase price")}
           {num("cash", "Cash selling price")}
           {num("price", "Installment price")}
-          {num("stock", "Opening stock")}
+          {num("stock", "Opening stock", false)}
           <Field label="Default frequency">
             <SelectInput value={f.freq} onChange={(e) => set("freq", e.target.value as Freq)}>
               <option value="weekly">Weekly</option>
               <option value="monthly">Monthly</option>
             </SelectInput>
           </Field>
-          {num("period", "Period (months)")}
+          {num("period", "Period (months)", false)}
           {num("amount", "Amount per payment")}
         </div>
         <FormError error={err} />
