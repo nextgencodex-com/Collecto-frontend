@@ -12,7 +12,6 @@ export interface Owner {
   name: string;
   email: string;
   username: string;
-  password: string;
   photo: string;
 }
 
@@ -22,7 +21,6 @@ export interface Rider {
   phone: string;
   area: string;
   username: string;
-  password: string;
   active: boolean;
   photo?: string;
 }
@@ -127,9 +125,8 @@ export interface Extension {
   reason: string;
 }
 
+/** The GET /bootstrap payload (role-scoped by the server). */
 export interface AppData {
-  v: 1;
-  seq: number;
   shop: Shop;
   owner: Owner;
   riders: Rider[];
@@ -140,8 +137,7 @@ export interface AppData {
   audit: AuditEntry[];
   notifs: Notification[];
   closings: Closing[];
-  /** optional so data saved before this feature still loads */
-  extensions?: Extension[];
+  extensions: Extension[];
 }
 
 export interface Session {
