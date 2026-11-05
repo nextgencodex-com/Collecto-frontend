@@ -62,7 +62,15 @@ let refreshing: Promise<AuthPayload | null> | null = null;
 export function refreshAccessToken(): Promise<AuthPayload | null> {
   return (refreshing ??= (async () => {
     try {
-      const res = await send("POST", "/auth/refresh");
+      let res = await send("POST", "/auth/refresh");
+      if (res?.status === 401) {
+        // Another tab may have rotated the cookie a moment ago: its new cookie is in the shared jar, so retry once.
+        const body = (await res.clone().json().catch(() => null)) as Envelope<unknown> | null;
+        if ((body?.errors?.[0] as { code?: string } | undefined)?.code === "refresh_race") {
+          await new Promise((r) => setTimeout(r, 300));
+          res = await send("POST", "/auth/refresh");
+        }
+      }
       if (!res?.ok) {
         setAccessToken(null);
         return null;
