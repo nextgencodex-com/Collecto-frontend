@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import { toast } from "sonner";
-import { digits } from "@/components/modals/frame";
-import { fmt, signed } from "@/lib/calc";
+import { decimal } from "@/components/modals/frame";
+import { fmt, r2, signed } from "@/lib/calc";
 import { api } from "@/services/api";
 import { useRider } from "@/hooks/use-rider";
 
@@ -38,9 +38,9 @@ export default function RiderClosingPage() {
       </>
     );
 
-  const diff = cash === "" ? null : +cash - collected;
+  const diff = cash === "" ? null : r2(+cash - collected);
   const submit = async () => {
-    const res = await api.closings.submit({ cash, note, expected, collected, pending, count: tp.length });
+    const res = await api.closings.submit({ cash, note });
     if (!res.ok) return setErr(res.error);
     setCash("");
     setNote("");
@@ -63,10 +63,10 @@ export default function RiderClosingPage() {
         <div className="flex h-14 items-center gap-2 rounded-[10px] border border-line-input bg-white px-3.5 focus-within:border-brand focus-within:shadow-[0_0_0_3px_rgba(124,92,250,.15)]">
           <span className="text-[15px] font-semibold text-muted-ink">Rs.</span>
           <input
-            inputMode="numeric"
+            inputMode="decimal"
             value={cash}
             onChange={(e) => {
-              setCash(digits(e.target.value));
+              setCash(decimal(e.target.value));
               setErr("");
             }}
             placeholder="0"

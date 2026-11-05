@@ -41,8 +41,8 @@ export default function CustomerProfilePage() {
   ];
 
   const assign = async (rid: string) => {
-    await api.customers.assignRider(c.id, rid);
-    toast(`Customer reassigned to ${D.rmap[rid].name}`);
+    const res = await api.customers.assignRider(c.id, rid);
+    toast(res.ok ? `Customer reassigned to ${D.rmap[rid].name}` : res.error);
   };
 
   const info = (label: string, value: React.ReactNode) => (
