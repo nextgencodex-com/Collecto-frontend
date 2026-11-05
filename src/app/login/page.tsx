@@ -7,6 +7,8 @@ import { api } from "@/services/api";
 import { useAppStore } from "@/store/app-store";
 
 type Role = "owner" | "rider";
+/** Demo accounts are pre-filled and advertised in development builds only. */
+const SHOW_DEMO = process.env.NODE_ENV !== "production";
 const DEMO: Record<Role, { user: string; pass: string }> = {
   owner: { user: "owner@collecto.lk", pass: "owner123" },
   rider: { user: "kasun", pass: "1234" },
@@ -17,8 +19,8 @@ export default function LoginPage() {
   const hydrated = useAppStore((s) => s.hydrated);
   const session = useAppStore((s) => s.session);
   const [role, setRole] = useState<Role>("owner");
-  const [user, setUser] = useState(DEMO.owner.user);
-  const [pass, setPass] = useState(DEMO.owner.pass);
+  const [user, setUser] = useState(SHOW_DEMO ? DEMO.owner.user : "");
+  const [pass, setPass] = useState(SHOW_DEMO ? DEMO.owner.pass : "");
   const [remember, setRemember] = useState(true);
   const [err, setErr] = useState("");
   const [info, setInfo] = useState("");
@@ -29,15 +31,19 @@ export default function LoginPage() {
 
   const pick = (r: Role) => {
     setRole(r);
-    setUser(DEMO[r].user);
-    setPass(DEMO[r].pass);
+    setUser(SHOW_DEMO ? DEMO[r].user : "");
+    setPass(SHOW_DEMO ? DEMO[r].pass : "");
     setErr("");
     setInfo("");
   };
 
+  const [busy, setBusy] = useState(false);
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (busy) return;
+    setBusy(true);
     const res = await api.auth.login(role, user, pass, remember);
+    setBusy(false);
     if (!res.ok) {
       setInfo("");
       setErr(res.error);
@@ -49,7 +55,7 @@ export default function LoginPage() {
     setInfo(
       role === "rider"
         ? "Riders: ask the shop owner to reset your password from the Riders screen."
-        : "A password reset link would be sent to the registered owner email. (Not connected in this demo.)",
+        : "Password reset is not available yet. Please contact the system administrator.",
     );
   };
 
@@ -128,16 +134,18 @@ export default function LoginPage() {
           )}
           {info && <div className="rounded-lg bg-brand-soft px-3 py-2.5 text-13 text-brand-ink">{info}</div>}
 
-          <button type="submit" className="h-12 rounded-[10px] border-0 bg-brand text-[15px] font-semibold text-white hover:bg-brand-hover">
-            Sign in
+          <button type="submit" disabled={busy} className="h-12 rounded-[10px] border-0 bg-brand text-[15px] font-semibold text-white hover:bg-brand-hover disabled:opacity-60">
+            {busy ? "Signing in…" : "Sign in"}
           </button>
         </form>
 
-        <div className="text-center text-meta leading-[1.6] text-muted-ink">
-          Demo accounts — Owner: owner@collecto.lk / owner123
-          <br />
-          Riders: kasun, nimal or tharindu / 1234
-        </div>
+        {SHOW_DEMO && (
+          <div className="text-center text-meta leading-[1.6] text-muted-ink">
+            Demo accounts — Owner: owner@collecto.lk / owner123
+            <br />
+            Riders: kasun, nimal or tharindu / 1234
+          </div>
+        )}
       </div>
     </div>
   );

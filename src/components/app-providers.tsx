@@ -4,7 +4,7 @@ import { Toaster } from "sonner";
 import { useAppStore } from "@/store/app-store";
 import { useUI } from "@/store/ui-store";
 
-/** Restores the session after mount (storage is client-only) and mounts global toasts. */
+/** Restores the session from the refresh cookie after mount and mounts global toasts. */
 export function AppProviders({ children }: { children: React.ReactNode }) {
   const hydrateSession = useAppStore((s) => s.hydrateSession);
   const closeModal = useUI((s) => s.close);
@@ -26,7 +26,7 @@ export function AppProviders({ children }: { children: React.ReactNode }) {
   );
 }
 
-/** Full-screen placeholder shown until client storage has been read. */
+/** Full-screen placeholder shown until the session has been restored. */
 export function BootScreen() {
   return <div className="grid min-h-screen place-items-center text-sm text-muted-ink">Loading COLLECTO…</div>;
 }
