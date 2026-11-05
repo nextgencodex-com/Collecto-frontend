@@ -102,8 +102,8 @@ export function ItemDialog({ customerId = "", code = "", lockCustomer, onClose }
           <Field label="Start date">
             <TextInput type="date" value={f.start} onChange={(e) => set("start", e.target.value)} />
           </Field>
-          <Field label="Assigned rider">
-            <SelectInput value={f.riderId} onChange={(e) => set("riderId", e.target.value)}>
+          <Field label="Assigned rider (the customer's rider)">
+            <SelectInput value={f.riderId} onChange={(e) => set("riderId", e.target.value)} disabled>
               {data.riders
                 .filter((r) => r.active || r.id === f.riderId)
                 .map((r) => (
