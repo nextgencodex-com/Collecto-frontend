@@ -34,6 +34,15 @@ only matter for the first paint before the data arrives.
 The demo accounts above exist only if the backend was seeded (`npm run db:seed` there), and the demo credentials,
 pre-filled login form and **Settings -> Reset demo data** are shown in development builds only.
 
+## Checks
+
+```bash
+npm test          # vitest: calculation maths, derived data, HTTP client (refresh/retry), store
+npm run lint
+npx tsc --noEmit
+npm run build
+```
+
 ## Project structure
 
 ```
